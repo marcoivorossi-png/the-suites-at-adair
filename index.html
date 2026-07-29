@@ -5,13 +5,15 @@
 
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>The Suites at Adair | Five Private Salon Suites</title>
 <meta content="Five private luxury salon suites in Downtown Woodstock, Georgia." name="description"/>
-<link href="css/style.css?v=34" rel="stylesheet"/><link href="images/favicon.png" rel="icon" type="image/png"/><meta content="The Suites at Adair" property="og:title"/><meta content="Five private salon suites at the edge of Downtown Woodstock." property="og:description"/><meta content="website" property="og:type"/><meta content="https://thesuitesatadair.com/" property="og:url"/><meta content="#f4efe5" name="theme-color"/><style id="floor-plan-production-styles">/* V31 interactive floor plan */
+<link href="css/style.css?v=35" rel="stylesheet"/><link href="images/favicon.png" rel="icon" type="image/png"/><meta content="The Suites at Adair" property="og:title"/><meta content="Five private salon suites at the edge of Downtown Woodstock." property="og:description"/><meta content="website" property="og:type"/><meta content="https://thesuitesatadair.com/" property="og:url"/><meta content="#f4efe5" name="theme-color"/><style id="floor-plan-production-styles">/* V31 interactive floor plan */
 .floor-plan-section{padding:110px 0;background:#f7f2e9;border-top:1px solid rgba(25,24,20,.08);border-bottom:1px solid rgba(25,24,20,.08)}
 .floor-plan-head{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:end;margin-bottom:42px}
 .floor-plan-head h2{margin:.2rem 0 0;font-size:clamp(2.8rem,5vw,5.2rem);line-height:.95}
@@ -192,6 +194,220 @@
   }
   .gallery-modal{padding:18px}
 }
+
+
+
+/* V35 stability release: corrected entrance label, reliable gallery, mobile repair */
+html, body { overflow-x: hidden; }
+img { max-width: 100%; }
+
+.suite-five-private-entrance{
+  left:12% !important;
+  top:20.5% !important;
+  width:94px;
+  white-space:normal !important;
+  line-height:1.12 !important;
+  text-align:center;
+  transform:translate(-50%,-50%);
+}
+
+/* Smaller suite markers so furniture remains visible */
+#floor-plan .suite-marker{
+  width:30px !important;
+  height:30px !important;
+  border-width:2px !important;
+  font-size:.78rem !important;
+  box-shadow:0 4px 11px rgba(0,0,0,.24) !important;
+}
+#floor-plan .suite-marker:hover,
+#floor-plan .suite-marker.active{
+  transform:translate(-50%,-50%) scale(1.08) !important;
+}
+
+/* Reliable large gallery layout */
+#gallery .editorial-grid{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  grid-auto-flow:row !important;
+  grid-auto-rows:auto !important;
+  gap:24px !important;
+}
+#gallery .gallery-card,
+#gallery .gallery-card:nth-child(n),
+#gallery .editorial-grid .gallery-card:nth-child(n+2){
+  grid-column:auto !important;
+  grid-row:auto !important;
+  min-width:0 !important;
+  width:100% !important;
+  height:clamp(380px,40vw,590px) !important;
+  min-height:0 !important;
+  margin:0 !important;
+  overflow:hidden !important;
+  border-radius:15px !important;
+  background:#eee8de !important;
+}
+#gallery .gallery-card:first-child{
+  grid-column:1 / -1 !important;
+  height:clamp(500px,54vw,760px) !important;
+}
+#gallery .gallery-card img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  min-height:0 !important;
+  object-fit:cover !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+/* Tablet repair */
+@media (max-width:1050px){
+  #floor-plan .floor-plan-layout{
+    grid-template-columns:180px minmax(0,1fr) !important;
+    gap:18px !important;
+  }
+  #floor-plan .suite-detail{
+    grid-column:1 / -1 !important;
+  }
+}
+
+/* Phone repair */
+@media (max-width:760px){
+  .wrap{
+    width:calc(100% - 28px) !important;
+    max-width:none !important;
+  }
+  .floor-plan-section{
+    padding:64px 0 !important;
+  }
+  #floor-plan .floor-plan-head{
+    display:block !important;
+    margin-bottom:24px !important;
+  }
+  #floor-plan .floor-plan-head h2{
+    font-size:clamp(2.15rem,11vw,3rem) !important;
+    line-height:1 !important;
+  }
+  #floor-plan .floor-plan-head p{
+    margin-top:16px !important;
+    line-height:1.55 !important;
+  }
+  #floor-plan .floor-plan-layout{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:16px !important;
+    width:100% !important;
+  }
+  #floor-plan .suite-picker{
+    width:100% !important;
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    gap:8px !important;
+    overflow-x:auto !important;
+    padding:12px !important;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+  }
+  #floor-plan .suite-picker-title,
+  #floor-plan .suite-legend{
+    display:none !important;
+  }
+  #floor-plan .suite-choice{
+    flex:0 0 132px !important;
+    display:grid !important;
+    grid-template-columns:30px 1fr !important;
+    grid-template-rows:auto auto !important;
+    justify-content:initial !important;
+    align-items:center !important;
+    padding:10px !important;
+    margin:0 !important;
+    scroll-snap-align:start;
+  }
+  #floor-plan .suite-choice strong,
+  #floor-plan .suite-choice small{
+    display:block !important;
+  }
+  #floor-plan .suite-choice span{
+    width:28px !important;
+    height:28px !important;
+  }
+  #floor-plan .floor-plan-canvas{
+    width:100% !important;
+    border-radius:12px !important;
+  }
+  #floor-plan .floor-plan-canvas > img{
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:auto !important;
+    object-fit:contain !important;
+  }
+  #floor-plan .suite-marker{
+    width:23px !important;
+    height:23px !important;
+    font-size:.63rem !important;
+    border-width:1.5px !important;
+  }
+  #floor-plan .plan-label{
+    font-size:.38rem !important;
+    padding:2px 4px !important;
+    letter-spacing:.025em !important;
+  }
+  #floor-plan .suite-five-private-entrance{
+    left:12% !important;
+    top:20.5% !important;
+    width:68px !important;
+  }
+  #floor-plan .plan-expand{
+    right:8px !important;
+    bottom:8px !important;
+    padding:7px 9px !important;
+    font-size:.52rem !important;
+  }
+  #floor-plan .suite-detail{
+    display:block !important;
+    width:100% !important;
+    padding:21px !important;
+    border-radius:14px !important;
+  }
+  #floor-plan .suite-detail-top{
+    margin-bottom:14px !important;
+  }
+  #floor-plan .suite-detail h3{
+    font-size:1.7rem !important;
+  }
+
+  #gallery .editorial-grid{
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+  }
+  #gallery .gallery-card,
+  #gallery .gallery-card:nth-child(n),
+  #gallery .gallery-card:first-child,
+  #gallery .editorial-grid .gallery-card:nth-child(n+2){
+    grid-column:1 !important;
+    width:100% !important;
+    height:clamp(255px,72vw,390px) !important;
+  }
+  .gallery-modal{
+    padding:12px !important;
+  }
+  .gallery-modal img{
+    max-width:96vw !important;
+    max-height:88vh !important;
+  }
+}
+
+@media (max-width:420px){
+  #floor-plan .suite-choice{
+    flex-basis:118px !important;
+  }
+  #floor-plan .suite-choice strong{
+    font-size:.88rem !important;
+  }
+  #floor-plan .suite-choice small{
+    font-size:.63rem !important;
+  }
+}
 </style></head>
 <body>
 <div class="announcement-bar">NOW LEASING   |   ANTICIPATED OPENING LATE 2026   |   ONLY FIVE PRIVATE SUITES AVAILABLE</div>
@@ -298,7 +514,7 @@ FIVE PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <div class="plan-label coffee-bar">Coffee Bar</div>
 <div class="plan-label shared-hallway">Shared Hallway</div>
 <div class="plan-label main-entrance">Main Entrance</div>
-<div class="plan-label suite-five-private-entrance">Private Entrance</div><button aria-label="Open floor plan larger" class="plan-expand" id="planExpand" type="button">View Larger</button>
+<div class="plan-label suite-five-private-entrance">Private Rear Entrance</div><button aria-label="Open floor plan larger" class="plan-expand" id="planExpand" type="button">View Larger</button>
 </div>
 <aside aria-live="polite" class="suite-detail">
 <div class="suite-detail-top"><span class="suite-detail-number">1</span><span class="suite-status">Available</span></div>
@@ -322,16 +538,16 @@ FIVE PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <p>Begin at the front door, then explore the refined vision for the corridors, private studios, treatment space, shampoo areas, and window-lined suites.</p>
 </div>
 <div class="editorial-grid reveal">
-<figure aria-label="Open gallery image 1 larger" class="gallery-card" role="button" tabindex="0"><img alt="Front exterior of The Suites at Adair at 60 Linton Street" decoding="async" loading="lazy" src="images/03-front-exterior-of-the-suites-at-adair-at-60-linton-stre.jpg"/></figure><figure aria-label="Open gallery image 2 larger" class="gallery-card" role="button" tabindex="0"><img alt="Warm modern private salon suite with two styling chairs" decoding="async" loading="lazy" src="images/04-warm-modern-private-salon-suite-with-two-styling-chairs.jpg"/></figure>
-<figure aria-label="Open gallery image 3 larger" class="gallery-card" role="button" tabindex="0"><img alt="Interior corridor with glass-front private suites" decoding="async" loading="lazy" src="images/05-interior-corridor-with-glass-front-private-suites.jpg"/></figure>
-<figure aria-label="Open gallery image 4 larger" class="gallery-card" role="button" tabindex="0"><img alt="Bright corridor and hospitality area" decoding="async" loading="lazy" src="images/06-bright-corridor-and-hospitality-area.jpg"/></figure>
-<figure aria-label="Open gallery image 5 larger" class="gallery-card" role="button" tabindex="0"><img alt="Private treatment suite rendering" decoding="async" loading="lazy" src="images/07-private-treatment-suite-rendering.jpg"/></figure>
-<figure aria-label="Open gallery image 6 larger" class="gallery-card" role="button" tabindex="0"><img alt="Salon suite with styling stations, shampoo bowls, and brick feature wall" decoding="async" loading="lazy" src="images/08-salon-suite-with-styling-stations-shampoo-bowls-and-bri.jpg"/></figure>
-<figure aria-label="Open gallery image 7 larger" class="gallery-card" role="button" tabindex="0"><img alt="Salon suite with brick wall and double styling stations" decoding="async" loading="lazy" src="images/09-salon-suite-with-brick-wall-and-double-styling-stations.jpg"/></figure>
-<figure aria-label="Open gallery image 8 larger" class="gallery-card" role="button" tabindex="0"><img alt="Large salon suite with styling and shampoo stations" decoding="async" loading="lazy" src="images/10-large-salon-suite-with-styling-and-shampoo-stations.jpg"/></figure>
-<figure aria-label="Open gallery image 9 larger" class="gallery-card" role="button" tabindex="0"><img alt="Window-lined private salon suite" decoding="async" loading="lazy" src="images/11-window-lined-private-salon-suite.jpg"/></figure>
-<figure aria-label="Open gallery image 10 larger" class="gallery-card" role="button" tabindex="0"><img alt="Private salon suite with abundant natural light" decoding="async" loading="lazy" src="images/12-private-salon-suite-with-abundant-natural-light.jpg"/></figure>
-<figure aria-label="Open gallery image 11 larger" class="gallery-card" role="button" tabindex="0"><img alt="Warm neutral salon suite rendering" decoding="async" loading="lazy" src="images/13-warm-neutral-salon-suite-rendering.jpg"/></figure>
+<figure aria-label="Open gallery image 1 larger" class="gallery-card" role="button" tabindex="0"><img alt="Front exterior of The Suites at Adair at 60 Linton Street" decoding="async" fetchpriority="high" loading="eager" src="images/03-front-exterior-of-the-suites-at-adair-at-60-linton-stre.jpg"/></figure><figure aria-label="Open gallery image 2 larger" class="gallery-card" role="button" tabindex="0"><img alt="Warm modern private salon suite with two styling chairs" decoding="async" fetchpriority="high" loading="eager" src="images/04-warm-modern-private-salon-suite-with-two-styling-chairs.jpg"/></figure>
+<figure aria-label="Open gallery image 3 larger" class="gallery-card" role="button" tabindex="0"><img alt="Interior corridor with glass-front private suites" decoding="async" fetchpriority="high" loading="eager" src="images/05-interior-corridor-with-glass-front-private-suites.jpg"/></figure>
+<figure aria-label="Open gallery image 4 larger" class="gallery-card" role="button" tabindex="0"><img alt="Bright corridor and hospitality area" decoding="async" fetchpriority="auto" loading="eager" src="images/06-bright-corridor-and-hospitality-area.jpg"/></figure>
+<figure aria-label="Open gallery image 5 larger" class="gallery-card" role="button" tabindex="0"><img alt="Private treatment suite rendering" decoding="async" fetchpriority="auto" loading="eager" src="images/07-private-treatment-suite-rendering.jpg"/></figure>
+<figure aria-label="Open gallery image 6 larger" class="gallery-card" role="button" tabindex="0"><img alt="Salon suite with styling stations, shampoo bowls, and brick feature wall" decoding="async" fetchpriority="auto" loading="eager" src="images/08-salon-suite-with-styling-stations-shampoo-bowls-and-bri.jpg"/></figure>
+<figure aria-label="Open gallery image 7 larger" class="gallery-card" role="button" tabindex="0"><img alt="Salon suite with brick wall and double styling stations" decoding="async" fetchpriority="auto" loading="eager" src="images/09-salon-suite-with-brick-wall-and-double-styling-stations.jpg"/></figure>
+<figure aria-label="Open gallery image 8 larger" class="gallery-card" role="button" tabindex="0"><img alt="Large salon suite with styling and shampoo stations" decoding="async" fetchpriority="auto" loading="eager" src="images/10-large-salon-suite-with-styling-and-shampoo-stations.jpg"/></figure>
+<figure aria-label="Open gallery image 9 larger" class="gallery-card" role="button" tabindex="0"><img alt="Window-lined private salon suite" decoding="async" fetchpriority="auto" loading="eager" src="images/11-window-lined-private-salon-suite.jpg"/></figure>
+<figure aria-label="Open gallery image 10 larger" class="gallery-card" role="button" tabindex="0"><img alt="Private salon suite with abundant natural light" decoding="async" fetchpriority="auto" loading="eager" src="images/12-private-salon-suite-with-abundant-natural-light.jpg"/></figure>
+<figure aria-label="Open gallery image 11 larger" class="gallery-card" role="button" tabindex="0"><img alt="Warm neutral salon suite rendering" decoding="async" fetchpriority="auto" loading="eager" src="images/13-warm-neutral-salon-suite-rendering.jpg"/></figure>
 </div>
 </div>
 <div class="rendering-notice reveal">
@@ -458,7 +674,7 @@ FIVE PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <svg viewbox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.6-1.6h1.7V4.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2V11H8v3h2.4v8z"></path></svg>
 </a>
 </div></footer>
-<script defer="True" src="js/app.js?v=34"></script><script id="floor-plan-production-script">
+<script defer="True" src="js/app.js?v=35"></script><script id="floor-plan-production-script">
 document.addEventListener('DOMContentLoaded', () => {
   if (window.__floorPlanInitialized) return;
   window.__floorPlanInitialized = true;

@@ -1,26 +1,14 @@
-# The Suites at Adair — V34 Production
+# The Suites at Adair — V35 Production
 
-Production-ready Cloudflare Pages website.
+Stability-focused release.
 
-## V34 updates
+Changes:
+- Private Rear Entrance label moved beside the Suite 5 swinging door.
+- Suite markers reduced in size.
+- Desktop gallery image loading repaired.
+- Gallery images remain large and open full screen.
+- Mobile floor-plan, suite selector, details panel, and gallery repaired.
+- Inquiry form and Cloudflare Pages Function preserved.
 
-- Suite 5 now identifies its dedicated private entrance in the floor plan,
-  description, and feature list.
-- Every gallery image is substantially larger.
-- Floor plan and gallery images open in full-screen lightboxes.
-- Existing inquiry form and Cloudflare Pages Function are preserved.
-
-## Publish
-
-Upload every file and folder inside this project to the existing GitHub
-repository `the-suites-at-adair`, replacing matching files. Commit to `main`.
-
+Upload all files and folders to the existing `the-suites-at-adair` GitHub repository.
 Do not create a new repository.
-
-Cloudflare Pages will redeploy automatically.
-
-## Required Cloudflare environment variables
-
-- `RESEND_API_KEY`
-- `INQUIRY_TO_EMAIL`
-- `INQUIRY_FROM_EMAIL`
