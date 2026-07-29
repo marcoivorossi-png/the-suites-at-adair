@@ -25,7 +25,13 @@ document.getElementById('interestForm').addEventListener('submit',async e=>{
 });
 
 
+// V33 floor-plan initialization is embedded in index.html for reliable deployment.
+// This external fallback runs only if the embedded script is unavailable.
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.__floorPlanInitialized) return;
+  window.__floorPlanInitialized = true;
 // V31 interactive suite floor plan
+
 const suiteData={
   1:{name:'Front Right Suite',location:'Front-facing location',status:'Available',description:'A bright private studio with front window exposure and convenient access near the main entrance.',features:['Front window exposure','White box ready','Build-out flexibility']},
   2:{name:'Front Left Suite',location:'Front-facing location',status:'Available',description:'A welcoming front suite with natural light, strong visibility, and a private professional atmosphere.',features:['Front window exposure','White box ready','Build-out flexibility']},
@@ -63,3 +69,5 @@ planModal?.querySelector('.plan-modal-close')?.addEventListener('click',()=>{pla
 planModal?.addEventListener('click',e=>{if(e.target===planModal){planModal.hidden=true;document.body.style.overflow=''}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&planModal&&!planModal.hidden){planModal.hidden=true;document.body.style.overflow=''}});
 selectSuite(1);
+
+});

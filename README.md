@@ -1,39 +1,25 @@
-# The Suites at Adair
+# The Suites at Adair — V33 Production
 
-Cloudflare Pages-ready website for The Suites at Adair.
+This is the production-ready Cloudflare Pages project.
 
-## Cloudflare Pages build settings
+## Update the live site
+
+Upload **all files and folders inside this directory** to the existing GitHub
+repository `the-suites-at-adair`, then commit the changes.
+
+Do not create a new repository.
+
+Cloudflare Pages will redeploy automatically from the `main` branch.
+
+## Cloudflare build settings
 
 - Framework preset: None
-- Production branch: main
-- Build command: leave blank
-- Build output directory: `/`
+- Build command: blank
+- Build output directory: blank
+- Root directory: blank
 
-## Inquiry form setup
+## Environment variables
 
-The form posts to the Cloudflare Pages Function at `/api/inquiry`.
-
-In Cloudflare Pages, open **Settings → Variables and Secrets** and add:
-
-- `RESEND_API_KEY` — API key from Resend
-- `INQUIRY_TO_EMAIL` — email address that should receive inquiries
-- `INQUIRY_FROM_EMAIL` — optional verified sender, such as `The Suites at Adair <inquiries@thesuitesatadair.com>`
-
-After adding variables, redeploy the project.
-
-## Project structure
-
-- `index.html`
-- `css/style.css`
-- `js/app.js`
-- `images/`
-- `functions/api/inquiry.js`
-- `_headers`
-
-## V31 interactive floor plan
-
-The floor plan is interactive. Suite dimensions are intentionally marked as “coming soon” and can be updated in `js/app.js` when final measurements are available.
-
-## V32 floor plan update
-
-Adds a full-page interactive floor-plan section with five clickable suites, availability legend, labeled shared amenities, and suite-specific inquiry prefill.
+- `RESEND_API_KEY`
+- `INQUIRY_TO_EMAIL`
+- `INQUIRY_FROM_EMAIL`
