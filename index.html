@@ -3,13 +3,15 @@
 
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>The Suites at Adair | Five Private Salon Suites</title>
 <meta content="Five private luxury salon suites in Downtown Woodstock, Georgia." name="description"/>
-<link href="css/style.css?v=33" rel="stylesheet"/><link href="images/favicon.png" rel="icon" type="image/png"/><meta content="The Suites at Adair" property="og:title"/><meta content="Five private salon suites at the edge of Downtown Woodstock." property="og:description"/><meta content="website" property="og:type"/><meta content="https://thesuitesatadair.com/" property="og:url"/><meta content="#f4efe5" name="theme-color"/><style id="floor-plan-production-styles">/* V31 interactive floor plan */
+<link href="css/style.css?v=34" rel="stylesheet"/><link href="images/favicon.png" rel="icon" type="image/png"/><meta content="The Suites at Adair" property="og:title"/><meta content="Five private salon suites at the edge of Downtown Woodstock." property="og:description"/><meta content="website" property="og:type"/><meta content="https://thesuitesatadair.com/" property="og:url"/><meta content="#f4efe5" name="theme-color"/><style id="floor-plan-production-styles">/* V31 interactive floor plan */
 .floor-plan-section{padding:110px 0;background:#f7f2e9;border-top:1px solid rgba(25,24,20,.08);border-bottom:1px solid rgba(25,24,20,.08)}
 .floor-plan-head{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:end;margin-bottom:42px}
 .floor-plan-head h2{margin:.2rem 0 0;font-size:clamp(2.8rem,5vw,5.2rem);line-height:.95}
@@ -99,6 +101,96 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
   }
+}
+
+
+
+/* V34: Suite 5 private entrance, larger gallery, and full-screen media */
+.suite-five-private-entrance{
+  left:7.5%;
+  top:13.5%;
+  max-width:92px;
+  text-align:center;
+  line-height:1.15;
+  border-color:rgba(183,123,29,.55);
+  color:#7d5312;
+  background:rgba(255,250,240,.96);
+}
+
+#gallery .editorial-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-auto-rows:auto;
+  gap:26px;
+}
+#gallery .gallery-card:nth-child(n){
+  grid-column:auto;
+  grid-row:auto;
+  min-height:clamp(390px,42vw,610px);
+  border-radius:16px;
+  box-shadow:0 22px 55px rgba(35,30,22,.11);
+  cursor:zoom-in;
+}
+#gallery .gallery-card:first-child{
+  grid-column:1 / -1;
+  min-height:clamp(520px,55vw,760px);
+}
+#gallery .gallery-card img{
+  min-height:inherit;
+}
+#gallery .gallery-card:focus-visible{
+  outline:3px solid #b77b1d;
+  outline-offset:4px;
+}
+
+.gallery-modal{
+  position:fixed;
+  inset:0;
+  z-index:1100;
+  display:grid;
+  place-items:center;
+  padding:34px;
+  background:rgba(12,11,10,.94);
+  overflow:auto;
+}
+.gallery-modal[hidden]{display:none}
+.gallery-modal img{
+  max-width:min(1500px,95vw);
+  max-height:91vh;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  border-radius:10px;
+  box-shadow:0 24px 90px rgba(0,0,0,.62);
+}
+.gallery-modal-close{
+  position:fixed;
+  top:16px;
+  right:24px;
+  z-index:2;
+  border:0;
+  background:transparent;
+  color:#fff;
+  font-size:2.7rem;
+  line-height:1;
+  cursor:pointer;
+}
+
+@media(max-width:760px){
+  .suite-five-private-entrance{
+    left:6%;
+    top:12.5%;
+    max-width:74px;
+  }
+  #gallery .editorial-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  #gallery .gallery-card:nth-child(n),
+  #gallery .gallery-card:first-child{
+    grid-column:1;
+    min-height:390px;
+  }
+  .gallery-modal{padding:18px}
 }
 </style></head>
 <body>
@@ -206,7 +298,7 @@ FIVE PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <div class="plan-label coffee-bar">Coffee Bar</div>
 <div class="plan-label shared-hallway">Shared Hallway</div>
 <div class="plan-label main-entrance">Main Entrance</div>
-<button aria-label="Open floor plan larger" class="plan-expand" id="planExpand" type="button">View Larger</button>
+<div class="plan-label suite-five-private-entrance">Private Entrance</div><button aria-label="Open floor plan larger" class="plan-expand" id="planExpand" type="button">View Larger</button>
 </div>
 <aside aria-live="polite" class="suite-detail">
 <div class="suite-detail-top"><span class="suite-detail-number">1</span><span class="suite-status">Available</span></div>
@@ -230,23 +322,23 @@ FIVE PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <p>Begin at the front door, then explore the refined vision for the corridors, private studios, treatment space, shampoo areas, and window-lined suites.</p>
 </div>
 <div class="editorial-grid reveal">
-<figure class="gallery-card"><img alt="Front exterior of The Suites at Adair at 60 Linton Street" decoding="async" loading="lazy" src="images/03-front-exterior-of-the-suites-at-adair-at-60-linton-stre.jpg"/></figure><figure class="gallery-card"><img alt="Warm modern private salon suite with two styling chairs" decoding="async" loading="lazy" src="images/04-warm-modern-private-salon-suite-with-two-styling-chairs.jpg"/></figure>
-<figure class="gallery-card"><img alt="Interior corridor with glass-front private suites" decoding="async" loading="lazy" src="images/05-interior-corridor-with-glass-front-private-suites.jpg"/></figure>
-<figure class="gallery-card"><img alt="Bright corridor and hospitality area" decoding="async" loading="lazy" src="images/06-bright-corridor-and-hospitality-area.jpg"/></figure>
-<figure class="gallery-card"><img alt="Private treatment suite rendering" decoding="async" loading="lazy" src="images/07-private-treatment-suite-rendering.jpg"/></figure>
-<figure class="gallery-card"><img alt="Salon suite with styling stations, shampoo bowls, and brick feature wall" decoding="async" loading="lazy" src="images/08-salon-suite-with-styling-stations-shampoo-bowls-and-bri.jpg"/></figure>
-<figure class="gallery-card"><img alt="Salon suite with brick wall and double styling stations" decoding="async" loading="lazy" src="images/09-salon-suite-with-brick-wall-and-double-styling-stations.jpg"/></figure>
-<figure class="gallery-card"><img alt="Large salon suite with styling and shampoo stations" decoding="async" loading="lazy" src="images/10-large-salon-suite-with-styling-and-shampoo-stations.jpg"/></figure>
-<figure class="gallery-card"><img alt="Window-lined private salon suite" decoding="async" loading="lazy" src="images/11-window-lined-private-salon-suite.jpg"/></figure>
-<figure class="gallery-card"><img alt="Private salon suite with abundant natural light" decoding="async" loading="lazy" src="images/12-private-salon-suite-with-abundant-natural-light.jpg"/></figure>
-<figure class="gallery-card"><img alt="Warm neutral salon suite rendering" decoding="async" loading="lazy" src="images/13-warm-neutral-salon-suite-rendering.jpg"/></figure>
+<figure aria-label="Open gallery image 1 larger" class="gallery-card" role="button" tabindex="0"><img alt="Front exterior of The Suites at Adair at 60 Linton Street" decoding="async" loading="lazy" src="images/03-front-exterior-of-the-suites-at-adair-at-60-linton-stre.jpg"/></figure><figure aria-label="Open gallery image 2 larger" class="gallery-card" role="button" tabindex="0"><img alt="Warm modern private salon suite with two styling chairs" decoding="async" loading="lazy" src="images/04-warm-modern-private-salon-suite-with-two-styling-chairs.jpg"/></figure>
+<figure aria-label="Open gallery image 3 larger" class="gallery-card" role="button" tabindex="0"><img alt="Interior corridor with glass-front private suites" decoding="async" loading="lazy" src="images/05-interior-corridor-with-glass-front-private-suites.jpg"/></figure>
+<figure aria-label="Open gallery image 4 larger" class="gallery-card" role="button" tabindex="0"><img alt="Bright corridor and hospitality area" decoding="async" loading="lazy" src="images/06-bright-corridor-and-hospitality-area.jpg"/></figure>
+<figure aria-label="Open gallery image 5 larger" class="gallery-card" role="button" tabindex="0"><img alt="Private treatment suite rendering" decoding="async" loading="lazy" src="images/07-private-treatment-suite-rendering.jpg"/></figure>
+<figure aria-label="Open gallery image 6 larger" class="gallery-card" role="button" tabindex="0"><img alt="Salon suite with styling stations, shampoo bowls, and brick feature wall" decoding="async" loading="lazy" src="images/08-salon-suite-with-styling-stations-shampoo-bowls-and-bri.jpg"/></figure>
+<figure aria-label="Open gallery image 7 larger" class="gallery-card" role="button" tabindex="0"><img alt="Salon suite with brick wall and double styling stations" decoding="async" loading="lazy" src="images/09-salon-suite-with-brick-wall-and-double-styling-stations.jpg"/></figure>
+<figure aria-label="Open gallery image 8 larger" class="gallery-card" role="button" tabindex="0"><img alt="Large salon suite with styling and shampoo stations" decoding="async" loading="lazy" src="images/10-large-salon-suite-with-styling-and-shampoo-stations.jpg"/></figure>
+<figure aria-label="Open gallery image 9 larger" class="gallery-card" role="button" tabindex="0"><img alt="Window-lined private salon suite" decoding="async" loading="lazy" src="images/11-window-lined-private-salon-suite.jpg"/></figure>
+<figure aria-label="Open gallery image 10 larger" class="gallery-card" role="button" tabindex="0"><img alt="Private salon suite with abundant natural light" decoding="async" loading="lazy" src="images/12-private-salon-suite-with-abundant-natural-light.jpg"/></figure>
+<figure aria-label="Open gallery image 11 larger" class="gallery-card" role="button" tabindex="0"><img alt="Warm neutral salon suite rendering" decoding="async" loading="lazy" src="images/13-warm-neutral-salon-suite-rendering.jpg"/></figure>
 </div>
 </div>
 <div class="rendering-notice reveal">
 <strong>Conceptual Renderings</strong>
   The images shown throughout this website include conceptual renderings intended to illustrate the planned design and vision for The Suites at Adair. Construction is currently underway, and the project is not yet complete. Final layouts, finishes, furnishings, materials, and design details are subject to change.
 </div>
-</section>
+</section><div class="gallery-modal" hidden="" id="galleryModal"><button aria-label="Close enlarged gallery image" class="gallery-modal-close" type="button">×</button><img alt="Enlarged gallery image"/></div>
 <section class="location"><div class="wrap location-grid">
 <img alt="The Suites at Adair" class="location-logo reveal" decoding="async" src="images/14-the-suites-at-adair.png"/>
 <div class="reveal">
@@ -366,7 +458,7 @@ FIVE PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <svg viewbox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.6-1.6h1.7V4.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2V11H8v3h2.4v8z"></path></svg>
 </a>
 </div></footer>
-<script defer="True" src="js/app.js?v=33"></script><script id="floor-plan-production-script">
+<script defer="True" src="js/app.js?v=34"></script><script id="floor-plan-production-script">
 document.addEventListener('DOMContentLoaded', () => {
   if (window.__floorPlanInitialized) return;
   window.__floorPlanInitialized = true;
@@ -376,7 +468,7 @@ const suiteData={
   2:{name:'Front Left Suite',location:'Front-facing location',status:'Available',description:'A welcoming front suite with natural light, strong visibility, and a private professional atmosphere.',features:['Front window exposure','White box ready','Build-out flexibility']},
   3:{name:'Right-Side Suite',location:'Right-side location near the coffee bar',status:'Available',description:'A private studio positioned beside the shared coffee bar, offering an intimate setting for clients.',features:['Near shared coffee bar','Private studio setting','Build-out flexibility']},
   4:{name:'Left-Side Suite',location:'Left-side location',status:'Available',description:'A flexible private suite with a comfortable footprint and separation from the front entry.',features:['Private studio setting','Flexible service layout','White box ready']},
-  5:{name:'Rear Suite',location:'Rear location near shared amenities',status:'Available',description:'A distinctive rear suite with a spacious feel and convenient proximity to the private restroom and coffee bar.',features:['Near shared amenities','Spacious rear position','Build-out flexibility']}
+  5:{name:'Rear Suite',location:'Rear location with a dedicated private entrance',status:'Available',description:'A distinctive rear suite with its own private entrance for added privacy and convenience, plus easy access to the private restroom and coffee bar.',features:['Dedicated private entrance','Near shared coffee bar and restroom','Spacious rear position','White box ready','Build-out flexibility']}
 };
 function selectSuite(number){
   const data=suiteData[number]; if(!data)return;
@@ -408,5 +500,43 @@ planModal?.querySelector('.plan-modal-close')?.addEventListener('click',()=>{pla
 planModal?.addEventListener('click',e=>{if(e.target===planModal){planModal.hidden=true;document.body.style.overflow=''}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&planModal&&!planModal.hidden){planModal.hidden=true;document.body.style.overflow=''}});
 selectSuite(1);
+
+
+// V34 gallery full-screen lightbox
+const galleryModal=document.getElementById('galleryModal');
+const galleryModalImage=galleryModal?.querySelector('img');
+function openGalleryImage(card){
+  const img=card?.querySelector('img');
+  if(!img||!galleryModal||!galleryModalImage)return;
+  galleryModalImage.src=img.currentSrc||img.src;
+  galleryModalImage.alt=img.alt||'Enlarged gallery image';
+  galleryModal.hidden=false;
+  document.body.style.overflow='hidden';
+}
+document.querySelectorAll('#gallery .gallery-card').forEach(card=>{
+  card.addEventListener('click',()=>openGalleryImage(card));
+  card.addEventListener('keydown',event=>{
+    if(event.key==='Enter'||event.key===' '){
+      event.preventDefault();
+      openGalleryImage(card);
+    }
+  });
+});
+galleryModal?.querySelector('.gallery-modal-close')?.addEventListener('click',()=>{
+  galleryModal.hidden=true;
+  document.body.style.overflow='';
+});
+galleryModal?.addEventListener('click',event=>{
+  if(event.target===galleryModal){
+    galleryModal.hidden=true;
+    document.body.style.overflow='';
+  }
+});
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'&&galleryModal&&!galleryModal.hidden){
+    galleryModal.hidden=true;
+    document.body.style.overflow='';
+  }
+});
 
 });</script></body></html>

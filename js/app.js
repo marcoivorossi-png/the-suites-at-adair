@@ -37,7 +37,7 @@ const suiteData={
   2:{name:'Front Left Suite',location:'Front-facing location',status:'Available',description:'A welcoming front suite with natural light, strong visibility, and a private professional atmosphere.',features:['Front window exposure','White box ready','Build-out flexibility']},
   3:{name:'Right-Side Suite',location:'Right-side location near the coffee bar',status:'Available',description:'A private studio positioned beside the shared coffee bar, offering an intimate setting for clients.',features:['Near shared coffee bar','Private studio setting','Build-out flexibility']},
   4:{name:'Left-Side Suite',location:'Left-side location',status:'Available',description:'A flexible private suite with a comfortable footprint and separation from the front entry.',features:['Private studio setting','Flexible service layout','White box ready']},
-  5:{name:'Rear Suite',location:'Rear location near shared amenities',status:'Available',description:'A distinctive rear suite with a spacious feel and convenient proximity to the private restroom and coffee bar.',features:['Near shared amenities','Spacious rear position','Build-out flexibility']}
+  5:{name:'Rear Suite',location:'Rear location with a dedicated private entrance',status:'Available',description:'A distinctive rear suite with its own private entrance for added privacy and convenience, plus easy access to the private restroom and coffee bar.',features:['Dedicated private entrance','Near shared coffee bar and restroom','Spacious rear position','White box ready','Build-out flexibility']}
 };
 function selectSuite(number){
   const data=suiteData[number]; if(!data)return;
@@ -69,5 +69,43 @@ planModal?.querySelector('.plan-modal-close')?.addEventListener('click',()=>{pla
 planModal?.addEventListener('click',e=>{if(e.target===planModal){planModal.hidden=true;document.body.style.overflow=''}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&planModal&&!planModal.hidden){planModal.hidden=true;document.body.style.overflow=''}});
 selectSuite(1);
+
+
+// V34 gallery full-screen lightbox
+const galleryModal=document.getElementById('galleryModal');
+const galleryModalImage=galleryModal?.querySelector('img');
+function openGalleryImage(card){
+  const img=card?.querySelector('img');
+  if(!img||!galleryModal||!galleryModalImage)return;
+  galleryModalImage.src=img.currentSrc||img.src;
+  galleryModalImage.alt=img.alt||'Enlarged gallery image';
+  galleryModal.hidden=false;
+  document.body.style.overflow='hidden';
+}
+document.querySelectorAll('#gallery .gallery-card').forEach(card=>{
+  card.addEventListener('click',()=>openGalleryImage(card));
+  card.addEventListener('keydown',event=>{
+    if(event.key==='Enter'||event.key===' '){
+      event.preventDefault();
+      openGalleryImage(card);
+    }
+  });
+});
+galleryModal?.querySelector('.gallery-modal-close')?.addEventListener('click',()=>{
+  galleryModal.hidden=true;
+  document.body.style.overflow='';
+});
+galleryModal?.addEventListener('click',event=>{
+  if(event.target===galleryModal){
+    galleryModal.hidden=true;
+    document.body.style.overflow='';
+  }
+});
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'&&galleryModal&&!galleryModal.hidden){
+    galleryModal.hidden=true;
+    document.body.style.overflow='';
+  }
+});
 
 });

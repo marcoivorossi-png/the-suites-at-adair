@@ -1,24 +1,25 @@
-# The Suites at Adair — V33 Production
+# The Suites at Adair — V34 Production
 
-This is the production-ready Cloudflare Pages project.
+Production-ready Cloudflare Pages website.
 
-## Update the live site
+## V34 updates
 
-Upload **all files and folders inside this directory** to the existing GitHub
-repository `the-suites-at-adair`, then commit the changes.
+- Suite 5 now identifies its dedicated private entrance in the floor plan,
+  description, and feature list.
+- Every gallery image is substantially larger.
+- Floor plan and gallery images open in full-screen lightboxes.
+- Existing inquiry form and Cloudflare Pages Function are preserved.
+
+## Publish
+
+Upload every file and folder inside this project to the existing GitHub
+repository `the-suites-at-adair`, replacing matching files. Commit to `main`.
 
 Do not create a new repository.
 
-Cloudflare Pages will redeploy automatically from the `main` branch.
+Cloudflare Pages will redeploy automatically.
 
-## Cloudflare build settings
-
-- Framework preset: None
-- Build command: blank
-- Build output directory: blank
-- Root directory: blank
-
-## Environment variables
+## Required Cloudflare environment variables
 
 - `RESEND_API_KEY`
 - `INQUIRY_TO_EMAIL`
