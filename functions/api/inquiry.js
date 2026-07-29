@@ -33,6 +33,7 @@ export async function onRequestPost(context) {
 
     const rows = [
       ["Name", data.full_name],
+      ["Preferred suite", data.preferred_suite],
       ["Business", data.business_name],
       ["Email", data.email],
       ["Phone", data.phone],

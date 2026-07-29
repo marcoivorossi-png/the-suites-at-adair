@@ -29,3 +29,11 @@ After adding variables, redeploy the project.
 - `images/`
 - `functions/api/inquiry.js`
 - `_headers`
+
+## V31 interactive floor plan
+
+The floor plan is interactive. Suite dimensions are intentionally marked as “coming soon” and can be updated in `js/app.js` when final measurements are available.
+
+## V32 floor plan update
+
+Adds a full-page interactive floor-plan section with five clickable suites, availability legend, labeled shared amenities, and suite-specific inquiry prefill.
