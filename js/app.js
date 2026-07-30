@@ -109,10 +109,69 @@ document.addEventListener('keydown',event=>{
 });
 
 });
-// V51 true image reveal slider
+// V52 robust image reveal slider
 document.querySelectorAll('[data-ba-slider]').forEach((slider) => {
   const control = slider.querySelector('.ba-control');
-  const update = () => slider.style.setProperty('--split', `${control.value}%`);
-  control.addEventListener('input', update);
-  update();
+
+  const setSplit = (percentage) => {
+    const clamped = Math.max(0, Math.min(100, percentage));
+    slider.style.setProperty('--split', `${clamped}%`);
+    control.value = String(Math.round(clamped));
+  };
+
+  const updateFromPointer = (event) => {
+    const rect = slider.getBoundingClientRect();
+    const percentage = ((event.clientX - rect.left) / rect.width) * 100;
+    setSplit(percentage);
+  };
+
+  let dragging = false;
+
+  slider.addEventListener('pointerdown', (event) => {
+    dragging = true;
+    slider.classList.add('is-dragging');
+    slider.setPointerCapture(event.pointerId);
+    updateFromPointer(event);
+  });
+
+  slider.addEventListener('pointermove', (event) => {
+    if (!dragging) return;
+    updateFromPointer(event);
+  });
+
+  const endDrag = (event) => {
+    if (!dragging) return;
+    dragging = false;
+    slider.classList.remove('is-dragging');
+    if (slider.hasPointerCapture(event.pointerId)) {
+      slider.releasePointerCapture(event.pointerId);
+    }
+  };
+
+  slider.addEventListener('pointerup', endDrag);
+  slider.addEventListener('pointercancel', endDrag);
+
+  slider.addEventListener('keydown', (event) => {
+    const current = parseFloat(control.value) || 50;
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      setSplit(current - 2);
+    } else if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      setSplit(current + 2);
+    } else if (event.key === 'Home') {
+      event.preventDefault();
+      setSplit(0);
+    } else if (event.key === 'End') {
+      event.preventDefault();
+      setSplit(100);
+    }
+  });
+
+  slider.setAttribute('tabindex', '0');
+  slider.setAttribute('role', 'slider');
+  slider.setAttribute('aria-valuemin', '0');
+  slider.setAttribute('aria-valuemax', '100');
+
+  setSplit(50);
 });
