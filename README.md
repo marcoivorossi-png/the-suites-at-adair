@@ -1,20 +1,11 @@
-# The Suites at Adair — V40 Production
+# The Suites at Adair — V42 Production
 
-Correct photo assignments supplied by the owner:
+This release updates only the “Five Private Suites” section:
 
-- Suite 1: 2 photos
-- Suite 2: 2 photos
-- Suite 3: 2 photos
-- Suite 4: 2 photos
-- Suite 5: 3 photos
-
-Features:
-- Suite-specific carousel beneath the suite title in the right-side panel
-- Desktop arrows, thumbnail navigation, and mobile swipe
-- Gallery grouped by Exterior, Suites 1–5, and Shared Spaces
-- Full-screen image lightbox retained
-- Interactive floor-plan highlighting retained
-- Inquiry form and Cloudflare Function retained
+- Keeps all five existing feature/stat cards and their wording
+- Removes the circled/numbered 01–05 markers
+- Replaces them with understated gold accent lines
+- Refines spacing, typography, and hover behavior
+- Preserves all galleries, suite photos, floor-plan interactions, forms, and mobile behavior
 
 Upload every file and folder to the existing GitHub repository.
-Do not create a new repository.
