@@ -33,11 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
 // V31 interactive suite floor plan
 
 const suiteData={
-  1:{name:'Front Right Suite',location:'Front-facing location',status:'Available',description:'A bright private studio with front window exposure and convenient access near the main entrance.',features:['Front window exposure','White box ready','Build-out flexibility']},
-  2:{name:'Front Left Suite',location:'Front-facing location',status:'Available',description:'A welcoming front suite with natural light, strong visibility, and a private professional atmosphere.',features:['Front window exposure','White box ready','Build-out flexibility']},
-  3:{name:'Right-Side Suite',location:'Right-side location near the coffee bar',status:'Available',description:'A private studio positioned beside the shared coffee bar, offering an intimate setting for clients.',features:['Near shared coffee bar','Private studio setting','Build-out flexibility']},
-  4:{name:'Left-Side Suite',location:'Left-side location',status:'Available',description:'A flexible private suite with a comfortable footprint and separation from the front entry.',features:['Private studio setting','Flexible service layout','White box ready']},
-  5:{name:'Rear Suite',location:'Rear location with a dedicated private entrance',status:'Available',description:'A distinctive rear suite with its own private entrance for added privacy and convenience, plus easy access to the private restroom and coffee bar.',features:['Dedicated private entrance','Near shared coffee bar and restroom','Spacious rear position','White box ready','Build-out flexibility']}
+  1:{name:'Front Right Suite',location:'Front-facing location',size:'120 SQ FT',status:'Available',description:'A front-facing private studio with an abundance of natural light.',features:['Strong visibility','Nearest to main entrance','Shampoo bowl and styling chair provided']},
+  2:{name:'Front Left Suite',location:'Front-facing location',size:'120 SQ FT',status:'Available',description:'A front-facing private studio with an abundance of natural light.',features:['Strong visibility','Nearest to main entrance','Shampoo bowl and styling chair provided']},
+  3:{name:'Right-Side Suite',location:'Right-side location near the coffee bar',size:'115 SQ FT',status:'Available',description:'A private studio positioned beside the shared coffee bar, offering an intimate setting for clients.',features:['Near shared coffee bar','Private studio setting','Build-out flexibility','Shampoo bowl and styling chair provided']},
+  4:{name:'Left-Side Suite',location:'Left-side location',size:'80 SQ FT',status:'Available',description:'A private interior suite with a comfortable footprint and separation from the front entry. Designed to accommodate a variety of estheticians.',features:['Private studio setting','Flexible service layout','Wall sink optional']},
+  5:{name:'Rear Suite',location:'Rear location with a dedicated private entrance',size:'180 SQ FT',status:'Available',description:'A distinctive rear suite with its own private entrance for added privacy and convenience, plus easy access to the private restroom and coffee bar. A flexible studio designed to accommodate one or two beauty professionals.',features:['Dedicated private entrance','Near private restroom','Spacious rear position with the largest studio','Flexible build-out for one or two professionals','Shampoo bowl and styling chair provided']}
 };
 function selectSuite(number){
   const data=suiteData[number]; if(!data)return;
@@ -47,7 +47,7 @@ function selectSuite(number){
   document.getElementById('suiteDetailName').textContent=data.name;
   document.getElementById('suiteDetailLocation').textContent=data.location;
   document.querySelector('.suite-status').textContent=data.status;
-  document.getElementById('suiteDetailSize').textContent='Dimensions coming soon';
+  document.getElementById('suiteDetailSize').textContent=data.size;
   document.getElementById('suiteDetailDescription').textContent=data.description;
   document.getElementById('suiteDetailFeatures').innerHTML=data.features.map(x=>`<li>${x}</li>`).join('');
   document.getElementById('requestSuite').textContent='Request Suite '+number;

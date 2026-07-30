@@ -21,7 +21,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>The Suites at Adair | Five Private Salon Suites</title>
 <meta content="Five private luxury salon suites in Downtown Woodstock, Georgia." name="description"/>
-<link href="css/style.css?v=67" rel="stylesheet"/><link href="images/favicon.png" rel="icon" type="image/png"/><meta content="The Suites at Adair" property="og:title"/><meta content="Five private salon suites at the edge of Downtown Woodstock." property="og:description"/><meta content="website" property="og:type"/><meta content="https://thesuitesatadair.com/" property="og:url"/><meta content="#f4efe5" name="theme-color"/><style id="floor-plan-production-styles">/* V31 interactive floor plan */
+<link href="css/style.css?v=68" rel="stylesheet"/><link href="images/favicon.png" rel="icon" type="image/png"/><meta content="The Suites at Adair" property="og:title"/><meta content="Five private salon suites at the edge of Downtown Woodstock." property="og:description"/><meta content="website" property="og:type"/><meta content="https://thesuitesatadair.com/" property="og:url"/><meta content="#f4efe5" name="theme-color"/><style id="floor-plan-production-styles">/* V31 interactive floor plan */
 .floor-plan-section{padding:110px 0;background:#f7f2e9;border-top:1px solid rgba(25,24,20,.08);border-bottom:1px solid rgba(25,24,20,.08)}
 .floor-plan-head{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:end;margin-bottom:42px}
 .floor-plan-head h2{margin:.2rem 0 0;font-size:clamp(2.8rem,5vw,5.2rem);line-height:.95}
@@ -677,6 +677,11 @@ img { max-width: 100%; }
     scroll-snap-align:center;
   }
 }
+</style><style id="v68-approved-overrides">
+.suite-square-footage{margin:18px 0 14px;padding:15px 10px;border-top:1px solid rgba(75,63,42,.13);border-bottom:1px solid rgba(75,63,42,.13);color:#171512;font-family:Georgia,serif;font-size:clamp(1.65rem,2.2vw,2.35rem);font-weight:700;line-height:1;letter-spacing:.06em;text-align:center}
+.suite-detail-meta{border-top:0;padding-top:4px}
+@media(min-width:961px){.split{grid-template-columns:minmax(0,1.28fr) minmax(360px,.72fr);min-height:680px}.split-copy{padding:7vw 5.5vw}.five .suite-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.five .suite-grid .suite:nth-child(3n){border-right:0}.five .suite-grid .suite:nth-child(-n+3){border-bottom:1px solid var(--line)}}
+@media(max-width:960px){.suite-square-footage{font-size:1.75rem}}
 </style></head>
 <body>
 <div class="announcement-bar">NOW LEASING   |   ANTICIPATED OPENING LATE 2026   |   ONLY FIVE PRIVATE SUITES AVAILABLE</div>
@@ -761,7 +766,7 @@ FIVE PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <div class="wrap">
 <div class="floor-plan-head reveal">
 <div><div class="eyebrow">Explore the layout</div><h2>Explore Our Suites.</h2><div class="floor-plan-urgency">Only five private suites available</div></div>
-<p>Select any suite on the plan or from the list to view its location, features, and current availability. Exact room dimensions will be added as they are finalized.</p>
+<p>Select any suite on the plan or from the list to view its location, features, and current availability. Select any suite on the plan or from the list to view its location, features, square footage, and current availability.</p>
 </div>
 <div class="floor-plan-layout reveal">
 <aside aria-label="Choose a suite" class="suite-picker">
@@ -775,7 +780,7 @@ FIVE PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <span><i class="status-dot available"></i> Available</span>
 <span><i class="status-dot pending"></i> Application Pending</span>
 <span><i class="status-dot leased"></i> Leased</span>
-<span class="dimensions-note">Dimensions coming soon</span>
+
 </div>
 </aside>
 <div class="floor-plan-canvas" id="floorPlanCanvas">
@@ -796,9 +801,10 @@ FIVE PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <div class="suite-detail-top"><span class="suite-detail-number">1</span><span class="suite-status">Available</span></div>
 <div class="eyebrow suite-detail-eyebrow">Suite 1</div>
 <h3 id="suiteDetailName">Front Right Suite</h3><div class="suite-photo-viewer"><button aria-label="Previous suite photo" class="suite-photo-nav suite-photo-prev" type="button">‹</button><img alt="Suite 1" decoding="async" id="suiteDetailPhoto" loading="eager" src="images/11-window-lined-private-salon-suite.jpg"/><button aria-label="Next suite photo" class="suite-photo-nav suite-photo-next" type="button">›</button><div class="suite-photo-count" id="suitePhotoCount">1 / 1</div></div><div class="suite-photo-thumbs" id="suitePhotoThumbs"></div>
-<div class="suite-detail-meta"><span id="suiteDetailLocation">Front-facing location</span><span id="suiteDetailSize">Dimensions coming soon</span></div>
-<p id="suiteDetailDescription">A private front suite with prominent window exposure and a bright, professional setting near the main entrance.</p>
-<ul id="suiteDetailFeatures"><li>Front window exposure</li><li>Build-out flexibility</li></ul>
+<div class="suite-square-footage" id="suiteDetailSize">120 SQ FT</div>
+<div class="suite-detail-meta"><span id="suiteDetailLocation">Front-facing location</span></div>
+<p id="suiteDetailDescription">A front-facing private studio with an abundance of natural light.</p>
+<ul id="suiteDetailFeatures"><li>Strong visibility</li><li>Nearest to main entrance</li><li>Shampoo bowl and styling chair provided</li></ul>
 <button class="btn gold request-suite" id="requestSuite" type="button">Request Suite 1</button>
 </aside>
 </div>
@@ -933,17 +939,17 @@ FIVE PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <svg viewbox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.6-1.6h1.7V4.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2V11H8v3h2.4v8z"></path></svg>
 </a>
 </div></footer>
-<script defer="True" src="js/app.js?v=67"></script><script id="floor-plan-production-script">
+<script defer="True" src="js/app.js?v=68"></script><script id="floor-plan-production-script">
 document.addEventListener('DOMContentLoaded', () => {
   if (window.__floorPlanInitialized) return;
   window.__floorPlanInitialized = true;
 // V31 interactive suite floor plan
 const suiteData={
-  1:{name:'Front Right Suite',location:'Front-facing location',status:'Available',description:'A bright private studio with front window exposure and convenient access near the main entrance.',features:['Front window exposure','Build-out flexibility']},
-  2:{name:'Front Left Suite',location:'Front-facing location',status:'Available',description:'A welcoming front suite with natural light, strong visibility, and a private professional atmosphere.',features:['Front window exposure','Build-out flexibility']},
-  3:{name:'Right-Side Suite',location:'Right-side location near the coffee bar',status:'Available',description:'A private studio positioned beside the shared coffee bar, offering an intimate setting for clients.',features:['Near shared coffee bar','Private studio setting','Build-out flexibility']},
-  4:{name:'Left-Side Suite',location:'Left-side location',status:'Available',description:'A flexible private suite with a comfortable footprint and separation from the front entry.',features:['Private studio setting','Flexible service layout',]},
-  5:{name:'Rear Suite',location:'Rear location with a dedicated private entrance',status:'Available',description:'A distinctive rear suite with its own private entrance for added privacy and convenience, plus easy access to the private restroom and coffee bar.',features:['Dedicated private entrance','Near shared coffee bar and restroom','Spacious rear position','Build-out flexibility']}
+  1:{name:'Front Right Suite',location:'Front-facing location',size:'120 SQ FT',status:'Available',description:'A front-facing private studio with an abundance of natural light.',features:['Strong visibility','Nearest to main entrance','Shampoo bowl and styling chair provided']},
+  2:{name:'Front Left Suite',location:'Front-facing location',size:'120 SQ FT',status:'Available',description:'A front-facing private studio with an abundance of natural light.',features:['Strong visibility','Nearest to main entrance','Shampoo bowl and styling chair provided']},
+  3:{name:'Right-Side Suite',location:'Right-side location near the coffee bar',size:'115 SQ FT',status:'Available',description:'A private studio positioned beside the shared coffee bar, offering an intimate setting for clients.',features:['Near shared coffee bar','Private studio setting','Build-out flexibility','Shampoo bowl and styling chair provided']},
+  4:{name:'Left-Side Suite',location:'Left-side location',size:'80 SQ FT',status:'Available',description:'A private interior suite with a comfortable footprint and separation from the front entry. Designed to accommodate a variety of estheticians.',features:['Private studio setting','Flexible service layout','Wall sink optional']},
+  5:{name:'Rear Suite',location:'Rear location with a dedicated private entrance',size:'180 SQ FT',status:'Available',description:'A distinctive rear suite with its own private entrance for added privacy and convenience, plus easy access to the private restroom and coffee bar. A flexible studio designed to accommodate one or two beauty professionals.',features:['Dedicated private entrance','Near private restroom','Spacious rear position with the largest studio','Flexible build-out for one or two professionals','Shampoo bowl and styling chair provided']}
 };
 
 const suitePhotos={
@@ -1019,7 +1025,7 @@ function selectSuite(number){
   document.getElementById('suiteDetailName').textContent=data.name;
   document.getElementById('suiteDetailLocation').textContent=data.location;
   document.querySelector('.suite-status').textContent=data.status;
-  document.getElementById('suiteDetailSize').textContent='Dimensions coming soon';
+  document.getElementById('suiteDetailSize').textContent=data.size;
   document.getElementById('suiteDetailDescription').textContent=data.description;
   document.getElementById('suiteDetailFeatures').innerHTML=data.features.map(x=>`<li>${x}</li>`).join('');
   document.getElementById('requestSuite').textContent='Request Suite '+number;
