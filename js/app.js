@@ -109,15 +109,10 @@ document.addEventListener('keydown',event=>{
 });
 
 });
-// V50 exterior before/after comparison
-document.querySelectorAll('[data-compare]').forEach((compare) => {
-  const range = compare.querySelector('[data-compare-range]');
-  const after = compare.querySelector('[data-compare-after]');
-  const update = () => {
-    const value = `${range.value}%`;
-    compare.style.setProperty('--compare-position', value);
-    after.style.width = value;
-  };
-  range.addEventListener('input', update);
+// V51 true image reveal slider
+document.querySelectorAll('[data-ba-slider]').forEach((slider) => {
+  const control = slider.querySelector('.ba-control');
+  const update = () => slider.style.setProperty('--split', `${control.value}%`);
+  control.addEventListener('input', update);
   update();
 });
