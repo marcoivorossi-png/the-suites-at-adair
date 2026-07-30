@@ -766,3 +766,50 @@ header{
 .split .eyebrow-number{
     display:none !important;
 }
+
+/* V48 — tighten the manifesto section on laptop screens */
+@media (min-width: 900px) and (max-width: 1500px) {
+  .manifesto {
+    padding: 72px 0 66px !important;
+  }
+
+  .manifesto .wrap {
+    width: min(1180px, 88vw);
+  }
+
+  .manifesto-grid {
+    display: block !important;
+  }
+
+  .manifesto-grid > .reveal {
+    max-width: 760px;
+  }
+
+  .manifesto h2 {
+    font-size: clamp(4rem, 5.4vw, 5.4rem) !important;
+    line-height: .91;
+    max-width: 690px;
+    margin-bottom: 20px;
+  }
+
+  .manifesto p {
+    max-width: 660px;
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+}
+
+/* Slightly tighter on shorter laptop displays */
+@media (min-width: 900px) and (max-width: 1500px) and (max-height: 900px) {
+  .manifesto {
+    padding: 52px 0 50px !important;
+  }
+
+  .manifesto h2 {
+    font-size: clamp(3.7rem, 5vw, 4.9rem) !important;
+  }
+
+  .manifesto p {
+    max-width: 620px;
+  }
+}
