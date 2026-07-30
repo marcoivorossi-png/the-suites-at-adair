@@ -1,13 +1,8 @@
-# The Suites at Adair — V36 Production Update
+# The Suites at Adair — V37 Production
 
-Updates:
-- Removed floor-plan number markers.
-- Clicking a suite card highlights the entire room in translucent gold.
-- Changed Closet to Mechanical Closet.
-- Removed all White Box wording.
-- Reordered and labeled gallery images.
-- Added Coffee Bar, Private Restroom, and Suite 4 Second View photos.
-- Existing inquiry form and Cloudflare functionality remain unchanged.
+- Suite photos now appear in the right-side details panel when a suite is selected.
+- Suite 4 and Suite 5 include next/previous photo controls.
+- Coffee Bar, Private Restroom, and Suite 4 Second View are included and labeled in the gallery.
+- Room highlighting, Mechanical Closet wording, and removal of White Box wording are preserved.
 
-Upload every file and folder in this ZIP to the existing GitHub repository.
-Do not create a new repository.
+Upload all files and folders to the existing GitHub repository.
