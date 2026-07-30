@@ -1,10 +1,20 @@
-# The Suites at Adair — V39 Production
+# The Suites at Adair — V40 Production
 
-Updates:
-- Added the new Suite 1, Suite 2, and replacement Suite 3 images.
-- Each suite now has a right-panel photo carousel with arrows, thumbnails, and mobile swipe.
-- Suite 3's old image was replaced by the four new renderings.
-- Main gallery is organized into mini showcases for Exterior, Suites 1–5, and Shared Spaces.
-- Existing floor-plan highlighting, inquiry form, labels, and mobile fixes are preserved.
+Correct photo assignments supplied by the owner:
 
-Upload all files and folders to the existing GitHub repository.
+- Suite 1: 2 photos
+- Suite 2: 2 photos
+- Suite 3: 2 photos
+- Suite 4: 2 photos
+- Suite 5: 3 photos
+
+Features:
+- Suite-specific carousel beneath the suite title in the right-side panel
+- Desktop arrows, thumbnail navigation, and mobile swipe
+- Gallery grouped by Exterior, Suites 1–5, and Shared Spaces
+- Full-screen image lightbox retained
+- Interactive floor-plan highlighting retained
+- Inquiry form and Cloudflare Function retained
+
+Upload every file and folder to the existing GitHub repository.
+Do not create a new repository.

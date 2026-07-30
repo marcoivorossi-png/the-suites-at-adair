@@ -21,7 +21,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>The Suites at Adair | Five Private Salon Suites</title>
 <meta content="Five private luxury salon suites in Downtown Woodstock, Georgia." name="description"/>
-<link href="css/style.css?v=39" rel="stylesheet"/><link href="images/favicon.png" rel="icon" type="image/png"/><meta content="The Suites at Adair" property="og:title"/><meta content="Five private salon suites at the edge of Downtown Woodstock." property="og:description"/><meta content="website" property="og:type"/><meta content="https://thesuitesatadair.com/" property="og:url"/><meta content="#f4efe5" name="theme-color"/><style id="floor-plan-production-styles">/* V31 interactive floor plan */
+<link href="css/style.css?v=40" rel="stylesheet"/><link href="images/favicon.png" rel="icon" type="image/png"/><meta content="The Suites at Adair" property="og:title"/><meta content="Five private salon suites at the edge of Downtown Woodstock." property="og:description"/><meta content="website" property="og:type"/><meta content="https://thesuitesatadair.com/" property="og:url"/><meta content="#f4efe5" name="theme-color"/><style id="floor-plan-production-styles">/* V31 interactive floor plan */
 .floor-plan-section{padding:110px 0;background:#f7f2e9;border-top:1px solid rgba(25,24,20,.08);border-bottom:1px solid rgba(25,24,20,.08)}
 .floor-plan-head{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:end;margin-bottom:42px}
 .floor-plan-head h2{margin:.2rem 0 0;font-size:clamp(2.8rem,5vw,5.2rem);line-height:.95}
@@ -572,23 +572,23 @@ img { max-width: 100%; }
 
 
 
-/* V39: suite image carousels and grouped gallery showcases */
+/* V40: correctly mapped suite galleries */
 #floor-plan .suite-photo-thumbs{
   display:flex;
   gap:8px;
-  margin:-7px 0 17px;
-  overflow-x:auto;
+  margin:-7px 0 18px;
   padding:3px 1px 5px;
+  overflow-x:auto;
   scrollbar-width:thin;
 }
 #floor-plan .suite-photo-thumb{
-  flex:0 0 62px;
-  width:62px;
-  height:48px;
+  flex:0 0 64px;
+  width:64px;
+  height:49px;
   padding:0;
+  overflow:hidden;
   border:2px solid transparent;
   border-radius:8px;
-  overflow:hidden;
   background:#eee7dc;
   cursor:pointer;
 }
@@ -596,13 +596,14 @@ img { max-width: 100%; }
   border-color:#b77b1d;
 }
 #floor-plan .suite-photo-thumb img{
+  display:block;
   width:100%;
   height:100%;
   object-fit:cover;
-  display:block;
 }
+
 .gallery-showcase{
-  margin:38px 0 54px;
+  margin:38px 0 56px;
 }
 .gallery-showcase-head{
   display:flex;
@@ -632,21 +633,32 @@ img { max-width: 100%; }
   gap:20px;
 }
 .gallery-showcase .gallery-card{
+  position:relative;
+  width:100% !important;
   height:clamp(330px,35vw,535px) !important;
   min-height:0 !important;
+  overflow:hidden;
+  border-radius:15px;
+}
+.gallery-showcase .gallery-card img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 .gallery-showcase:first-of-type .gallery-card{
   grid-column:1/-1;
   height:clamp(470px,51vw,720px) !important;
 }
+
 @media(max-width:760px){
   #floor-plan .suite-photo-thumb{
-    flex-basis:54px;
-    width:54px;
-    height:43px;
+    flex-basis:56px;
+    width:56px;
+    height:44px;
   }
   .gallery-showcase{
-    margin:30px 0 42px;
+    margin:30px 0 43px;
   }
   .gallery-showcase-rail{
     display:flex;
@@ -654,6 +666,7 @@ img { max-width: 100%; }
     overflow-x:auto;
     padding-bottom:10px;
     scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
   }
   .gallery-showcase .gallery-card,
   .gallery-showcase:first-of-type .gallery-card{
@@ -783,7 +796,7 @@ FIVE PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <button aria-label="Close enlarged floor plan" class="plan-modal-close" type="button">×</button>
 <img alt="Enlarged floor plan of The Suites at Adair" src="images/floor-plan-clean.jpg"/>
 </div>
-<section class="editorial" id="gallery"><div class="wrap"><div class="gallery-head reveal"><h2>Gallery</h2><p>Explore each private suite and the shared amenities.</p></div><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Exterior</h3><span>1 photo</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Exterior of The Suites at Adair larger" class="gallery-card" role="button" tabindex="0"><img alt="Exterior of The Suites at Adair" decoding="async" loading="eager" src="images/03-front-exterior-of-the-suites-at-adair-at-60-linton-stre.jpg"/><figcaption class="gallery-label">Exterior</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 1</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 1 larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 1" decoding="async" loading="eager" src="images/11-window-lined-private-salon-suite.jpg"/><figcaption class="gallery-label">Suite 1</figcaption></figure><figure aria-label="Open Suite 1 additional view larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 1 additional view" decoding="async" loading="eager" src="images/suite-1-new-view.jpg"/><figcaption class="gallery-label">Suite 1 · View 2</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 2</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 2 larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 2" decoding="async" loading="lazy" src="images/12-private-salon-suite-with-abundant-natural-light.jpg"/><figcaption class="gallery-label">Suite 2</figcaption></figure><figure aria-label="Open Suite 2 additional view larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 2 additional view" decoding="async" loading="lazy" src="images/suite-2-new-view.jpg"/><figcaption class="gallery-label">Suite 2 · View 2</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 3</h3><span>4 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 3 view one larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 3 view one" decoding="async" loading="lazy" src="images/suite-3-angle-1.jpg"/><figcaption class="gallery-label">Suite 3</figcaption></figure><figure aria-label="Open Suite 3 view two larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 3 view two" decoding="async" loading="lazy" src="images/suite-3-angle-2.jpg"/><figcaption class="gallery-label">Suite 3 · View 2</figcaption></figure><figure aria-label="Open Suite 3 view three larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 3 view three" decoding="async" loading="lazy" src="images/suite-3-angle-3.jpg"/><figcaption class="gallery-label">Suite 3 · View 3</figcaption></figure><figure aria-label="Open Suite 3 view four larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 3 view four" decoding="async" loading="lazy" src="images/suite-3-angle-4.jpg"/><figcaption class="gallery-label">Suite 3 · View 4</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 4</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 4 larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 4" decoding="async" loading="lazy" src="images/07-private-treatment-suite-rendering.jpg"/><figcaption class="gallery-label">Suite 4</figcaption></figure><figure aria-label="Open Suite 4 second view larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 4 second view" decoding="async" loading="lazy" src="images/suite-4-second-view.jpg"/><figcaption class="gallery-label">Suite 4 · View 2</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 5</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 5 larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 5" decoding="async" loading="lazy" src="images/10-large-salon-suite-with-styling-and-shampoo-stations.jpg"/><figcaption class="gallery-label">Suite 5</figcaption></figure><figure aria-label="Open Suite 5 second view larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 5 second view" decoding="async" loading="lazy" src="images/09-salon-suite-with-brick-wall-and-double-styling-stations.jpg"/><figcaption class="gallery-label">Suite 5 · View 2</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Shared Spaces</h3><span>4 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Shared hallway larger" class="gallery-card" role="button" tabindex="0"><img alt="Shared hallway" decoding="async" loading="lazy" src="images/05-interior-corridor-with-glass-front-private-suites.jpg"/><figcaption class="gallery-label">Shared Spaces</figcaption></figure><figure aria-label="Open Shared hallway second view larger" class="gallery-card" role="button" tabindex="0"><img alt="Shared hallway second view" decoding="async" loading="lazy" src="images/06-bright-corridor-and-hospitality-area.jpg"/><figcaption class="gallery-label">Shared Spaces · View 2</figcaption></figure><figure aria-label="Open Coffee bar larger" class="gallery-card" role="button" tabindex="0"><img alt="Coffee bar" decoding="async" loading="lazy" src="images/coffee-bar.jpg"/><figcaption class="gallery-label">Shared Spaces · View 3</figcaption></figure><figure aria-label="Open Private restroom larger" class="gallery-card" role="button" tabindex="0"><img alt="Private restroom" decoding="async" loading="lazy" src="images/private-restroom.jpg"/><figcaption class="gallery-label">Shared Spaces · View 4</figcaption></figure></div></section></div>
+<section class="editorial" id="gallery"><div class="wrap"><div class="gallery-head reveal"><h2>Gallery</h2><p>Explore each private suite and the shared amenities.</p></div><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Exterior</h3><span>1 photo</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Exterior of The Suites at Adair larger" class="gallery-card" role="button" tabindex="0"><img alt="Exterior of The Suites at Adair" decoding="async" loading="eager" src="images/03-front-exterior-of-the-suites-at-adair-at-60-linton-stre.jpg"/><figcaption class="gallery-label">Exterior</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 1</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 1 view one larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 1 view one" decoding="async" loading="eager" src="images/suite-1-view-1.jpg"/><figcaption class="gallery-label">Suite 1</figcaption></figure><figure aria-label="Open Suite 1 view two larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 1 view two" decoding="async" loading="eager" src="images/suite-1-view-2.jpg"/><figcaption class="gallery-label">Suite 1 · View 2</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 2</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 2 view one larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 2 view one" decoding="async" loading="lazy" src="images/suite-2-view-1.jpg"/><figcaption class="gallery-label">Suite 2</figcaption></figure><figure aria-label="Open Suite 2 view two larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 2 view two" decoding="async" loading="lazy" src="images/suite-2-view-2.jpg"/><figcaption class="gallery-label">Suite 2 · View 2</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 3</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 3 view one larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 3 view one" decoding="async" loading="lazy" src="images/suite-3-view-1.jpg"/><figcaption class="gallery-label">Suite 3</figcaption></figure><figure aria-label="Open Suite 3 view two larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 3 view two" decoding="async" loading="lazy" src="images/suite-3-view-2.jpg"/><figcaption class="gallery-label">Suite 3 · View 2</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 4</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 4 view one larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 4 view one" decoding="async" loading="lazy" src="images/suite-4-view-1.jpg"/><figcaption class="gallery-label">Suite 4</figcaption></figure><figure aria-label="Open Suite 4 view two larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 4 view two" decoding="async" loading="lazy" src="images/suite-4-view-2.jpg"/><figcaption class="gallery-label">Suite 4 · View 2</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 5</h3><span>3 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 5 view one larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 5 view one" decoding="async" loading="lazy" src="images/10-large-salon-suite-with-styling-and-shampoo-stations.jpg"/><figcaption class="gallery-label">Suite 5</figcaption></figure><figure aria-label="Open Suite 5 view two larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 5 view two" decoding="async" loading="lazy" src="images/09-salon-suite-with-brick-wall-and-double-styling-stations.jpg"/><figcaption class="gallery-label">Suite 5 · View 2</figcaption></figure><figure aria-label="Open Suite 5 view three larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 5 view three" decoding="async" loading="lazy" src="images/suite-5-view-3.jpg"/><figcaption class="gallery-label">Suite 5 · View 3</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Shared Spaces</h3><span>4 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Shared hallway larger" class="gallery-card" role="button" tabindex="0"><img alt="Shared hallway" decoding="async" loading="lazy" src="images/05-interior-corridor-with-glass-front-private-suites.jpg"/><figcaption class="gallery-label">Shared Spaces</figcaption></figure><figure aria-label="Open Shared hallway second view larger" class="gallery-card" role="button" tabindex="0"><img alt="Shared hallway second view" decoding="async" loading="lazy" src="images/06-bright-corridor-and-hospitality-area.jpg"/><figcaption class="gallery-label">Shared Spaces · View 2</figcaption></figure><figure aria-label="Open Coffee bar larger" class="gallery-card" role="button" tabindex="0"><img alt="Coffee bar" decoding="async" loading="lazy" src="images/coffee-bar.jpg"/><figcaption class="gallery-label">Shared Spaces · View 3</figcaption></figure><figure aria-label="Open Private restroom larger" class="gallery-card" role="button" tabindex="0"><img alt="Private restroom" decoding="async" loading="lazy" src="images/private-restroom.jpg"/><figcaption class="gallery-label">Shared Spaces · View 4</figcaption></figure></div></section></div>
 <div class="rendering-notice reveal">
 <strong>Conceptual Renderings</strong>
   The images shown throughout this website include conceptual renderings intended to illustrate the planned design and vision for The Suites at Adair. Construction is currently underway, and the project is not yet complete. Final layouts, finishes, furnishings, materials, and design details are subject to change.
@@ -908,7 +921,7 @@ FIVE PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <svg viewbox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.6-1.6h1.7V4.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2V11H8v3h2.4v8z"></path></svg>
 </a>
 </div></footer>
-<script defer="True" src="js/app.js?v=39"></script><script id="floor-plan-production-script">
+<script defer="True" src="js/app.js?v=40"></script><script id="floor-plan-production-script">
 document.addEventListener('DOMContentLoaded', () => {
   if (window.__floorPlanInitialized) return;
   window.__floorPlanInitialized = true;
@@ -923,26 +936,25 @@ const suiteData={
 
 const suitePhotos={
   1:[
-    {src:'images/11-window-lined-private-salon-suite.jpg',alt:'Suite 1'},
-    {src:'images/suite-1-new-view.jpg',alt:'Suite 1 additional view'}
+    {src:'images/suite-1-view-1.jpg',alt:'Suite 1 view one'},
+    {src:'images/suite-1-view-2.jpg',alt:'Suite 1 view two'}
   ],
   2:[
-    {src:'images/12-private-salon-suite-with-abundant-natural-light.jpg',alt:'Suite 2'},
-    {src:'images/suite-2-new-view.jpg',alt:'Suite 2 additional view'}
+    {src:'images/suite-2-view-1.jpg',alt:'Suite 2 view one'},
+    {src:'images/suite-2-view-2.jpg',alt:'Suite 2 view two'}
   ],
   3:[
-    {src:'images/suite-3-angle-1.jpg',alt:'Suite 3 view one'},
-    {src:'images/suite-3-angle-2.jpg',alt:'Suite 3 view two'},
-    {src:'images/suite-3-angle-3.jpg',alt:'Suite 3 view three'},
-    {src:'images/suite-3-angle-4.jpg',alt:'Suite 3 view four'}
+    {src:'images/suite-3-view-1.jpg',alt:'Suite 3 view one'},
+    {src:'images/suite-3-view-2.jpg',alt:'Suite 3 view two'}
   ],
   4:[
-    {src:'images/07-private-treatment-suite-rendering.jpg',alt:'Suite 4'},
-    {src:'images/suite-4-second-view.jpg',alt:'Suite 4 second view'}
+    {src:'images/suite-4-view-1.jpg',alt:'Suite 4 view one'},
+    {src:'images/suite-4-view-2.jpg',alt:'Suite 4 view two'}
   ],
   5:[
-    {src:'images/10-large-salon-suite-with-styling-and-shampoo-stations.jpg',alt:'Suite 5'},
-    {src:'images/09-salon-suite-with-brick-wall-and-double-styling-stations.jpg',alt:'Suite 5 second view'}
+    {src:'images/10-large-salon-suite-with-styling-and-shampoo-stations.jpg',alt:'Suite 5 view one'},
+    {src:'images/09-salon-suite-with-brick-wall-and-double-styling-stations.jpg',alt:'Suite 5 view two'},
+    {src:'images/suite-5-view-3.jpg',alt:'Suite 5 view three'}
   ]
 };
 let activeSuiteNumber=1;
@@ -953,15 +965,35 @@ function renderSuitePhoto(){
   const image=document.getElementById('suiteDetailPhoto');
   const count=document.getElementById('suitePhotoCount');
   const thumbs=document.getElementById('suitePhotoThumbs');
-  if(image&&photo){ image.src=photo.src; image.alt=photo.alt; }
-  if(count) count.textContent=photos.length?`${activeSuitePhotoIndex+1} / ${photos.length}`:'';
-  document.querySelectorAll('.suite-photo-nav').forEach(btn=>btn.hidden=photos.length<2);
+
+  if(image&&photo){
+    image.src=photo.src;
+    image.alt=photo.alt;
+  }
+  if(count){
+    count.textContent=photos.length?`${activeSuitePhotoIndex+1} / ${photos.length}`:'';
+  }
+
+  document.querySelectorAll('.suite-photo-nav').forEach(button=>{
+    button.hidden=photos.length<2;
+  });
+
   if(thumbs){
-    thumbs.innerHTML=photos.map((item,index)=>`<button type="button" class="suite-photo-thumb ${index===activeSuitePhotoIndex?'active':''}" data-photo-index="${index}" aria-label="View photo ${index+1}"><img src="${item.src}" alt=""></button>`).join('');
-    thumbs.querySelectorAll('.suite-photo-thumb').forEach(btn=>btn.addEventListener('click',()=>{
-      activeSuitePhotoIndex=Number(btn.dataset.photoIndex);
-      renderSuitePhoto();
-    }));
+    thumbs.innerHTML=photos.map((item,index)=>`
+      <button type="button"
+              class="suite-photo-thumb ${index===activeSuitePhotoIndex?'active':''}"
+              data-photo-index="${index}"
+              aria-label="View photo ${index+1}">
+        <img src="${item.src}" alt="">
+      </button>
+    `).join('');
+
+    thumbs.querySelectorAll('.suite-photo-thumb').forEach(button=>{
+      button.addEventListener('click',()=>{
+        activeSuitePhotoIndex=Number(button.dataset.photoIndex);
+        renderSuitePhoto();
+      });
+    });
   }
 }
 
@@ -1014,16 +1046,20 @@ document.querySelector('.suite-photo-next')?.addEventListener('click',()=>{
 
 let suitePhotoTouchStart=0;
 const suitePhotoViewer=document.querySelector('.suite-photo-viewer');
+
 suitePhotoViewer?.addEventListener('touchstart',event=>{
   suitePhotoTouchStart=event.changedTouches[0].clientX;
 },{passive:true});
+
 suitePhotoViewer?.addEventListener('touchend',event=>{
-  const delta=event.changedTouches[0].clientX-suitePhotoTouchStart;
   const photos=suitePhotos[activeSuiteNumber]||[];
+  const delta=event.changedTouches[0].clientX-suitePhotoTouchStart;
   if(photos.length<2||Math.abs(delta)<45)return;
+
   activeSuitePhotoIndex=delta<0
     ?(activeSuitePhotoIndex+1)%photos.length
     :(activeSuitePhotoIndex-1+photos.length)%photos.length;
+
   renderSuitePhoto();
 },{passive:true});
 
