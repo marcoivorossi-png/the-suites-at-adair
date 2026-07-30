@@ -1,11 +1,12 @@
-# The Suites at Adair — V42 Production
+# V43 Emergency Fix
 
-This release updates only the “Five Private Suites” section:
+This build is restored from the last stable V40 production version.
 
-- Keeps all five existing feature/stat cards and their wording
-- Removes the circled/numbered 01–05 markers
-- Replaces them with understated gold accent lines
-- Refines spacing, typography, and hover behavior
-- Preserves all galleries, suite photos, floor-plan interactions, forms, and mobile behavior
+Only one section was changed:
+- Kept all five existing feature/statistic cards
+- Removed the visible 01–05 markers
+- Added small gold accent lines
+- Added subtle spacing and hover refinement
 
-Upload every file and folder to the existing GitHub repository.
+No images are embedded into the HTML.
+Upload the CONTENTS of this folder to the root of the existing GitHub repository.
