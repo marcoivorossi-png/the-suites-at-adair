@@ -755,3 +755,14 @@ header{
   background-size: cover !important;
   background-repeat: no-repeat !important;
 }
+
+/* V46 remove decorative editorial section numeral */
+.editorial .section-number,
+.editorial .eyebrow-number,
+.editorial .display-number,
+.editorial .count,
+.editorial .number,
+.split .section-number,
+.split .eyebrow-number{
+    display:none !important;
+}
