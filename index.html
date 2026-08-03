@@ -22,7 +22,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>The Suites at Adair | Four Private Salon Suites</title>
 <meta content="Four private luxury salon suites in Downtown Woodstock, Georgia, with a breakroom and virtual walkthrough." name="description"/>
-<link href="css/style.css?v=68" rel="stylesheet"/><link href="images/favicon.png" rel="icon" type="image/png"/><meta content="The Suites at Adair" property="og:title"/><meta content="Four private salon suites at the edge of Downtown Woodstock, with a private breakroom and virtual walkthrough." property="og:description"/><meta content="website" property="og:type"/><meta content="https://thesuitesatadair.com/" property="og:url"/><meta content="#f4efe5" name="theme-color"/><style id="floor-plan-production-styles">/* V31 interactive floor plan */
+<link href="css/style.css?v=78" rel="stylesheet"/><link href="images/favicon.png" rel="icon" type="image/png"/><meta content="The Suites at Adair" property="og:title"/><meta content="Four private salon suites at the edge of Downtown Woodstock, with a private breakroom and virtual walkthrough." property="og:description"/><meta content="website" property="og:type"/><meta content="https://thesuitesatadair.com/" property="og:url"/><meta content="#f4efe5" name="theme-color"/><style id="floor-plan-production-styles">/* V31 interactive floor plan */
 .floor-plan-section{padding:110px 0;background:#f7f2e9;border-top:1px solid rgba(25,24,20,.08);border-bottom:1px solid rgba(25,24,20,.08)}
 .floor-plan-head{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:end;margin-bottom:42px}
 .floor-plan-head h2{margin:.2rem 0 0;font-size:clamp(2.8rem,5vw,5.2rem);line-height:.95}
@@ -737,7 +737,7 @@ img { max-width: 100%; }
 .video-modal[hidden]{display:none}
 .video-modal-inner{width:min(92vw,760px);max-height:92vh;display:flex;flex-direction:column;align-items:center;gap:13px;color:#fff}
 .video-modal-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3.4rem)}
-.video-modal video{display:block;max-width:100%;max-height:76vh;background:#000;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.video-modal video,.video-modal iframe{display:block;width:min(92vw,430px);aspect-ratio:9/16;max-height:76vh;border:0;background:#000;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
 .video-modal p{margin:0;color:rgba(255,255,255,.65);font-size:.78rem;text-align:center;line-height:1.5}
 .video-modal-close{position:fixed;right:22px;top:18px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.4);color:#fff;font-size:2rem;cursor:pointer;z-index:2}
 @media(max-width:760px){
@@ -1177,12 +1177,13 @@ document.addEventListener('keydown',event=>{
   }
 });
 
-});</script><div class="video-modal" hidden="" id="virtualTourModal"><button aria-label="Close virtual walkthrough" class="video-modal-close" type="button">×</button><div class="video-modal-inner"><div class="video-modal-title">Virtual Walkthrough</div><video controls="" id="virtualTourVideo" playsinline="" poster="images/new-suite-rendering-1.jpg" preload="metadata"><source src="videos/virtual-walkthrough.mp4" type="video/mp4"/></video><p>Conceptual virtual walkthrough. Final construction, finishes, furnishings, and layouts may vary.</p></div></div><script id="v72-video-script">
+});</script><div class="video-modal" hidden="" id="virtualTourModal"><button aria-label="Close virtual walkthrough" class="video-modal-close" type="button">×</button><div class="video-modal-inner"><div class="video-modal-title">Virtual Walkthrough</div><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="virtualTourVideo" referrerpolicy="strict-origin-when-cross-origin" title="The Suites at Adair virtual walkthrough"></iframe><p>Conceptual virtual walkthrough. Final construction, finishes, furnishings, and layouts may vary.</p></div></div><script id="v78-youtube-video-script">
 document.addEventListener('DOMContentLoaded',()=>{
  const modal=document.getElementById('virtualTourModal');
- const video=document.getElementById('virtualTourVideo');
- const open=()=>{if(!modal)return;modal.hidden=false;document.body.style.overflow='hidden';};
- const close=()=>{if(!modal)return;modal.hidden=true;document.body.style.overflow='';if(video)video.pause();};
+ const player=document.getElementById('virtualTourVideo');
+ const youtubeUrl='https://www.youtube-nocookie.com/embed/SQgVMgyodno?autoplay=1&rel=0&playsinline=1';
+ const open=()=>{if(!modal)return;if(player)player.src=youtubeUrl;modal.hidden=false;document.body.style.overflow='hidden';};
+ const close=()=>{if(!modal)return;modal.hidden=true;document.body.style.overflow='';if(player)player.src='';};
  document.querySelectorAll('.virtual-tour-trigger').forEach(btn=>btn.addEventListener('click',open));
  modal?.querySelector('.video-modal-close')?.addEventListener('click',close);
  modal?.addEventListener('click',e=>{if(e.target===modal)close();});
