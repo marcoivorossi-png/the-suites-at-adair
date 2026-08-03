@@ -13,3 +13,10 @@ The five existing feature items remain unchanged except:
 - small gold accent lines added
 
 Upload all contents of this unzipped folder to the repository root.
+
+## V72 updates
+- Updated from five suites to four suites.
+- Added the new labeled floor plan with Suites 1–4 and the breakroom.
+- Added the latest private-suite and breakroom renderings.
+- Added a web-optimized H.264 virtual walkthrough and modal player.
+- Preserved the approved visual design, feature highlights, navigation, contact form, and interactions.
