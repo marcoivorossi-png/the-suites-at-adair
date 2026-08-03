@@ -678,6 +678,15 @@ img { max-width: 100%; }
     scroll-snap-align:center;
   }
 }
+
+/* V74: virtual tour near top and restored original Suite 1/2 gallery photos */
+.virtual-tour-feature{padding-top:clamp(64px,8vw,110px);padding-bottom:clamp(64px,8vw,110px);background:#f4efe5;}
+.virtual-tour-feature .gallery-head{margin-bottom:28px;}
+.virtual-tour-top{margin-top:0;}
+.virtual-tour-top .gallery-showcase-head{display:none;}
+.virtual-tour-top .gallery-showcase-rail{display:block;}
+.virtual-tour-feature .gallery-video-card{height:clamp(360px,52vw,680px);}
+@media(max-width:760px){.virtual-tour-feature{padding-top:56px;padding-bottom:56px}.virtual-tour-feature .gallery-video-card{height:420px;}}
 </style><style id="v68-approved-overrides">
 .suite-square-footage{margin:18px 0 14px;padding:15px 10px;border-top:1px solid rgba(75,63,42,.13);border-bottom:1px solid rgba(75,63,42,.13);color:#171512;font-family:Georgia,serif;font-size:clamp(1.65rem,2.2vw,2.35rem);font-weight:700;line-height:1;letter-spacing:.06em;text-align:center}
 .suite-detail-meta{border-top:0;padding-top:4px}
@@ -742,7 +751,7 @@ img { max-width: 100%; }
 <div class="announcement-bar">NOW LEASING   |   ANTICIPATED OPENING LATE 2026   |   ONLY FOUR PRIVATE SUITES AVAILABLE</div>
 <header id="hdr"><div class="wrap"><nav>
 <a class="brand" href="#top"><img alt="SA" decoding="async" src="images/01-sa.png"/><span>The Suites at Adair</span></a>
-<div class="links"><a href="#story">Vision</a><a href="#suites">Four Suites</a><a href="#floor-plan">Floor Plan</a><a href="#gallery">Gallery</a><a class="btn gold" href="#apply">Request Information</a></div>
+<div class="links"><a href="#story">Vision</a><a href="#suites">Four Suites</a><a href="#virtual-tour">Virtual Tour</a><a href="#floor-plan">Floor Plan</a><a href="#gallery">Gallery</a><a class="btn gold" href="#apply">Request Information</a></div>
 <div class="social-links">
 <a aria-label="Instagram" href="#">
 <svg viewbox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.2A4.8 4.8 0 1 0 16.8 12 4.8 4.8 0 0 0 12 7.2zm0 1.8A3 3 0 1 1 9 12a3 3 0 0 1 3-3zm5.2-2.9a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1z"></path></svg>
@@ -785,7 +794,7 @@ FOUR PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <h2>Not another maze of salon rooms.</h2>
 <p>The Suites at Adair is a boutique collection of only four private studios. The smaller scale creates an intimate atmosphere, a stronger sense of identity, and a more elevated experience for every professional and every client.</p>
 </div>
-</div></section>
+</div></section><section class="editorial virtual-tour-feature" id="virtual-tour"><div class="wrap"><div class="gallery-head reveal"><h2>Take a Virtual Tour</h2><p>Walk through the new four-suite layout, including the private studios and shared breakroom.</p></div><section class="gallery-showcase reveal virtual-tour-showcase virtual-tour-top"><div class="gallery-showcase-head"><h3>Virtual Walkthrough</h3><span>Full tour</span></div><div class="gallery-showcase-rail"><button aria-label="Play the virtual walkthrough" class="gallery-video-card virtual-tour-trigger" type="button"><img alt="Virtual walkthrough preview" decoding="async" loading="lazy" src="images/new-suite-rendering-1.jpg"/><span class="gallery-video-play">▶</span><span class="gallery-video-caption">Take a Virtual Tour</span></button></div></section></div></section>
 <section class="brand-experience">
 <div class="brand-experience-slider">
 <div class="ba-slider" data-ba-slider="" style="--split:50%;">
@@ -831,11 +840,6 @@ FOUR PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <div class="floor-plan-layout reveal">
 <aside aria-label="Choose a suite" class="suite-picker">
 <div class="suite-picker-title">Four Private Suites</div>
-
-
-
-
-
 <button class="suite-choice" data-suite="4" type="button"><span>4</span><strong>Suite 4</strong><small>Back left</small></button><button class="suite-choice" data-suite="3" type="button"><span>3</span><strong>Suite 3</strong><small>Right side</small></button><button class="suite-choice" data-suite="2" type="button"><span>2</span><strong>Suite 2</strong><small>Front right</small></button><button class="suite-choice active" data-suite="1" type="button"><span>1</span><strong>Suite 1</strong><small>Front left</small></button><div class="suite-legend">
 <span><i class="status-dot available"></i> Available</span>
 <span><i class="status-dot pending"></i> Application Pending</span>
@@ -843,23 +847,17 @@ FOUR PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 </div>
 </aside>
 <div class="floor-plan-canvas" id="floorPlanCanvas">
-<img alt="Floor plan of The Suites at Adair showing four private salon suites and the breakroom" decoding="async" loading="lazy" src="images/floor-plan-four-suites-labeled.jpg">
+<img alt="Floor plan of The Suites at Adair showing four private salon suites and the breakroom" decoding="async" loading="lazy" src="images/floor-plan-four-suites-labeled.jpg"/>
 <div class="suite-highlight active" data-suite="1"></div>
 <div class="suite-highlight" data-suite="2"></div>
 <div class="suite-highlight" data-suite="3"></div>
 <div class="suite-highlight" data-suite="4"></div>
-
-
-
-
-
-
 <button aria-label="Open floor plan larger" class="plan-expand" id="planExpand" type="button">View Larger</button>
-</img></div>
+</div>
 <aside aria-live="polite" class="suite-detail">
 <div class="suite-detail-top"><span class="suite-detail-number">1</span><span class="suite-status">Available</span></div>
 <div class="eyebrow suite-detail-eyebrow">Suite 1</div>
-<h3 id="suiteDetailName">Front Left Suite</h3><div class="suite-photo-viewer"><button aria-label="Previous suite photo" class="suite-photo-nav suite-photo-prev" type="button">‹</button><img alt="Conceptual private suite rendering" decoding="async" id="suiteDetailPhoto" loading="eager" src="images/new-suite-rendering-1.jpg"><button aria-label="Next suite photo" class="suite-photo-nav suite-photo-next" type="button">›</button><div class="suite-photo-count" id="suitePhotoCount">1 / 1</div></img></div><div class="suite-photo-thumbs" id="suitePhotoThumbs"></div>
+<h3 id="suiteDetailName">Front Left Suite</h3><div class="suite-photo-viewer"><button aria-label="Previous suite photo" class="suite-photo-nav suite-photo-prev" type="button">‹</button><img alt="Conceptual private suite rendering" decoding="async" id="suiteDetailPhoto" loading="eager" src="images/new-suite-rendering-1.jpg"/><button aria-label="Next suite photo" class="suite-photo-nav suite-photo-next" type="button">›</button><div class="suite-photo-count" id="suitePhotoCount">1 / 1</div></div><div class="suite-photo-thumbs" id="suitePhotoThumbs"></div>
 <div class="suite-square-footage" id="suiteDetailSize">Details Available Upon Request</div>
 <div class="suite-detail-meta"><span id="suiteDetailLocation">Front-left location near the main entrance</span></div>
 <p id="suiteDetailDescription">A bright, front-facing private studio designed for a polished and comfortable client experience.</p>
@@ -871,9 +869,9 @@ FOUR PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 </section>
 <div class="plan-modal" hidden="" id="planModal">
 <button aria-label="Close enlarged floor plan" class="plan-modal-close" type="button">×</button>
-<img alt="Enlarged floor plan showing four suites and breakroom" src="images/floor-plan-four-suites-labeled.jpg">
-</img></div>
-<section class="editorial" id="gallery"><div class="wrap"><div class="gallery-head reveal"><h2>Gallery</h2><p>Explore each private suite and the shared amenities.</p></div><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Exterior</h3><span>1 photo</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Exterior of The Suites at Adair larger" class="gallery-card" role="button" tabindex="0"><img alt="Exterior of The Suites at Adair" decoding="async" loading="eager" src="images/exterior-gallery-new-v64.jpg"/><figcaption class="gallery-label">Exterior</figcaption></figure></div></section><section class="gallery-showcase reveal virtual-tour-showcase"><div class="gallery-showcase-head"><h3>Virtual Walkthrough</h3><span>Full tour</span></div><div class="gallery-showcase-rail"><button aria-label="Play the virtual walkthrough" class="gallery-video-card virtual-tour-trigger" type="button"><img alt="Virtual walkthrough preview" decoding="async" loading="lazy" src="images/new-suite-rendering-1.jpg"/><span class="gallery-video-play">▶</span><span class="gallery-video-caption">Take a Virtual Tour</span></button></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Private Suite Renderings</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Private salon suite conceptual rendering larger" class="gallery-card" role="button" tabindex="0"><img alt="Private salon suite conceptual rendering" decoding="async" loading="lazy" src="images/new-suite-rendering-1.jpg"/><figcaption class="gallery-label">Private Suite Rendering</figcaption></figure><figure aria-label="Open Spacious private salon suite conceptual rendering larger" class="gallery-card" role="button" tabindex="0"><img alt="Spacious private salon suite conceptual rendering" decoding="async" loading="lazy" src="images/new-suite-rendering-2.jpg"/><figcaption class="gallery-label">Private Suite Rendering · View 2</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Breakroom</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Breakroom conceptual rendering with coffee bar and seating larger" class="gallery-card" role="button" tabindex="0"><img alt="Breakroom conceptual rendering with coffee bar and seating" decoding="async" loading="lazy" src="images/new-breakroom-rendering-1.jpg"/><figcaption class="gallery-label">Breakroom</figcaption></figure><figure aria-label="Open Breakroom conceptual rendering with sink and lounge seating larger" class="gallery-card" role="button" tabindex="0"><img alt="Breakroom conceptual rendering with sink and lounge seating" decoding="async" loading="lazy" src="images/new-breakroom-rendering-2.jpg"/><figcaption class="gallery-label">Breakroom · View 2</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Floor Plan</h3><span>1 image</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Labeled floor plan with Suites 1 through 4 and breakroom larger" class="gallery-card" role="button" tabindex="0"><img alt="Labeled floor plan with Suites 1 through 4 and breakroom" decoding="async" loading="lazy" src="images/floor-plan-four-suites-labeled.jpg"/><figcaption class="gallery-label">Four-Suite Floor Plan</figcaption></figure></div></section></div>
+<img alt="Enlarged floor plan showing four suites and breakroom" src="images/floor-plan-four-suites-labeled.jpg"/>
+</div>
+<section class="editorial" id="gallery"><div class="wrap"><div class="gallery-head reveal"><h2>Gallery</h2><p>Explore each private suite and the shared amenities.</p></div><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Exterior</h3><span>1 photo</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Exterior of The Suites at Adair larger" class="gallery-card" role="button" tabindex="0"><img alt="Exterior of The Suites at Adair" decoding="async" loading="eager" src="images/exterior-gallery-new-v64.jpg"/><figcaption class="gallery-label">Exterior</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Original Suite 1 &amp; Suite 2 Gallery</h3><span>4 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 1 larger" class="gallery-card" role="button" tabindex="0"><img alt="Original Suite 1 gallery photo" decoding="async" loading="lazy" src="images/suite-1-view-1.jpg"/><figcaption class="gallery-label">Suite 1</figcaption></figure><figure aria-label="Open Suite 1 · View 2 larger" class="gallery-card" role="button" tabindex="0"><img alt="Original Suite 1 gallery photo, second view" decoding="async" loading="lazy" src="images/suite-1-view-2.jpg"/><figcaption class="gallery-label">Suite 1 · View 2</figcaption></figure><figure aria-label="Open Suite 2 larger" class="gallery-card" role="button" tabindex="0"><img alt="Original Suite 2 gallery photo" decoding="async" loading="lazy" src="images/suite-2-view-1.jpg"/><figcaption class="gallery-label">Suite 2</figcaption></figure><figure aria-label="Open Suite 2 · View 2 larger" class="gallery-card" role="button" tabindex="0"><img alt="Original Suite 2 gallery photo, second view" decoding="async" loading="lazy" src="images/suite-2-view-2.jpg"/><figcaption class="gallery-label">Suite 2 · View 2</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>New Suite Renderings</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Private salon suite conceptual rendering larger" class="gallery-card" role="button" tabindex="0"><img alt="Private salon suite conceptual rendering" decoding="async" loading="lazy" src="images/new-suite-rendering-1.jpg"/><figcaption class="gallery-label">Private Suite Rendering</figcaption></figure><figure aria-label="Open Spacious private salon suite conceptual rendering larger" class="gallery-card" role="button" tabindex="0"><img alt="Spacious private salon suite conceptual rendering" decoding="async" loading="lazy" src="images/new-suite-rendering-2.jpg"/><figcaption class="gallery-label">Private Suite Rendering · View 2</figcaption></figure></div></section><section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Breakroom</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Breakroom conceptual rendering with coffee bar and seating larger" class="gallery-card" role="button" tabindex="0"><img alt="Breakroom conceptual rendering with coffee bar and seating" decoding="async" loading="lazy" src="images/new-breakroom-rendering-1.jpg"/><figcaption class="gallery-label">Breakroom</figcaption></figure><figure aria-label="Open Breakroom conceptual rendering with sink and lounge seating larger" class="gallery-card" role="button" tabindex="0"><img alt="Breakroom conceptual rendering with sink and lounge seating" decoding="async" loading="lazy" src="images/new-breakroom-rendering-2.jpg"/><figcaption class="gallery-label">Breakroom · View 2</figcaption></figure></div></section></div>
 <div class="rendering-notice reveal">
 <strong>Conceptual Renderings</strong>
   The images shown throughout this website include conceptual renderings intended to illustrate the planned design and vision for The Suites at Adair. Construction is currently underway, and the project is not yet complete. Final layouts, finishes, furnishings, materials, and design details are subject to change.
@@ -969,7 +967,7 @@ FOUR PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <p>Leasing opportunities are now available for independent beauty professionals seeking a premium studio environment in Downtown Woodstock. With only four private suites available, early inquiries are encouraged ahead of the anticipated late-2026 opening.</p>
 </div>
 </div>
-<form action="/api/inquiry" class="reveal" id="interestForm" method="post"><input id="preferred-suite" name="preferred_suite" type="hidden" value="">
+<form action="/api/inquiry" class="reveal" id="interestForm" method="post"><input id="preferred-suite" name="preferred_suite" type="hidden" value=""/>
 <p hidden=""><label>Do not fill this out: </label></p>
 <div class="form-grid">
 <div class="field"><label for="full-name">Full name</label><input autocomplete="name" id="full-name" name="full_name" required=""/></div>
@@ -986,7 +984,7 @@ FOUR PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 </div>
 <div class="success" hidden="" id="success" role="status"><strong>Thank you!</strong><br/>We’ve received your inquiry. A member of The Suites at Adair team will contact you within one business day.</div>
 <div class="success" hidden="" id="formError" role="alert">Something went wrong. Please try again or contact us directly.</div>
-</input></form>
+</form>
 </div>
 </section>
 </main>
