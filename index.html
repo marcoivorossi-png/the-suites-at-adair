@@ -1181,10 +1181,7 @@ document.addEventListener('keydown',event=>{
   }
 });
 
-});</script><div class="video-modal" hidden="" id="virtualTourModal"><button aria-label="Close virtual walkthrough" class="video-modal-close" type="button">× </button><div class="video-modal-inner"><div<video id="virtualTourVideo" controls playsinline preload="metadata">
-  <source src="images/virtual-tour-desktop.mp4" media="(min-width: 768px)" type="video/mp4">
-  <source src="images/virtual-tour-final.mp4" media="(max-width: 767px)" type="video/mp4">
-</video> <div class="video-modal-title">Virtual Walkthrough</div><video id="virtualTourVideo" controls playsinline preload="metadata"><source src="images/virtual-tour-desktop.mp4" media="(min-width: 768px)" type="video/mp4"><source src="images/virtual-tour-final.mp4" media="(max-width: 767px)" type="video/mp4"></video><<div class="video-modal" hidden id="virtualTourModal">
+});</script><div class="video-modal" hidden id="virtualTourModal">
   <button
     aria-label="Close virtual walkthrough"
     class="video-modal-close"
@@ -1196,22 +1193,8 @@ document.addEventListener('keydown',event=>{
   <div class="video-modal-inner">
     <div class="video-modal-title">Virtual Walkthrough</div>
 
-    <video
-      id="virtualTourVideo"
-      controls
-      playsinline
-      preload="metadata"
-    >
-      <source
-        src="images/virtual-tour-desktop.mp4"
-        media="(min-width: 768px)"
-        type="video/mp4"
-      >
-      <source
-        src="images/virtual-tour-final.mp4"
-        media="(max-width: 767px)"
-        type="video/mp4"
-      >
+    <video id="virtualTourVideo" controls playsinline preload="metadata">
+      <source src="images/virtual-tour-desktop.mp4" type="video/mp4">
     </video>
 
     <p>
@@ -1219,7 +1202,9 @@ document.addEventListener('keydown',event=>{
       furnishings, and layouts may vary.
     </p>
   </div>
-</div><script id="v78-local-video-script">
+</div>
+
+<script id="v78-local-video-script">
 document.addEventListener('DOMContentLoaded',()=>{
  const modal=document.getElementById('virtualTourModal');
  const player=document.getElementById('virtualTourVideo');
