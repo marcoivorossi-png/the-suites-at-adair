@@ -735,9 +735,7 @@ img { max-width: 100%; }
 .gallery-video-caption{position:absolute;left:28px;bottom:24px;color:#fff;font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.8rem)}
 .video-modal{position:fixed;inset:0;z-index:9999;background:rgba(10,9,8,.94);display:grid;place-items:center;padding:24px}
 .video-modal[hidden]{display:none}
-.video-modal-inner{
-    width:98vw;
-    max-width:1800px;;max-height:92vh;display:flex;flex-direction:column;align-items:center;gap:13px;color:#fff}
+.video-modal-inner{width:min(98vw,1200px);max-height:92vh;display:flex;flex-direction:column;align-items:center;gap:13px;color:#fff}
 .video-modal-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3.4rem)}
 .video-modal video{
   display:block;
@@ -753,25 +751,7 @@ img { max-width: 100%; }
  .gallery-video-card{height:420px}
  .video-modal{padding:14px}.video-modal-close{right:10px;top:10px}
 }
-}
-
-#virtualTourModal .video-modal-inner {
-  width: 100vw !important;
-  max-width: none !important;
-  height: 100vh !important;
-  max-height: none !important;
-  padding: 60px 20px 20px !important;
-}
-
-#virtualTourModal #virtualTourVideo {
-  width: auto !important;
-  height: 90vh !important;
-  max-width: 100% !important;
-  max-height: calc(100vh - 150px) !important;
-  object-fit: contain !important;
-}
-
-</head>
+</style></head>
 <body>
 <div class="announcement-bar">NOW LEASING   |   ANTICIPATED OPENING LATE 2026   |   ONLY FOUR PRIVATE SUITES AVAILABLE</div>
 <header id="hdr"><div class="wrap"><nav>
