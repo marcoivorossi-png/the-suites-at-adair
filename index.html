@@ -737,7 +737,12 @@ img { max-width: 100%; }
 .video-modal[hidden]{display:none}
 .video-modal-inner{width:min(92vw,760px);max-height:92vh;display:flex;flex-direction:column;align-items:center;gap:13px;color:#fff}
 .video-modal-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3.4rem)}
-.video-modal video{display:block;width:min(92vw,430px);aspect-ratio:9/16;max-height:76vh;border:0;background:#000;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.video-modal video{
+  display:block;
+  width:min(92vw,720px);
+  max-height:82vh;
+  aspect-ratio:9/16;
+  object-fit:contain;border:0;background:#000;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
 .video-modal p{margin:0;color:rgba(255,255,255,.65);font-size:.78rem;text-align:center;line-height:1.5}
 .video-modal-close{position:fixed;right:22px;top:18px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.4);color:#fff;font-size:2rem;cursor:pointer;z-index:2}
 @media(max-width:760px){
