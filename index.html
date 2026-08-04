@@ -737,7 +737,7 @@ img { max-width: 100%; }
 .video-modal[hidden]{display:none}
 .video-modal-inner{width:min(92vw,760px);max-height:92vh;display:flex;flex-direction:column;align-items:center;gap:13px;color:#fff}
 .video-modal-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3.4rem)}
-.video-modal video,.video-modal iframe{display:block;width:min(92vw,430px);aspect-ratio:9/16;max-height:76vh;border:0;background:#000;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.video-modal video{display:block;width:min(92vw,430px);aspect-ratio:9/16;max-height:76vh;border:0;background:#000;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
 .video-modal p{margin:0;color:rgba(255,255,255,.65);font-size:.78rem;text-align:center;line-height:1.5}
 .video-modal-close{position:fixed;right:22px;top:18px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.4);color:#fff;font-size:2rem;cursor:pointer;z-index:2}
 @media(max-width:760px){
@@ -924,7 +924,6 @@ FOUR PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <span aria-hidden="true" class="life-arrow">↗</span>
 <div class="life-copy"><h3>Prime Nail Lounge</h3><span>Nail salon</span></div>
 </a>
-<a aria-label="Visit Project Optical website" class="life-card reveal" href="https://www.projectoptical.com/" rel="noopener noreferrer" style="--business-image:url('https://static.wixstatic.com/media/aedd11_73cecb04aaf5486cb231c4188117b9d6~mv2.jpeg/v1/crop/x_85,y_0,w_470,h_470/fill/w_720,h_720,al_c,lg_1,q_85/Project%20Optical%20Eyeglasses%20Downtown%20Woodstock.jpeg')" target="_blank">
 <span aria-hidden="true" class="life-arrow">↗</span>
 <div class="life-copy"><h3>Project Optical</h3><span>Eyewear</span></div>
 </a>
@@ -1177,13 +1176,12 @@ document.addEventListener('keydown',event=>{
   }
 });
 
-});</script><div class="video-modal" hidden="" id="virtualTourModal"><button aria-label="Close virtual walkthrough" class="video-modal-close" type="button">×</button><div class="video-modal-inner"><div class="video-modal-title">Virtual Walkthrough</div><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="virtualTourVideo" referrerpolicy="strict-origin-when-cross-origin" title="The Suites at Adair virtual walkthrough"></iframe><p>Conceptual virtual walkthrough. Final construction, finishes, furnishings, and layouts may vary.</p></div></div><script id="v78-youtube-video-script">
+});</script><div class="video-modal" hidden="" id="virtualTourModal"><button aria-label="Close virtual walkthrough" class="video-modal-close" type="button">×</button><div class="video-modal-inner"><div class="video-modal-title">Virtual Walkthrough</div><video controls id="virtualTourVideo" playsinline preload="metadata"><source src="0803.mov" type="video/quicktime"></video><p>Conceptual virtual walkthrough. Final construction, finishes, furnishings, and layouts may vary.</p></div></div><script id="v78-local-video-script">
 document.addEventListener('DOMContentLoaded',()=>{
  const modal=document.getElementById('virtualTourModal');
  const player=document.getElementById('virtualTourVideo');
- const youtubeUrl='https://www.youtube-nocookie.com/embed/SQgVMgyodno?autoplay=1&rel=0&playsinline=1';
- const open=()=>{if(!modal)return;if(player)player.src=youtubeUrl;modal.hidden=false;document.body.style.overflow='hidden';};
- const close=()=>{if(!modal)return;modal.hidden=true;document.body.style.overflow='';if(player)player.src='';};
+ const open=()=>{if(!modal)return;modal.hidden=false;document.body.style.overflow='hidden';player?.play().catch(()=>{});};
+ const close=()=>{if(!modal)return;modal.hidden=true;document.body.style.overflow='';player?.pause();player && (player.currentTime=0);};
  document.querySelectorAll('.virtual-tour-trigger').forEach(btn=>btn.addEventListener('click',open));
  modal?.querySelector('.video-modal-close')?.addEventListener('click',close);
  modal?.addEventListener('click',e=>{if(e.target===modal)close();});
