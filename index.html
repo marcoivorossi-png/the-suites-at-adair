@@ -751,6 +751,10 @@ img { max-width: 100%; }
  .gallery-video-card{height:420px}
  .video-modal{padding:14px}.video-modal-close{right:10px;top:10px}
 }
+
+/* Breakroom selector */
+#floor-plan .suite-choice[data-suite="breakroom"] span{font-size:.68rem;letter-spacing:-.03em}
+@media(max-width:760px){#floor-plan .suite-choice[data-suite="breakroom"] span{font-size:.58rem}}
 </style></head>
 <body>
 <div class="announcement-bar">NOW LEASING   |   ANTICIPATED OPENING LATE 2026   |   ONLY FOUR PRIVATE SUITES AVAILABLE</div>
@@ -845,7 +849,7 @@ FOUR PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <div class="floor-plan-layout reveal">
 <aside aria-label="Choose a suite" class="suite-picker">
 <div class="suite-picker-title">Four Private Suites</div>
-<button class="suite-choice active" data-suite="1" type="button"><span>1</span><strong>Suite 1</strong><small>Front left</small></button><button class="suite-choice" data-suite="2" type="button"><span>2</span><strong>Suite 2</strong><small>Front right</small></button><button class="suite-choice" data-suite="3" type="button"><span>3</span><strong>Suite 3</strong><small>Right side</small></button><button class="suite-choice" data-suite="4" type="button"><span>4</span><strong>Suite 4</strong><small>Back left</small></button><div class="suite-legend">
+<button class="suite-choice active" data-suite="1" type="button"><span>1</span><strong>Suite 1</strong><small>Front left</small></button><button class="suite-choice" data-suite="2" type="button"><span>2</span><strong>Suite 2</strong><small>Front right</small></button><button class="suite-choice" data-suite="3" type="button"><span>3</span><strong>Suite 3</strong><small>Right side</small></button><button class="suite-choice" data-suite="4" type="button"><span>4</span><strong>Suite 4</strong><small>Back left</small></button><button class="suite-choice" data-suite="breakroom" type="button"><span>BR</span><strong>Breakroom</strong><small>Shared amenity</small></button><div class="suite-legend">
 <span><i class="status-dot available"></i> Available</span>
 <span><i class="status-dot pending"></i> Application Pending</span>
 <span><i class="status-dot leased"></i> Leased</span>
@@ -878,8 +882,8 @@ FOUR PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 </div>
 <section class="editorial" id="gallery"><div class="wrap"><div class="gallery-head reveal"><h2>Gallery</h2><p>Explore each private suite and the shared amenities.</p></div>
 <section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Exterior</h3><span>1 photo</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Exterior of The Suites at Adair larger" class="gallery-card" role="button" tabindex="0"><img alt="Exterior of The Suites at Adair" decoding="async" loading="eager" src="images/exterior-gallery-new-v64.jpg"/><figcaption class="gallery-label">Exterior</figcaption></figure></div></section>
-<section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 1</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 1 larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 1 interior" decoding="async" loading="lazy" src="images/suite-1-view-1.jpg"/><figcaption class="gallery-label">Suite 1</figcaption></figure><figure aria-label="Open Suite 1 second view larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 1 interior, second view" decoding="async" loading="lazy" src="images/suite-1-view-2.jpg"/><figcaption class="gallery-label">Suite 1 · View 2</figcaption></figure></div></section>
-<section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 2</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 2 larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 2 interior" decoding="async" loading="lazy" src="images/suite-2-view-1.jpg"/><figcaption class="gallery-label">Suite 2</figcaption></figure><figure aria-label="Open Suite 2 second view larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 2 interior, second view" decoding="async" loading="lazy" src="images/suite-2-view-2.jpg"/><figcaption class="gallery-label">Suite 2 · View 2</figcaption></figure></div></section>
+<section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 1</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 1 larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 1 interior" decoding="async" loading="lazy" src="images/suite-2-view-1.jpg"/><figcaption class="gallery-label">Suite 1</figcaption></figure><figure aria-label="Open Suite 1 second view larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 1 interior, second view" decoding="async" loading="lazy" src="images/suite-2-view-2.jpg"/><figcaption class="gallery-label">Suite 1 · View 2</figcaption></figure></div></section>
+<section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 2</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 2 larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 2 interior" decoding="async" loading="lazy" src="images/suite-1-view-1.jpg"/><figcaption class="gallery-label">Suite 2</figcaption></figure><figure aria-label="Open Suite 2 second view larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 2 interior, second view" decoding="async" loading="lazy" src="images/suite-1-view-2.jpg"/><figcaption class="gallery-label">Suite 2 · View 2</figcaption></figure></div></section>
 <section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 3</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 3 larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 3 interior" decoding="async" loading="lazy" src="images/suite-3-primary-v60.jpg"/><figcaption class="gallery-label">Suite 3</figcaption></figure><figure aria-label="Open Suite 3 second view larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 3 interior, second view" decoding="async" loading="lazy" src="images/suite-3-secondary-v60.jpg"/><figcaption class="gallery-label">Suite 3 · View 2</figcaption></figure></div></section>
 <section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 4</h3><span>3 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 4 view one larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 4 view one" decoding="async" loading="lazy" src="images/10-large-salon-suite-with-styling-and-shampoo-stations.jpg"/><figcaption class="gallery-label">Suite 4</figcaption></figure><figure aria-label="Open Suite 4 view two larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 4 view two" decoding="async" loading="lazy" src="images/09-salon-suite-with-brick-wall-and-double-styling-stations.jpg"/><figcaption class="gallery-label">Suite 4 · View 2</figcaption></figure><figure aria-label="Open Suite 4 view three larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 4 view three" decoding="async" loading="lazy" src="images/suite-5-view-3.jpg"/><figcaption class="gallery-label">Suite 4 · View 3</figcaption></figure></div></section>
 <section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Breakroom</h3><span>2 renderings</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Breakroom rendering larger" class="gallery-card" role="button" tabindex="0"><img alt="Breakroom conceptual rendering with coffee bar and seating" decoding="async" loading="lazy" src="images/new-breakroom-rendering-1.jpg"/><figcaption class="gallery-label">Breakroom</figcaption></figure><figure aria-label="Open Breakroom second rendering larger" class="gallery-card" role="button" tabindex="0"><img alt="Breakroom conceptual rendering with sink and lounge seating" decoding="async" loading="lazy" src="images/new-breakroom-rendering-2.jpg"/><figcaption class="gallery-label">Breakroom · View 2</figcaption></figure></div></section>
@@ -1013,17 +1017,18 @@ const suiteData={
   1:{name:'Front Left Suite',location:'Front-left location near the main entrance',size:'120 SQ FT',status:'Available',description:'A bright, front-facing private studio designed for a polished and comfortable client experience.',features:['Front-facing location','Natural light','Private, lockable workspace','Upscale finishes shown conceptually']},
   2:{name:'Front Right Suite',location:'Front-right location near the main entrance',size:'120 SQ FT',status:'Available',description:'A bright, front-facing private studio with convenient access from the main entrance.',features:['Front-facing location','Natural light','Private, lockable workspace','Upscale finishes shown conceptually']},
   3:{name:'Right-Side Suite',location:'Right-side private suite',size:'125 SQ FT',status:'Available',description:'A spacious private studio along the right side of the floor plan with room for a customized salon experience.',features:['Spacious private layout','Flexible workstation arrangement','Natural light','Upscale finishes shown conceptually']},
-  4:{name:'Back Left Suite',location:'Back-left private suite',size:'150 SQ FT',status:'Available',description:'A distinctive rear suite with its own private entrance for added privacy and convenience, plus easy access to the private restroom and coffee bar. A flexible studio designed to accommodate one or two beauty professionals.',features:['Dedicated private entrance','Near private restroom','Spacious rear position with the largest studio','Flexible build-out for one or two professionals','Shampoo bowl and styling chair provided']}
+  4:{name:'Back Left Suite',location:'Back-left private suite',size:'180 SQ FT',status:'Available',description:'A distinctive rear suite with its own private entrance for added privacy and convenience, plus easy access to the private restroom and coffee bar. A flexible studio designed to accommodate one or two beauty professionals.',features:['Dedicated private entrance','Near private restroom','Spacious rear position with the largest studio','Flexible build-out for one or two professionals','Shampoo bowl and styling chair provided']},
+  breakroom:{name:'Private Breakroom',location:'Shared amenity for suite professionals',size:'80 SQ FT',status:'Shared Amenity',description:'A private, thoughtfully designed breakroom with the everyday conveniences needed between appointments. The space seats four comfortably.',features:['Private breakroom','Microwave','Coffee bar','Fridge and storage','Seats 4 comfortably']}
 }
 
 const suitePhotos={
   1:[
-    {src:'images/suite-1-view-1.jpg',alt:'Suite 1 interior'},
-    {src:'images/suite-1-view-2.jpg',alt:'Suite 1 interior, second view'}
+    {src:'images/suite-2-view-1.jpg',alt:'Suite 1 interior'},
+    {src:'images/suite-2-view-2.jpg',alt:'Suite 1 interior, second view'}
   ],
   2:[
-    {src:'images/suite-2-view-1.jpg',alt:'Suite 2 interior'},
-    {src:'images/suite-2-view-2.jpg',alt:'Suite 2 interior, second view'}
+    {src:'images/suite-1-view-1.jpg',alt:'Suite 2 interior'},
+    {src:'images/suite-1-view-2.jpg',alt:'Suite 2 interior, second view'}
   ],
   3:[
     {src:'images/suite-3-primary-v60.jpg',alt:'Suite 3 interior'},
@@ -1033,6 +1038,10 @@ const suitePhotos={
     {src:'images/10-large-salon-suite-with-styling-and-shampoo-stations.jpg',alt:'Suite 4 view one'},
     {src:'images/09-salon-suite-with-brick-wall-and-double-styling-stations.jpg',alt:'Suite 4 view two'},
     {src:'images/suite-5-view-3.jpg',alt:'Suite 4 view three'}
+  ],
+  breakroom:[
+    {src:'images/new-breakroom-rendering-1.jpg',alt:'Private breakroom with coffee bar and seating'},
+    {src:'images/new-breakroom-rendering-2.jpg',alt:'Private breakroom with sink, storage, and lounge seating'}
   ]
 }
 let activeSuiteNumber=1;
@@ -1080,15 +1089,16 @@ function selectSuite(number){
   activeSuiteNumber=Number(number);
   activeSuitePhotoIndex=0;
   document.querySelectorAll('[data-suite]').forEach(el=>el.classList.toggle('active',el.dataset.suite==number));
-  document.querySelector('.suite-detail-number').textContent=number;
-  document.querySelector('.suite-detail-eyebrow').textContent='Suite '+number;
+  const isBreakroom=String(number)==='breakroom';
+  document.querySelector('.suite-detail-number').textContent=isBreakroom?'BR':number;
+  document.querySelector('.suite-detail-eyebrow').textContent=isBreakroom?'Shared Amenity':'Suite '+number;
   document.getElementById('suiteDetailName').textContent=data.name;
   document.getElementById('suiteDetailLocation').textContent=data.location;
   document.querySelector('.suite-status').textContent=data.status;
   document.getElementById('suiteDetailSize').textContent=data.size;
   document.getElementById('suiteDetailDescription').textContent=data.description;
   document.getElementById('suiteDetailFeatures').innerHTML=data.features.map(x=>`<li>${x}</li>`).join('');
-  document.getElementById('requestSuite').textContent='Request Suite '+number;
+  document.getElementById('requestSuite').textContent=isBreakroom?'Request Information':'Request Suite '+number;
   document.getElementById('requestSuite').dataset.suite=number;
   renderSuitePhoto();
 }
@@ -1097,8 +1107,9 @@ document.getElementById('requestSuite')?.addEventListener('click',e=>{
   const number=e.currentTarget.dataset.suite||'1';
   const hidden=document.getElementById('preferred-suite');
   const message=document.getElementById('message');
-  hidden.value='Suite '+number;
-  if(!message.value.trim()) message.value=`I am interested in learning more about Suite ${number}.`;
+  const isBreakroom=String(number)==='breakroom';
+  hidden.value=isBreakroom?'Breakroom / General Information':'Suite '+number;
+  if(!message.value.trim()) message.value=isBreakroom?'I am interested in learning more about the suites and private breakroom.':`I am interested in learning more about Suite ${number}.`;
   document.getElementById('apply').scrollIntoView({behavior:'smooth'});
   setTimeout(()=>document.getElementById('full-name')?.focus(),650);
 });
