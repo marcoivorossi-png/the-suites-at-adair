@@ -755,6 +755,7 @@ img { max-width: 100%; }
 /* Breakroom selector */
 #floor-plan .suite-choice[data-suite="breakroom"] span{font-size:.68rem;letter-spacing:-.03em}
 @media(max-width:760px){#floor-plan .suite-choice[data-suite="breakroom"] span{font-size:.58rem}}
+#floor-plan .suite-highlight[data-suite="breakroom"]{clip-path:polygon(7% 40%,43% 40%,43% 57%,7% 57%)}
 </style></head>
 <body>
 <div class="announcement-bar">NOW LEASING   |   ANTICIPATED OPENING LATE 2026   |   ONLY FOUR PRIVATE SUITES AVAILABLE</div>
@@ -861,6 +862,7 @@ FOUR PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <div class="suite-highlight" data-suite="2"></div>
 <div class="suite-highlight" data-suite="3"></div>
 <div class="suite-highlight" data-suite="4"></div>
+<div class="suite-highlight" data-suite="breakroom"></div>
 <button aria-label="Open floor plan larger" class="plan-expand" id="planExpand" type="button">View Larger</button>
 </div>
 <aside aria-live="polite" class="suite-detail">
@@ -878,7 +880,7 @@ FOUR PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 </section>
 <div class="plan-modal" hidden="" id="planModal">
 <button aria-label="Close enlarged floor plan" class="plan-modal-close" type="button">×</button>
-<img alt="Enlarged floor plan showing four suites and breakroom" src="images/floor-plan-four-suites-labeled.jpg"/>
+<img alt="Enlarged floor plan showing four suites and breakroom" src="images/floor-plan-four-suites-labeled.JPEG"/>
 </div>
 <section class="editorial" id="gallery"><div class="wrap"><div class="gallery-head reveal"><h2>Gallery</h2><p>Explore each private suite and the shared amenities.</p></div>
 <section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Exterior</h3><span>1 photo</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Exterior of The Suites at Adair larger" class="gallery-card" role="button" tabindex="0"><img alt="Exterior of The Suites at Adair" decoding="async" loading="eager" src="images/exterior-gallery-new-v64.jpg"/><figcaption class="gallery-label">Exterior</figcaption></figure></div></section>
@@ -1086,7 +1088,7 @@ function renderSuitePhoto(){
 
 function selectSuite(number){
   const data=suiteData[number]; if(!data)return;
-  activeSuiteNumber=Number(number);
+  activeSuiteNumber=String(number)==='breakroom'?'breakroom':Number(number);
   activeSuitePhotoIndex=0;
   document.querySelectorAll('[data-suite]').forEach(el=>el.classList.toggle('active',el.dataset.suite==number));
   const isBreakroom=String(number)==='breakroom';
