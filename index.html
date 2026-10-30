@@ -740,7 +740,16 @@ img { max-width: 100%; }
 #floor-plan .suite-status.leased-status{background:#f7dfdc;color:#9b3028}
 #requestSuite:disabled{opacity:.6;cursor:not-allowed;filter:grayscale(.15)}
 @media(max-width:760px){.hero-leasing-status{font-size:.62rem;padding:8px 12px;letter-spacing:.08em}}
-</style></head>
+</style>
+<style id="v80-suite2-prominent">
+/* Make Suite 2 leased status unmistakable */
+.hero-leasing-status{font-size:clamp(18px,2.2vw,30px)!important;font-weight:800!important;letter-spacing:.06em!important;text-transform:uppercase!important;padding:14px 22px!important;border:2px solid #d6ae66!important;background:rgba(10,10,10,.78)!important;box-shadow:0 8px 30px rgba(0,0,0,.28)!important;margin:18px auto 0!important;width:max-content!important;max-width:92%!important}
+.hero-leasing-status .leased-dot{width:12px!important;height:12px!important;background:#d6ae66!important;box-shadow:0 0 0 5px rgba(214,174,102,.22)!important}
+.announcement-bar{font-size:clamp(14px,1.6vw,20px)!important;font-weight:800!important;letter-spacing:.12em!important;padding:13px 12px!important}
+.floor-plan-urgency{font-size:clamp(18px,2vw,26px)!important;font-weight:800!important;text-transform:uppercase!important;letter-spacing:.04em!important;padding:12px 16px!important;border:2px solid #9b3028!important;background:#f7dfdc!important;color:#9b3028!important;display:inline-block!important;margin-top:12px!important}
+@media(max-width:640px){.hero-leasing-status{font-size:17px!important;padding:12px 14px!important;letter-spacing:.035em!important}.announcement-bar{font-size:12px!important;letter-spacing:.07em!important}}
+</style>
+</head>
 <body>
 <div class="announcement-bar">NOW LEASING   |   SUITE 2 LEASED   |   ONLY THREE PRIVATE SUITES REMAINING</div>
 <header id="hdr"><div class="wrap"><nav>
@@ -761,7 +770,7 @@ img { max-width: 100%; }
 <div class="wrap hero-v17-inner">
 <div class="hero-v17-content reveal">
 <div class="hero-v17-coming">COMING SOON</div>
-<div class="hero-leasing-status"><span class="leased-dot"></span>Suite 2 Leased &nbsp;·&nbsp; Only 3 Suites Remaining</div>
+<div class="hero-leasing-status"><span class="leased-dot"></span>SUITE 2 IS LEASED &nbsp;—&nbsp; ONLY 3 SUITES REMAIN</div>
 <img alt="The Suites at Adair" class="hero-v17-logo" decoding="async" src="images/logo-dark-transparent.png"/>
 <div class="hero-v17-subtitle">Luxury Salon Suites</div>
 <div class="hero-v17-location">Downtown Woodstock</div>
@@ -828,7 +837,7 @@ THREE SUITES REMAINING   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN
 <section class="floor-plan-section" id="floor-plan">
 <div class="wrap">
 <div class="floor-plan-head reveal">
-<div><div class="eyebrow">Explore the layout</div><h2>Explore Our Suites.</h2><div class="floor-plan-urgency">Suite 2 leased · Only three suites remaining</div></div>
+<div><div class="eyebrow">Explore the layout</div><h2>Explore Our Suites.</h2><div class="floor-plan-urgency">SUITE 2 IS LEASED — ONLY 3 SUITES REMAIN</div></div>
 <p>Select any suite on the plan or from the list to view its location, features, and current availability. Select any suite on the plan or from the list to view its location, features, square footage, and current availability.</p>
 </div>
 <div class="floor-plan-layout reveal">
