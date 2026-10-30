@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>The Suites at Adair | Four Private Salon Suites</title>
+<meta content="Four private luxury salon suites in Downtown Woodstock, Georgia, with a private breakroom and premium shared amenities." name="description"/>
+<link href="css/style.css?v=78" rel="stylesheet"/><link href="images/favicon-logo.png" rel="icon" type="image/png"/><meta content="The Suites at Adair" property="og:title"/><meta content="Four private salon suites at the edge of Downtown Woodstock, with a private breakroom and premium shared amenities." property="og:description"/><meta content="website" property="og:type"/><meta content="https://thesuitesatadair.com/" property="og:url"/><meta content="#f4efe5" name="theme-color"/><style id="floor-plan-production-styles">/* V31 interactive floor plan */
+.floor-plan-section{padding:110px 0;background:#f7f2e9;border-top:1px solid rgba(25,24,20,.08);border-bottom:1px solid rgba(25,24,20,.08)}
+.floor-plan-head{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:end;margin-bottom:42px}
+.floor-plan-head h2{margin:.2rem 0 0;font-size:clamp(2.8rem,5vw,5.2rem);line-height:.95}
+.floor-plan-head p{margin:0;color:#655f56;line-height:1.8;max-width:620px}
+.floor-plan-urgency{margin-top:16px;color:#a96f18;font-size:.76rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.floor-plan-layout{display:grid;grid-template-columns:220px minmax(0,1fr) 300px;gap:24px;align-items:start}
+.suite-picker,.suite-detail{background:#fffdf9;border:1px solid rgba(104,87,56,.16);border-radius:20px;box-shadow:0 18px 45px rgba(47,39,25,.07)}
+.suite-picker{padding:22px}
+.suite-picker-title{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;margin:3px 0 17px;color:#9c6818}
+.suite-choice{width:100%;display:grid;grid-template-columns:34px 1fr;grid-template-rows:auto auto;column-gap:11px;text-align:left;border:1px solid rgba(75,63,42,.14);background:#fff;border-radius:12px;padding:13px 12px;margin:0 0 10px;color:#1d1b18;cursor:pointer;transition:.2s ease}
+.suite-choice span{grid-row:1/3;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;border:1px solid #c88925;font-weight:800;color:#9f6712}
+.suite-choice strong{font:600 1rem Georgia,serif}.suite-choice small{font-size:.72rem;color:#746d64;margin-top:2px}
+.suite-choice:hover,.suite-choice.active{border-color:#b77b1d;transform:translateY(-1px);box-shadow:0 8px 18px rgba(183,123,29,.12)}
+.suite-choice.active span{background:#b77b1d;color:#fff}
+.suite-legend{border-top:1px solid rgba(75,63,42,.12);padding-top:16px;margin-top:17px;display:grid;gap:9px;color:#716a61;font-size:.76rem}
+.suite-legend span{display:flex;align-items:center;gap:8px}.status-dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:0 0 auto}.status-dot.available{background:#58a64f}.status-dot.pending{background:#dda514}.status-dot.leased{background:#cf2e2e}.dimensions-note{margin-top:3px;padding-top:10px;border-top:1px solid rgba(75,63,42,.1)}
+.floor-plan-canvas{position:relative;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 22px 55px rgba(35,30,22,.13);border:1px solid rgba(104,87,56,.15)}
+.floor-plan-canvas>img{display:block;width:100%;height:auto}
+.suite-marker{position:absolute;width:44px;height:44px;border-radius:50%;border:3px solid #fff;background:#b77b1d;color:#fff;font:700 1.05rem Georgia,serif;box-shadow:0 5px 16px rgba(0,0,0,.28);cursor:pointer;transform:translate(-50%,-50%);z-index:4;transition:.2s ease}
+.suite-marker:hover,.suite-marker.active{transform:translate(-50%,-50%) scale(1.14);background:#171512}
+.suite-marker[data-suite="1"]{left:75%;top:78%}.suite-marker[data-suite="2"]{left:25%;top:78%}.suite-marker[data-suite="3"]{left:75%;top:50%}.suite-marker[data-suite="4"]{left:29%;top:53%}.suite-marker[data-suite="5"]{left:25%;top:25%}
+.suite-highlight{position:absolute;inset:0;background:rgba(183,123,29,.12);outline:3px solid #bd811f;outline-offset:-3px;opacity:0;pointer-events:none;z-index:2;transition:opacity .25s ease}
+.suite-highlight.active{opacity:1}
+.suite-highlight[data-suite="1"]{clip-path:polygon(59% 57%,91% 57%,91% 90%,59% 90%)}
+.suite-highlight[data-suite="2"]{clip-path:polygon(8% 60%,40% 60%,40% 90%,8% 90%)}
+.suite-highlight[data-suite="3"]{clip-path:polygon(59% 29%,91% 29%,91% 57%,59% 57%)}
+.suite-highlight[data-suite="4"]{clip-path:polygon(8% 40%,40% 40%,40% 60%,8% 60%)}
+.suite-highlight[data-suite="5"]{clip-path:polygon(8% 6%,52% 6%,52% 23%,40% 40%,8% 40%)}
+
+.plan-label{position:absolute;z-index:3;pointer-events:none;transform:translate(-50%,-50%);padding:5px 8px;border-radius:7px;background:rgba(255,253,249,.86);backdrop-filter:blur(5px);box-shadow:0 3px 12px rgba(34,29,21,.08);color:#27221b;font-size:clamp(.48rem,.7vw,.68rem);font-weight:800;line-height:1.05;text-align:center;text-transform:uppercase;letter-spacing:.07em;white-space:nowrap}
+.plan-label.private-restroom{left:64%;top:13%}.plan-label.closet-label{left:84%;top:13%}.plan-label.coffee-bar{left:61%;top:31%}.plan-label.shared-hallway{left:51%;top:69%}.plan-label.main-entrance{left:50%;top:96.2%;background:#181613;color:#fff}
+
+.plan-expand{position:absolute;right:14px;bottom:14px;z-index:5;border:1px solid rgba(255,255,255,.7);background:rgba(20,18,15,.78);backdrop-filter:blur(8px);color:#fff;border-radius:999px;padding:10px 15px;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;cursor:pointer}
+.suite-detail{padding:28px}.suite-detail-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:21px}.suite-detail-number{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#b77b1d;color:#fff;font:700 1.2rem Georgia,serif}.suite-status{background:#e7f2df;color:#3c7433;padding:7px 11px;border-radius:999px;font-size:.7rem;font-weight:750;text-transform:uppercase;letter-spacing:.08em}
+.suite-detail-eyebrow{color:#b77b1d}.suite-detail h3{font-size:2rem;margin:.3rem 0 1rem}.suite-detail-meta{display:grid;gap:8px;padding:15px 0;border-top:1px solid rgba(75,63,42,.13);border-bottom:1px solid rgba(75,63,42,.13);font-size:.85rem;color:#625c54}.suite-detail p{color:#5f5951;line-height:1.7}.suite-detail ul{list-style:none;padding:0;margin:18px 0 24px;display:grid;gap:10px}.suite-detail li:before{content:'✓';display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#b77b1d;color:white;margin-right:9px;font-size:.7rem}.request-suite{width:100%;border:0;cursor:pointer}
+.plan-modal{position:fixed;inset:0;z-index:999;background:rgba(12,11,10,.92);display:grid;place-items:center;padding:34px;overflow:auto}.plan-modal[hidden]{display:none}.plan-modal img{max-width:min(1100px,94vw);max-height:90vh;object-fit:contain;border-radius:8px;box-shadow:0 20px 80px rgba(0,0,0,.55)}.plan-modal-close{position:fixed;right:24px;top:18px;border:0;background:transparent;color:#fff;font-size:2.5rem;cursor:pointer}
+@media(max-width:1050px){.floor-plan-layout{grid-template-columns:190px 1fr}.suite-detail{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:0 28px}.suite-detail-top{grid-row:1/5}.suite-detail .request-suite{max-width:360px}.floor-plan-head{grid-template-columns:1fr}}
+@media(max-width:760px){.plan-label{font-size:.45rem;padding:3px 5px;letter-spacing:.04em}.floor-plan-section{padding:76px 0}.floor-plan-head{display:block}.floor-plan-head p{margin-top:18px}.floor-plan-layout{display:flex;flex-direction:column}.suite-picker{width:100%;display:grid;grid-template-columns:repeat(5,1fr);gap:7px;padding:14px}.suite-picker-title,.suite-legend{grid-column:1/-1}.suite-choice{display:flex;align-items:center;justify-content:center;padding:8px;margin:0}.suite-choice strong,.suite-choice small{display:none}.suite-choice span{width:34px;height:34px}.floor-plan-canvas{width:100%}.suite-marker{width:36px;height:36px}.suite-detail{display:block;width:100%;padding:24px}.plan-expand{font-size:.62rem;padding:8px 11px}.links a[href="#floor-plan"]{display:none}}
+
+
+/* V33 production floor-plan safeguards */
+#floor-plan, #floor-plan * { box-sizing: border-box; }
+#floor-plan button { font: inherit; }
+#floor-plan .floor-plan-head h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -.035em;
+}
+#floor-plan .floor-plan-head {
+  padding-top: 6px;
+}
+#floor-plan .floor-plan-layout {
+  position: relative;
+}
+#floor-plan .suite-choice {
+  appearance: none;
+  -webkit-appearance: none;
+}
+#floor-plan .suite-choice strong,
+#floor-plan .suite-choice small {
+  display: block;
+}
+#floor-plan .suite-picker-title,
+#floor-plan .suite-detail-eyebrow {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#floor-plan .floor-plan-canvas > img {
+  aspect-ratio: 0.82;
+  object-fit: contain;
+  background: #fff;
+}
+#floor-plan .suite-detail h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -.02em;
+}
+#floor-plan .request-suite {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 52px;
+}
+@media (max-width: 760px) {
+  #floor-plan .floor-plan-head h2 { font-size: 2.65rem; }
+  #floor-plan .floor-plan-layout { gap: 16px; }
+  #floor-plan .suite-picker {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+
+
+/* V34: Suite 5 private entrance, larger gallery, and full-screen media */
+.suite-five-private-entrance{
+  left:7.5%;
+  top:13.5%;
+  max-width:92px;
+  text-align:center;
+  line-height:1.15;
+  border-color:rgba(183,123,29,.55);
+  color:#7d5312;
+  background:rgba(255,250,240,.96);
+}
+
+#gallery .editorial-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-auto-rows:auto;
+  gap:26px;
+}
+#gallery .gallery-card:nth-child(n){
+  grid-column:auto;
+  grid-row:auto;
+  min-height:clamp(390px,42vw,610px);
+  border-radius:16px;
+  box-shadow:0 22px 55px rgba(35,30,22,.11);
+  cursor:zoom-in;
+}
+#gallery .gallery-card:first-child{
+  grid-column:1 / -1;
+  min-height:clamp(520px,55vw,760px);
+}
+#gallery .gallery-card img{
+  min-height:inherit;
+}
+#gallery .gallery-card:focus-visible{
+  outline:3px solid #b77b1d;
+  outline-offset:4px;
+}
+
+.gallery-modal{
+  position:fixed;
+  inset:0;
+  z-index:1100;
+  display:grid;
+  place-items:center;
+  padding:34px;
+  background:rgba(12,11,10,.94);
+  overflow:auto;
+}
+.gallery-modal[hidden]{display:none}
+.gallery-modal img{
+  max-width:min(1500px,95vw);
+  max-height:91vh;
+  width:min(90vw,1100px);
+  height:auto;
+  object-fit:contain;
+  border-radius:10px;
+  box-shadow:0 24px 90px rgba(0,0,0,.62);
+}
+.gallery-modal-close{
+  position:fixed;
+  top:16px;
+  right:24px;
+  z-index:2;
+  border:0;
+  background:transparent;
+  color:#fff;
+  font-size:2.7rem;
+  line-height:1;
+  cursor:pointer;
+}
+
+@media(max-width:760px){
+  .suite-five-private-entrance{
+    left:6%;
+    top:12.5%;
+    max-width:74px;
+  }
+  #gallery .editorial-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  #gallery .gallery-card:nth-child(n),
+  #gallery .gallery-card:first-child{
+    grid-column:1;
+    min-height:390px;
+  }
+  .gallery-modal{padding:18px}
+}
+
+
+
+/* V35 stability release: corrected entrance label, reliable gallery, mobile repair */
+html, body { overflow-x: hidden; }
+img { max-width: 100%; }
+
+.suite-five-private-entrance{
+  left:12% !important;
+  top:20.5% !important;
+  width:94px;
+  white-space:normal !important;
+  line-height:1.12 !important;
+  text-align:center;
+  transform:translate(-50%,-50%);
+}
+
+/* Smaller suite markers so furniture remains visible */
+#floor-plan .suite-marker{
+  width:30px !important;
+  height:30px !important;
+  border-width:2px !important;
+  font-size:.78rem !important;
+  box-shadow:0 4px 11px rgba(0,0,0,.24) !important;
+}
+#floor-plan .suite-marker:hover,
+#floor-plan .suite-marker.active{
+  transform:translate(-50%,-50%) scale(1.08) !important;
+}
+
+/* Reliable large gallery layout */
+#gallery .editorial-grid{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  grid-auto-flow:row !important;
+  grid-auto-rows:auto !important;
+  gap:24px !important;
+}
+#gallery .gallery-card,
+#gallery .gallery-card:nth-child(n),
+#gallery .editorial-grid .gallery-card:nth-child(n+2){
+  grid-column:auto !important;
+  grid-row:auto !important;
+  min-width:0 !important;
+  width:100% !important;
+  height:clamp(380px,40vw,590px) !important;
+  min-height:0 !important;
+  margin:0 !important;
+  overflow:hidden !important;
+  border-radius:15px !important;
+  background:#eee8de !important;
+}
+#gallery .gallery-card:first-child{
+  grid-column:1 / -1 !important;
+  height:clamp(500px,54vw,760px) !important;
+}
+#gallery .gallery-card img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  min-height:0 !important;
+  object-fit:cover !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+/* Tablet repair */
+@media (max-width:1050px){
+  #floor-plan .floor-plan-layout{
+    grid-template-columns:180px minmax(0,1fr) !important;
+    gap:18px !important;
+  }
+  #floor-plan .suite-detail{
+    grid-column:1 / -1 !important;
+  }
+}
+
+/* Phone repair */
+@media (max-width:760px){
+  .wrap{
+    width:calc(100% - 28px) !important;
+    max-width:none !important;
+  }
+  .floor-plan-section{
+    padding:64px 0 !important;
+  }
+  #floor-plan .floor-plan-head{
+    display:block !important;
+    margin-bottom:24px !important;
+  }
+  #floor-plan .floor-plan-head h2{
+    font-size:clamp(2.15rem,11vw,3rem) !important;
+    line-height:1 !important;
+  }
+  #floor-plan .floor-plan-head p{
+    margin-top:16px !important;
+    line-height:1.55 !important;
+  }
+  #floor-plan .floor-plan-layout{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:16px !important;
+    width:100% !important;
+  }
+  #floor-plan .suite-picker{
+    width:100% !important;
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    gap:8px !important;
+    overflow-x:auto !important;
+    padding:12px !important;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+  }
+  #floor-plan .suite-picker-title,
+  #floor-plan .suite-legend{
+    display:none !important;
+  }
+  #floor-plan .suite-choice{
+    flex:0 0 132px !important;
+    display:grid !important;
+    grid-template-columns:30px 1fr !important;
+    grid-template-rows:auto auto !important;
+    justify-content:initial !important;
+    align-items:center !important;
+    padding:10px !important;
+    margin:0 !important;
+    scroll-snap-align:start;
+  }
+  #floor-plan .suite-choice strong,
+  #floor-plan .suite-choice small{
+    display:block !important;
+  }
+  #floor-plan .suite-choice span{
+    width:28px !important;
+    height:28px !important;
+  }
+  #floor-plan .floor-plan-canvas{
+    width:100% !important;
+    border-radius:12px !important;
+  }
+  #floor-plan .floor-plan-canvas > img{
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:auto !important;
+    object-fit:contain !important;
+  }
+  #floor-plan .suite-marker{
+    width:23px !important;
+    height:23px !important;
+    font-size:.63rem !important;
+    border-width:1.5px !important;
+  }
+  #floor-plan .plan-label{
+    font-size:.38rem !important;
+    padding:2px 4px !important;
+    letter-spacing:.025em !important;
+  }
+  #floor-plan .suite-five-private-entrance{
+    left:12% !important;
+    top:20.5% !important;
+    width:68px !important;
+  }
+  #floor-plan .plan-expand{
+    right:8px !important;
+    bottom:8px !important;
+    padding:7px 9px !important;
+    font-size:.52rem !important;
+  }
+  #floor-plan .suite-detail{
+    display:block !important;
+    width:100% !important;
+    padding:21px !important;
+    border-radius:14px !important;
+  }
+  #floor-plan .suite-detail-top{
+    margin-bottom:14px !important;
+  }
+  #floor-plan .suite-detail h3{
+    font-size:1.7rem !important;
+  }
+
+  #gallery .editorial-grid{
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+  }
+  #gallery .gallery-card,
+  #gallery .gallery-card:nth-child(n),
+  #gallery .gallery-card:first-child,
+  #gallery .editorial-grid .gallery-card:nth-child(n+2){
+    grid-column:1 !important;
+    width:100% !important;
+    height:clamp(255px,72vw,390px) !important;
+  }
+  .gallery-modal{
+    padding:12px !important;
+  }
+  .gallery-modal img{
+    max-width:96vw !important;
+    max-height:88vh !important;
+  }
+}
+
+@media (max-width:420px){
+  #floor-plan .suite-choice{
+    flex-basis:118px !important;
+  }
+  #floor-plan .suite-choice strong{
+    font-size:.88rem !important;
+  }
+  #floor-plan .suite-choice small{
+    font-size:.63rem !important;
+  }
+}
+
+
+
+/* V36: clickable room highlighting, labeled gallery, mechanical closet */
+#floor-plan .suite-marker { display:none !important; }
+
+#floor-plan .suite-highlight{
+  opacity:0;
+  background:rgba(246,190,45,.38) !important;
+  outline:4px solid rgba(198,133,10,.95) !important;
+  outline-offset:-4px;
+  transition:opacity .25s ease, filter .25s ease;
+}
+#floor-plan .suite-highlight.active{
+  opacity:1 !important;
+  filter:saturate(1.08);
+}
+#floor-plan .mechanical-closet-label{
+  width:92px;
+  text-align:center;
+  line-height:1.1;
+}
+
+#gallery .gallery-card{
+  position:relative !important;
+}
+#gallery .gallery-label{
+  position:absolute;
+  top:14px;
+  left:14px;
+  z-index:3;
+  margin:0;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(12,55,46,.94);
+  color:#fff;
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  line-height:1;
+  text-transform:uppercase;
+  box-shadow:0 5px 18px rgba(0,0,0,.18);
+}
+#gallery .gallery-card:first-child .gallery-label{
+  background:rgba(183,123,29,.95);
+}
+
+@media(max-width:760px){
+  #gallery .gallery-label{
+    top:10px;
+    left:10px;
+    padding:7px 9px;
+    font-size:.61rem;
+  }
+  #floor-plan .mechanical-closet-label{
+    width:62px !important;
+  }
+}
+
+
+/* V37 suite photo panel and reliable new gallery images */
+.suite-photo-viewer{
+  position:relative;
+  width:100%;
+  margin:16px 0 20px;
+  aspect-ratio:4/3;
+  overflow:hidden;
+  border-radius:13px;
+  background:#eee8de;
+  box-shadow:0 12px 30px rgba(30,25,18,.12);
+}
+.suite-photo-viewer img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.suite-photo-nav{
+  position:absolute;
+  z-index:2;
+  top:50%;
+  transform:translateY(-50%);
+  width:38px;
+  height:38px;
+  border:0;
+  border-radius:50%;
+  background:rgba(255,255,255,.92);
+  color:#173a32;
+  font-size:1.65rem;
+  line-height:1;
+  cursor:pointer;
+  box-shadow:0 4px 15px rgba(0,0,0,.18);
+}
+.suite-photo-prev{left:10px}.suite-photo-next{right:10px}
+.suite-photo-count{
+  position:absolute;
+  z-index:2;
+  bottom:9px;
+  left:50%;
+  transform:translateX(-50%);
+  padding:5px 9px;
+  border-radius:999px;
+  background:rgba(10,35,30,.82);
+  color:#fff;
+  font-size:.68rem;
+  letter-spacing:.08em;
+}
+#gallery img[src$="coffee-bar.jpg"],
+#gallery img[src$="private-restroom.jpg"],
+#gallery img[src$="suite-4-second-view.jpg"]{
+  display:block !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+@media(max-width:760px){
+  .suite-photo-viewer{aspect-ratio:16/11;margin:14px 0 18px}
+  .suite-photo-nav{width:34px;height:34px}
+}
+
+
+
+/* V38: suite photos directly beneath suite title */
+#floor-plan .suite-detail{
+  overflow:hidden;
+}
+#floor-plan .suite-photo-viewer{
+  margin:14px 0 18px !important;
+  aspect-ratio:16 / 10 !important;
+  border-radius:14px !important;
+  background:#e9e2d6 !important;
+  box-shadow:0 14px 34px rgba(28,23,16,.14) !important;
+}
+#floor-plan .suite-photo-viewer img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+#floor-plan .suite-detail-meta{
+  margin-top:0 !important;
+}
+@media(max-width:1050px){
+  #floor-plan .suite-detail{
+    display:block !important;
+  }
+}
+@media(max-width:760px){
+  #floor-plan .suite-photo-viewer{
+    aspect-ratio:4 / 3 !important;
+  }
+}
+
+
+
+/* V40: correctly mapped suite galleries */
+#floor-plan .suite-photo-thumbs{
+  display:flex;
+  gap:8px;
+  margin:-7px 0 18px;
+  padding:3px 1px 5px;
+  overflow-x:auto;
+  scrollbar-width:thin;
+}
+#floor-plan .suite-photo-thumb{
+  flex:0 0 64px;
+  width:64px;
+  height:49px;
+  padding:0;
+  overflow:hidden;
+  border:2px solid transparent;
+  border-radius:8px;
+  background:#eee7dc;
+  cursor:pointer;
+}
+#floor-plan .suite-photo-thumb.active{
+  border-color:#b77b1d;
+}
+#floor-plan .suite-photo-thumb img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.gallery-showcase{
+  margin:38px 0 56px;
+}
+.gallery-showcase-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:18px;
+  margin-bottom:16px;
+  padding-bottom:11px;
+  border-bottom:1px solid rgba(40,35,28,.14);
+}
+.gallery-showcase-head h3{
+  margin:0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(1.65rem,3vw,2.35rem);
+  font-weight:500;
+}
+.gallery-showcase-head span{
+  color:#7c7368;
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.gallery-showcase-rail{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+}
+.gallery-showcase .gallery-card{
+  position:relative;
+  width:100% !important;
+  height:clamp(330px,35vw,535px) !important;
+  min-height:0 !important;
+  overflow:hidden;
+  border-radius:15px;
+}
+.gallery-showcase .gallery-card img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.gallery-showcase:first-of-type .gallery-card{
+  grid-column:1/-1;
+  height:clamp(470px,51vw,720px) !important;
+}
+
+@media(max-width:760px){
+  #floor-plan .suite-photo-thumb{
+    flex-basis:56px;
+    width:56px;
+    height:44px;
+  }
+  .gallery-showcase{
+    margin:30px 0 43px;
+  }
+  .gallery-showcase-rail{
+    display:flex;
+    gap:13px;
+    overflow-x:auto;
+    padding-bottom:10px;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+  }
+  .gallery-showcase .gallery-card,
+  .gallery-showcase:first-of-type .gallery-card{
+    flex:0 0 86%;
+    width:86% !important;
+    height:330px !important;
+    grid-column:auto !important;
+    scroll-snap-align:center;
+  }
+}
+
+</style><style id="v68-approved-overrides">
+.suite-square-footage{margin:18px 0 14px;padding:15px 10px;border-top:1px solid rgba(75,63,42,.13);border-bottom:1px solid rgba(75,63,42,.13);color:#171512;font-family:Georgia,serif;font-size:clamp(1.65rem,2.2vw,2.35rem);font-weight:700;line-height:1;letter-spacing:.06em;text-align:center}
+.suite-detail-meta{border-top:0;padding-top:4px}
+@media(min-width:961px){.split{grid-template-columns:minmax(0,1.28fr) minmax(360px,.72fr);min-height:680px}.split-copy{padding:7vw 5.5vw}.five .suite-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.five .suite-grid .suite:nth-child(3n){border-right:0}.five .suite-grid .suite:nth-child(-n+3){border-bottom:1px solid var(--line)}}
+@media(max-width:960px){.suite-square-footage{font-size:1.75rem}}
+</style>
+<style id="v71-brand-experience-layout">
+.brand-experience{background:var(--black);color:#fff;padding:0 0 clamp(70px,8vw,120px);overflow:hidden}
+.brand-experience-slider{width:100%;background:#090909}
+.brand-experience-slider .ba-slider{width:100%;height:clamp(520px,52vw,820px);max-height:820px;min-height:520px}
+.brand-experience-slider .ba-image{width:100%;height:100%;object-fit:cover;object-position:center}
+.brand-experience-content{display:grid;grid-template-columns:minmax(0,.92fr) minmax(480px,1.08fr);gap:clamp(50px,7vw,110px);align-items:center;padding-top:clamp(65px,7vw,105px)}
+.brand-experience-copy{max-width:600px}
+.brand-experience-copy .eyebrow{color:#d6ae66;margin-bottom:18px}
+.brand-experience-copy h2{font-family:var(--serif);font-size:clamp(3.5rem,5vw,5.8rem);font-weight:400;line-height:.96;letter-spacing:-.035em;margin:0 0 28px}
+.brand-experience-copy p{max-width:560px;color:rgba(255,255,255,.7);font-size:1.08rem;line-height:1.75;margin:0 0 34px}
+.brand-experience-image img{display:block;width:100%;aspect-ratio:1.28/1;object-fit:cover;border-radius:12px}
+@media(max-width:960px){
+  .brand-experience{padding-bottom:72px}
+  .brand-experience-slider .ba-slider{height:62vw;min-height:330px;max-height:620px}
+  .brand-experience-content{grid-template-columns:1fr;gap:38px;padding-top:58px}
+  .brand-experience-copy{max-width:680px}
+  .brand-experience-copy h2{font-size:clamp(3rem,9vw,4.6rem)}
+  .brand-experience-image{order:2}
+}
+@media(max-width:620px){
+  .brand-experience-slider .ba-slider{height:72vw;min-height:280px}
+  .brand-experience-content{padding-top:46px}
+  .brand-experience-copy h2{font-size:clamp(2.65rem,13vw,3.8rem)}
+  .brand-experience-copy p{font-size:1rem}
+}
+</style>
+<meta content="https://thesuitesatadair.com/images/suite-1-new-1.jpg" property="og:image"/><style id="v72-four-suite-video-overrides">
+/* Four-suite floor plan overrides */
+.hero-v17-actions{flex-wrap:wrap}
+#floor-plan .suite-picker{grid-template-columns:repeat(4,1fr)}
+#floor-plan .suite-highlight[data-suite="1"]{clip-path:polygon(7% 57%,43% 57%,43% 92%,7% 92%)}
+#floor-plan .suite-highlight[data-suite="2"]{clip-path:polygon(54% 57%,92% 57%,92% 92%,54% 92%)}
+#floor-plan .suite-highlight[data-suite="3"]{clip-path:polygon(55% 20%,92% 20%,92% 57%,55% 57%)}
+#floor-plan .suite-highlight[data-suite="4"]{clip-path:polygon(7% 5%,53% 5%,53% 40%,7% 40%)}
+@media(max-width:760px){
+ #floor-plan .suite-picker{grid-template-columns:repeat(4,1fr)}
+ .hero-v17-actions .btn{width:100%;justify-content:center}
+}
+
+/* Breakroom selector */
+#floor-plan .suite-choice[data-suite="breakroom"] span{font-size:.68rem;letter-spacing:-.03em}
+@media(max-width:760px){#floor-plan .suite-choice[data-suite="breakroom"] span{font-size:.58rem}}
+#floor-plan .suite-highlight[data-suite="breakroom"]{clip-path:polygon(7% 40%,43% 40%,43% 57%,7% 57%)}
+</style><style id="v79-suite2-leased-update">
+/* Oct 30, 2026: Suite 1 hero + Suite 2 leased */
+.hero.hero-v17{background-image:url('images/suite-1-new-1.jpg') !important;background-size:cover !important;background-position:center center !important}
+.hero-leasing-status{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;padding:9px 15px;border:1px solid rgba(255,255,255,.55);border-radius:999px;background:rgba(20,18,15,.62);backdrop-filter:blur(8px);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.hero-leasing-status .leased-dot{width:8px;height:8px;border-radius:50%;background:#d6ae66;box-shadow:0 0 0 3px rgba(214,174,102,.18)}
+#floor-plan .suite-choice[data-suite="2"]{position:relative;border-color:rgba(140,40,40,.28);background:#fff8f6}
+#floor-plan .suite-choice[data-suite="2"] small{color:#a23b31;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+#floor-plan .suite-choice[data-suite="2"] span{border-color:#a23b31;color:#a23b31}
+#floor-plan .suite-choice[data-suite="2"].active span{background:#a23b31;color:#fff}
+#floor-plan .suite-status.leased-status{background:#f7dfdc;color:#9b3028}
+#requestSuite:disabled{opacity:.6;cursor:not-allowed;filter:grayscale(.15)}
+@media(max-width:760px){.hero-leasing-status{font-size:.62rem;padding:8px 12px;letter-spacing:.08em}}
+</style></head>
+<body>
+<div class="announcement-bar">NOW LEASING   |   SUITE 2 LEASED   |   ONLY THREE PRIVATE SUITES REMAINING</div>
+<header id="hdr"><div class="wrap"><nav>
+<a class="brand" href="#top"><img alt="SA" decoding="async" src="images/monogram-light-transparent.png"/><span>The Suites at Adair</span></a>
+<div class="links"><a href="#story">Vision</a><a href="#suites">Four Suites</a><a href="#floor-plan">Floor Plan</a><a href="#gallery">Gallery</a><a class="btn gold" href="#apply">Request Information</a></div>
+<div class="social-links">
+<a aria-label="Instagram" href="#">
+<svg viewbox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.2A4.8 4.8 0 1 0 16.8 12 4.8 4.8 0 0 0 12 7.2zm0 1.8A3 3 0 1 1 9 12a3 3 0 0 1 3-3zm5.2-2.9a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1z"></path></svg>
+</a>
+<a aria-label="Facebook" href="#">
+<svg viewbox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.6-1.6h1.7V4.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2V11H8v3h2.4v8z"></path></svg>
+</a>
+</div>
+</nav></div></header>
+<main id="top">
+<section class="hero hero-v17">
+<div class="hero-v17-overlay"></div>
+<div class="wrap hero-v17-inner">
+<div class="hero-v17-content reveal">
+<div class="hero-v17-coming">COMING SOON</div>
+<div class="hero-leasing-status"><span class="leased-dot"></span>Suite 2 Leased &nbsp;·&nbsp; Only 3 Suites Remaining</div>
+<img alt="The Suites at Adair" class="hero-v17-logo" decoding="async" src="images/logo-dark-transparent.png"/>
+<div class="hero-v17-subtitle">Luxury Salon Suites</div>
+<div class="hero-v17-location">Downtown Woodstock</div>
+<div class="hero-v17-rule"></div>
+<p class="hero-v17-tagline">Private spaces. Premium finishes. Your business, elevated.</p>
+<div class="hero-v17-actions">
+<a class="btn hero-v17-primary" href="#apply">Reserve Your Suite</a>
+<a class="btn hero-v17-secondary" href="#apply">Join the Interest List</a>
+</div>
+<div aria-label="Highlights" class="hero-v17-features">
+<span>Downtown Woodstock</span>
+<span>Luxury Private Suites</span>
+<span>Only 3 Suites Remaining</span>
+</div>
+</div>
+</div>
+</section>
+<div class="marquee"><div class="marquee-track">
+THREE SUITES REMAINING   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN   •   PRIVATE CLIENT EXPERIENCE   •  
+THREE SUITES REMAINING   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN   •   PRIVATE CLIENT EXPERIENCE   •  
+</div></div>
+<section class="manifesto" id="story"><div class="wrap manifesto-grid">
+<div class="reveal">
+<div class="eyebrow">Limited on purpose</div>
+<h2>Not another maze of salon rooms.</h2>
+<p>The Suites at Adair is a boutique collection of only four private studios. The smaller scale creates an intimate atmosphere, a stronger sense of identity, and a more elevated experience for every professional and every client.</p>
+</div>
+</div></section><section class="brand-experience">
+<div class="brand-experience-slider">
+<div class="ba-slider" data-ba-slider="" style="--split:50%;">
+<img alt="Future illuminated exterior concept" class="ba-image ba-present" src="images/exterior-future.png"/>
+<img alt="Present-day exterior of The Suites at Adair" class="ba-image ba-future" src="images/exterior-present.jpg"/>
+<span class="ba-label ba-label-left">Present</span>
+<span class="ba-label ba-label-right">Future</span>
+<div aria-hidden="true" class="ba-line">
+<span class="ba-grip">‹  ›</span>
+</div>
+<input aria-label="Slide left or right to compare present and future exterior" class="ba-control" max="100" min="0" type="range" value="50"/>
+</div>
+</div>
+<div class="wrap brand-experience-content">
+<div class="brand-experience-copy reveal">
+<div class="eyebrow">Designed around your reputation</div>
+<h2>Your workspace becomes part of your brand.</h2>
+<p>Warm architectural details, black-framed doors, refined lighting, natural textures, and private studios create an environment that feels intentional rather than ordinary.</p>
+<a class="btn gold" href="#apply">Request Information</a>
+</div>
+<div class="brand-experience-image reveal">
+<img alt="Warm, refined salon suite interior" loading="lazy" src="images/suite-1-new-1.jpg"/>
+</div>
+</div>
+</section>
+<section class="five" id="suites"><div class="wrap">
+<div class="five-head reveal"><div><div class="eyebrow">The collection</div><h2>Four private suites.</h2></div><p>Each studio is part of one cohesive boutique environment while giving every professional the freedom to create an experience of their own.</p></div>
+<div class="suite-grid reveal">
+<article class="suite"><span aria-hidden="true" class="suite-accent"></span><h3>Natural Light Throughout</h3><p>Every suite. Every day. Creating a brighter experience for you and your clients.</p></article>
+<article class="suite"><span aria-hidden="true" class="suite-accent"></span><h3>Private Workspace</h3><p>A dedicated studio for your services, schedule, and clientele.</p></article>
+<article class="suite"><span aria-hidden="true" class="suite-accent"></span><h3>Luxury Setting</h3><p>Materials and finishes selected to feel warm, polished, and timeless.</p></article>
+<article class="suite"><span aria-hidden="true" class="suite-accent"></span><h3>Independent Brand</h3><p>Build a recognizable business identity without a traditional salon floor.</p></article>
+<article class="suite"><span aria-hidden="true" class="suite-accent"></span><h3>Client Experience</h3><p>A quiet, intimate environment that makes every appointment feel personal.</p></article>
+<article class="suite"><span aria-hidden="true" class="suite-accent"></span><h3>Downtown Address</h3><p>Located at 60 Linton Street in the Adair Park area of Downtown Woodstock.</p></article>
+</div>
+</div></section>
+<section class="floor-plan-section" id="floor-plan">
+<div class="wrap">
+<div class="floor-plan-head reveal">
+<div><div class="eyebrow">Explore the layout</div><h2>Explore Our Suites.</h2><div class="floor-plan-urgency">Suite 2 leased · Only three suites remaining</div></div>
+<p>Select any suite on the plan or from the list to view its location, features, and current availability. Select any suite on the plan or from the list to view its location, features, square footage, and current availability.</p>
+</div>
+<div class="floor-plan-layout reveal">
+<aside aria-label="Choose a suite" class="suite-picker">
+<div class="suite-picker-title">Four Private Suites</div>
+<button class="suite-choice active" data-suite="1" type="button"><span>1</span><strong>Suite 1</strong><small>Front left</small></button><button class="suite-choice" data-suite="2" type="button"><span>2</span><strong>Suite 2</strong><small>Leased</small></button><button class="suite-choice" data-suite="3" type="button"><span>3</span><strong>Suite 3</strong><small>Right side</small></button><button class="suite-choice" data-suite="4" type="button"><span>4</span><strong>Suite 4</strong><small>Back left</small></button><button class="suite-choice" data-suite="breakroom" type="button"><span>BR</span><strong>Breakroom + Laundry</strong><small>Shared amenity</small></button><div class="suite-legend">
+<span><i class="status-dot available"></i> Available</span>
+<span><i class="status-dot pending"></i> Application Pending</span>
+<span><i class="status-dot leased"></i> Leased</span>
+</div>
+</aside>
+<div class="floor-plan-canvas" id="floorPlanCanvas">
+<img alt="Floor plan of The Suites at Adair showing four private salon suites and the breakroom" decoding="async" loading="lazy" src="images/floor-plan-four-suites-labeled.JPEG"/>
+<div class="suite-highlight active" data-suite="1"></div>
+<div class="suite-highlight" data-suite="2"></div>
+<div class="suite-highlight" data-suite="3"></div>
+<div class="suite-highlight" data-suite="4"></div>
+<div class="suite-highlight" data-suite="breakroom"></div>
+<button aria-label="Open floor plan larger" class="plan-expand" id="planExpand" type="button">View Larger</button>
+</div>
+<aside aria-live="polite" class="suite-detail">
+<div class="suite-detail-top"><span class="suite-detail-number">1</span><span class="suite-status">Available</span></div>
+<div class="eyebrow suite-detail-eyebrow">Suite 1</div>
+<h3 id="suiteDetailName">Front Left Suite</h3><div class="suite-photo-viewer"><button aria-label="Previous suite photo" class="suite-photo-nav suite-photo-prev" type="button">‹</button><img alt="Conceptual private suite rendering" decoding="async" id="suiteDetailPhoto" loading="eager" src="images/suite-1-new-1.jpg"/><button aria-label="Next suite photo" class="suite-photo-nav suite-photo-next" type="button">›</button><div class="suite-photo-count" id="suitePhotoCount">1 / 1</div></div><div class="suite-photo-thumbs" id="suitePhotoThumbs"></div>
+<div class="suite-square-footage" id="suiteDetailSize">120 SQ FT</div>
+<div class="suite-detail-meta"><span id="suiteDetailLocation">Front-left location near the main entrance</span></div>
+<p id="suiteDetailDescription">A bright, front-facing private studio designed for a polished and comfortable client experience.</p>
+<ul id="suiteDetailFeatures"><li>Front-facing location</li><li>Natural light</li><li>Private, lockable workspace</li><li>Upscale finishes and furnishings shown conceptually</li></ul>
+<button class="btn gold request-suite" id="requestSuite" type="button">Request Suite 1</button>
+</aside>
+</div>
+</div>
+</section>
+<div class="plan-modal" hidden="" id="planModal">
+<button aria-label="Close enlarged floor plan" class="plan-modal-close" type="button">×</button>
+<img alt="Enlarged floor plan showing four suites and breakroom" src="images/floor-plan-four-suites-labeled.JPEG"/>
+</div>
+<section class="editorial" id="gallery"><div class="wrap"><div class="gallery-head reveal"><h2>Gallery</h2><p>Explore each private suite and the shared amenities.</p></div>
+<section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Exterior</h3><span>1 photo</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Exterior of The Suites at Adair larger" class="gallery-card" role="button" tabindex="0"><img alt="Exterior of The Suites at Adair" decoding="async" loading="eager" src="images/exterior-gallery-new-v64.jpg"/><figcaption class="gallery-label">Exterior</figcaption></figure></div></section>
+<section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 1</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 1 larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 1 interior" decoding="async" loading="lazy" src="images/suite-1-new-1.jpg"/><figcaption class="gallery-label">Suite 1</figcaption></figure><figure aria-label="Open Suite 1 second view larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 1 interior, second view" decoding="async" loading="lazy" src="images/suite-1-new-2.jpg"/><figcaption class="gallery-label">Suite 1 · View 2</figcaption></figure></div></section>
+<section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 2</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 2 larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 2 interior" decoding="async" loading="lazy" src="images/suite-2-new-1.jpg"/><figcaption class="gallery-label">Suite 2</figcaption></figure><figure aria-label="Open Suite 2 second view larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 2 interior, second view" decoding="async" loading="lazy" src="images/suite-2-new-2.jpg"/><figcaption class="gallery-label">Suite 2 · View 2</figcaption></figure></div></section>
+<section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 3</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 3 larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 3 interior" decoding="async" loading="lazy" src="images/suite-3-new-1.jpg"/><figcaption class="gallery-label">Suite 3</figcaption></figure><figure aria-label="Open Suite 3 second view larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 3 interior, second view" decoding="async" loading="lazy" src="images/suite-3-new-2.jpg"/><figcaption class="gallery-label">Suite 3 · View 2</figcaption></figure></div></section>
+<section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Suite 4</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Suite 4 view one larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 4 view one" decoding="async" loading="lazy" src="images/suite-4-new-1.jpg"/><figcaption class="gallery-label">Suite 4</figcaption></figure><figure aria-label="Open Suite 4 view two larger" class="gallery-card" role="button" tabindex="0"><img alt="Suite 4 view two" decoding="async" loading="lazy" src="images/suite-4-new-2.jpg"/><figcaption class="gallery-label">Suite 4 · View 2</figcaption></figure></div></section>
+<section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Breakroom + Laundry</h3><span>1 photo</span></div><div class="gallery-showcase-rail"><figure aria-label="Open Breakroom + Laundry photo larger" class="gallery-card" role="button" tabindex="0"><img alt="Breakroom and on-site laundry with washer, coffee bar, microwave, refrigerator, storage and seating" decoding="async" loading="lazy" src="images/breakroom-new.jpg"/><figcaption class="gallery-label">Breakroom + Laundry</figcaption></figure></div></section>
+<section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Shared Hallway</h3><span>2 photos</span></div><div class="gallery-showcase-rail"><figure aria-label="Open shared hallway larger" class="gallery-card" role="button" tabindex="0"><img alt="Shared hallway with glass-front private suites" decoding="async" loading="lazy" src="images/hallway-new-1.jpg"/><figcaption class="gallery-label">Shared Hallway</figcaption></figure><figure aria-label="Open shared hallway hospitality area larger" class="gallery-card" role="button" tabindex="0"><img alt="Bright shared hallway and hospitality area" decoding="async" loading="lazy" src="images/hallway-new-2.jpg"/><figcaption class="gallery-label">Shared Hallway · View 2</figcaption></figure></div></section>
+<section class="gallery-showcase reveal"><div class="gallery-showcase-head"><h3>Private Bathroom</h3><span>1 photo</span></div><div class="gallery-showcase-rail"><figure aria-label="Open private bathroom larger" class="gallery-card" role="button" tabindex="0"><img alt="Private bathroom" decoding="async" loading="lazy" src="images/bathroom-new.jpg"/><figcaption class="gallery-label">Private Bathroom</figcaption></figure></div></section>
+</div></section><div class="gallery-modal" hidden="" id="galleryModal"><button aria-label="Close enlarged gallery image" class="gallery-modal-close" type="button">×</button><img alt="Enlarged gallery image"/></div>
+<section class="location"><div class="wrap location-grid">
+<img alt="The Suites at Adair" class="location-logo reveal" decoding="async" src="images/logo-dark-transparent.png"/>
+<div class="reveal">
+<div class="eyebrow">The location</div>
+<h2>At the edge of everything people love about Downtown Woodstock.</h2>
+<p>A destination that feels connected, walkable, and established—giving your clients a more complete experience before and after their appointment.</p>
+<div class="address">60 Linton Street · Woodstock, Georgia</div>
+</div>
+</div></section>
+<section class="walkable" id="walkable">
+<div class="wrap">
+<div class="walkable-head reveal">
+<div>
+<div class="eyebrow">Life at Adair Park</div>
+<h2>A neighborhood your clients will love.</h2>
+</div>
+<p>Coffee before the first appointment. Lunch between clients. Dinner, wellness, shopping, and treats after the workday. Every destination below is located within Adair Park and is just a short walk from The Suites at Adair.</p>
+</div>
+<div class="life-grid">
+<a aria-label="Visit Starbucks website" class="life-card reveal" href="https://www.starbucks.com/store-locator" rel="noopener noreferrer" style="--business-image:url('https://static.wixstatic.com/media/aedd11_9c23bd7aa45340b9921f8e3c012fb9a5~mv2.png/v1/fill/w_980,h_682,al_c,q_90,usm_0.66_1.00_0.01/IMG_3046_edited.png')" target="_blank">
+<span aria-hidden="true" class="life-arrow">↗</span>
+<div class="life-copy"><h3>Starbucks</h3><span>Coffee</span></div>
+</a>
+<a aria-label="Visit Kale Me Crazy website" class="life-card reveal" href="https://kalemecrazy.net/woodstock/" rel="noopener noreferrer" style="--business-image:url('https://static.wixstatic.com/media/aedd11_eb072eac358a4846a5f85352bbbc454e~mv2.jpg/v1/fill/w_980,h_979,al_c,q_85,usm_0.66_1.00_0.01/Screenshot%202025-07-28%20at%207_30_edited.jpg')" target="_blank">
+<span aria-hidden="true" class="life-arrow">↗</span>
+<div class="life-copy"><h3>Kale Me Crazy</h3><span>Juice &amp; healthy fare</span></div>
+</a>
+<a aria-label="Visit Roberto's Deluxe website" class="life-card reveal" href="https://robertoswoodstock.com/" rel="noopener noreferrer" style="--business-image:url('https://static.wixstatic.com/media/aedd11_1d3bb89c64244d26b1104913dea0914d~mv2.jpg/v1/fill/w_980,h_1470,al_c,q_85,usm_0.66_1.00_0.01/IMG_5916.jpg')" target="_blank">
+<span aria-hidden="true" class="life-arrow">↗</span>
+<div class="life-copy"><h3>Roberto's Deluxe</h3><span>Seafood</span></div>
+</a>
+<a aria-label="Visit Paloma Tequila &amp; Tacos website" class="life-card reveal" href="https://www.palomataco.com/" rel="noopener noreferrer" style="--business-image:url('https://static.wixstatic.com/media/aedd11_e8bd4e8d853c4725b74b3d16886539bd~mv2.png/v1/fill/w_980,h_735,al_c,q_90,usm_0.66_1.00_0.01/IMG_3041_HEIC.png')" target="_blank">
+<span aria-hidden="true" class="life-arrow">↗</span>
+<div class="life-copy"><h3>Paloma Tequila &amp; Tacos</h3><span>Tacos &amp; cocktails</span></div>
+</a>
+<a aria-label="Visit Catalina Cucina website" class="life-card reveal" href="https://www.toasttab.com/local/order/catalina-cucina" rel="noopener noreferrer" style="--business-image:url('https://static.wixstatic.com/media/f81a0c31f6e743f689035e23ab8acc81.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01/Pasta%20And%20Wine.jpg')" target="_blank">
+<span aria-hidden="true" class="life-arrow">↗</span>
+<div class="life-copy"><h3>Catalina Cucina</h3><span>Italian dining</span></div>
+</a>
+<a aria-label="Visit Prime Nail Lounge website" class="life-card reveal" href="https://primenaillounge.com/" rel="noopener noreferrer" style="--business-image:url('https://static.wixstatic.com/media/aedd11_f054b243404f48068aeeb81d411a576d~mv2.jpeg/v1/fill/w_980,h_686,al_c,q_85,usm_0.66_1.00_0.01/primw.jpeg')" target="_blank">
+<span aria-hidden="true" class="life-arrow">↗</span>
+<div class="life-copy"><h3>Prime Nail Lounge</h3><span>Nail salon</span></div>
+</a>
+<span aria-hidden="true" class="life-arrow">↗</span>
+<div class="life-copy"><h3>Project Optical</h3><span>Eyewear</span></div>
+</a>
+<a aria-label="Visit Whit's Frozen Custard website" class="life-card reveal" href="https://www.whitsfrozencustard.com/georgia/woodstock" rel="noopener noreferrer" style="--business-image:url('https://static.wixstatic.com/media/11062b_50566e1be74e4077864d367e9c603a9b~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85,usm_0.66_1.00_0.01/Ice%20Cream%20Scoops.jpg')" target="_blank">
+<span aria-hidden="true" class="life-arrow">↗</span>
+<div class="life-copy"><h3>Whit's Frozen Custard</h3><span>Dessert</span></div>
+</a>
+<a aria-label="Visit Skin MD Medical Spa website" class="life-card reveal" href="https://skinmdwoodstock.com/" rel="noopener noreferrer" style="--business-image:url('https://static.wixstatic.com/media/11062b_67c19ea1e2f642c48b29dcec4aa94354~mv2.jpg/v1/fill/w_980,h_1009,al_c,q_85,usm_0.66_1.00_0.01/Freckled%20Skin.jpg')" target="_blank">
+<span aria-hidden="true" class="life-arrow">↗</span>
+<div class="life-copy"><h3>Skin MD Medical Spa</h3><span>Medical spa</span></div>
+</a>
+<a aria-label="Visit Collaborate Coworking website" class="life-card reveal" href="https://www.collaboratewoodstock.com/" rel="noopener noreferrer" style="--business-image:url('https://static.wixstatic.com/media/aedd11_1496f38bc0df476cb514e6efc849e40f~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85,usm_0.66_1.00_0.01/summit6.jpg')" target="_blank">
+<span aria-hidden="true" class="life-arrow">↗</span>
+<div class="life-copy"><h3>Collaborate Coworking</h3><span>Coworking &amp; events</span></div>
+</a>
+<a aria-label="Visit 4Ever Young website" class="life-card reveal" href="https://4everyoungantiaging.com/woodstock/" rel="noopener noreferrer" style="--business-image:url('https://static.wixstatic.com/media/aedd11_4b8a48bc55c149928e12a37695223d2e~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85,usm_0.66_1.00_0.01/4ever.jpg')" target="_blank">
+<span aria-hidden="true" class="life-arrow">↗</span>
+<div class="life-copy"><h3>4Ever Young</h3><span>Anti-aging &amp; medical spa</span></div>
+</a>
+<a aria-label="Visit Horsepower Fitness website" class="life-card reveal" href="https://www.horsepowerfitness.com/studio-locations" rel="noopener noreferrer" style="--business-image:url('https://static.wixstatic.com/media/049c92_7232791639bf4ede90d8bfce075a6aa0~mv2.jpeg/v1/crop/x_0%2Cy_196%2Cw_1631%2Ch_891/fill/w_1200%2Ch_656%2Cal_c%2Cq_85/001A1385.jpeg')" target="_blank">
+<span aria-hidden="true" class="life-arrow">↗</span>
+<div class="life-copy"><h3>Horsepower Fitness</h3><span>Strength, conditioning &amp; HYROX</span></div>
+</a>
+<a aria-label="Visit Even Flow Chiropractic website" class="life-card reveal" href="https://www.evenflowchiro.com/" rel="noopener noreferrer" style="--business-image:url('https://static.wixstatic.com/media/c766c0_e6e60b898b0240b6be6c81cc4ec9f848~mv2.png/v1/crop/x_4393,y_2462,w_3081,h_2267/fill/w_900,h_660,al_c,q_85/Transparent%20-11.png')" target="_blank">
+<span aria-hidden="true" class="life-arrow">↗</span>
+<div class="life-copy"><h3>Even Flow Chiropractic</h3><span>Chiropractic &amp; wellness</span></div>
+</a>
+<a aria-label="Visit PrivateSomm ATL website" class="life-card reveal" href="https://www.privatesommatl.com/" rel="noopener noreferrer" style="--business-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%231b1512'/%3E%3Cstop offset='1' stop-color='%236b321f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='800' fill='url(%23g)'/%3E%3Ccircle cx='870' cy='230' r='180' fill='%23caa56a' opacity='.13'/%3E%3Cpath d='M510 170h180c0 190-35 292-90 325v120h105v28H495v-28h105V495c-55-33-90-135-90-325Z' fill='none' stroke='%23e9d3a2' stroke-width='15'/%3E%3Cpath d='M530 325h140' stroke='%23e9d3a2' stroke-width='15'/%3E%3Ctext x='600' y='715' text-anchor='middle' font-family='Georgia,serif' font-size='56' fill='%23f4e8cf' letter-spacing='7'%3EPRIVATE SOMM ATL%3C/text%3E%3C/svg%3E&quot;)" target="_blank"> <span aria-hidden="true" class="life-arrow">↗</span> <div class="life-copy"><h3>PrivateSomm ATL</h3><span>Private sommelier &amp; wine consulting</span></div> </a> <a aria-label="Visit Pelican's SnoBalls website" class="life-card reveal" href="https://pelicanssnoballs.com/georgia/" rel="noopener noreferrer" style="--business-image:url('https://static.wixstatic.com/media/aedd11_16c1802e6e7d478ca5f0d440eccc7c5a~mv2.jpg/v1/fill/w_960,h_960,al_c,q_85/pelican.jpg')" target="_blank">
+<span aria-hidden="true" class="life-arrow">↗</span>
+<div class="life-copy"><h3>Pelican's SnoBalls</h3><span>Shaved ice</span></div>
+</a>
+</div>
+<div class="walk-note reveal">Select any card to visit that business’s website. Tenant openings and availability are subject to change.</div>
+</div>
+</section>
+<section class="apply" id="apply">
+<div class="wrap apply-grid">
+<div class="apply-copy reveal">
+<div class="eyebrow">Founding professionals</div>
+<h2>Claim one of four.</h2>
+<p>Share a few details about your business to receive suite availability, pricing, project updates, and future leasing opportunities.</p>
+<div class="reserve-note">
+<h3>Reserve Your Suite Early</h3>
+<p>Leasing opportunities are now available for independent beauty professionals seeking a premium studio environment in Downtown Woodstock. With only four private suites available, early inquiries are encouraged ahead of the anticipated late-2026 opening.</p>
+</div>
+</div>
+<form action="/api/inquiry" class="reveal" id="interestForm" method="post"><input id="preferred-suite" name="preferred_suite" type="hidden" value=""/>
+<p hidden=""><label>Do not fill this out: </label></p>
+<div class="form-grid">
+<div class="field"><label for="full-name">Full name</label><input autocomplete="name" id="full-name" name="full_name" required=""/></div>
+<div class="field"><label for="business-name">Business name</label><input autocomplete="organization" id="business-name" name="business_name"/></div>
+<div class="field"><label for="email">Email address</label><input autocomplete="email" id="email" name="email" required="" type="email"/></div>
+<div class="field"><label for="phone">Mobile phone</label><input autocomplete="tel" id="phone" name="phone" required="" type="tel"/></div>
+<div class="field"><label for="service">Business type</label><select id="service" name="business_type" required=""><option disabled="" selected="" value="">Select one</option><option>Hair Stylist</option><option>Color Specialist</option><option>Barber</option><option>Esthetician</option><option>Lash Artist</option><option>Brow Artist</option><option>Nail Technician</option><option>Makeup Artist</option><option>Permanent Makeup</option><option>Massage Therapist</option><option>Med Spa</option><option>Wellness</option><option>Other</option></select></div>
+<div class="field"><label for="move-in">Desired move-in timing</label><select id="move-in" name="move_in_timing" required=""><option disabled="" selected="" value="">Select one</option><option>Immediately</option><option>Within 30 Days</option><option>1–3 Months</option><option>3–6 Months</option><option>Just Exploring</option></select></div>
+<div class="field"><label for="suite-before">Leased a salon suite before?</label><select id="suite-before" name="leased_suite_before" required=""><option disabled="" selected="" value="">Select one</option><option>Yes</option><option>No</option></select></div>
+<div class="field"><label for="contact-method">Preferred contact method</label><select id="contact-method" name="preferred_contact_method" required=""><option disabled="" selected="" value="">Select one</option><option>Call</option><option>Text</option><option>Email</option></select></div>
+<div class="field full"><label for="instagram">Instagram</label><input id="instagram" name="instagram" placeholder="@yourhandle"/></div>
+<div class="field full"><label for="message">Tell us about your business</label><textarea id="message" name="message" placeholder="Tell us a little about your business, your clientele, and what you're looking for in your next salon suite."></textarea></div>
+<div class="field full"><button class="btn gold" type="submit">Request Information</button></div>
+</div>
+<div class="success" hidden="" id="success" role="status"><strong>Thank you!</strong><br/>We’ve received your inquiry. A member of The Suites at Adair team will contact you within one business day.</div>
+<div class="success" hidden="" id="formError" role="alert">Something went wrong. Please try again or contact us directly.</div>
+</form>
+</div>
+</section>
+</main>
+<a aria-label="Request information" class="floating-tour" href="#apply">Request Information</a>
+<footer><div class="wrap footer"><span>© 2026 The Suites at Adair</span><span>Four Private Salon Suites · Downtown Woodstock</span></div><div class="social-links footer-social"><a aria-label="Instagram" href="#">
+<svg viewbox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.2A4.8 4.8 0 1 0 16.8 12 4.8 4.8 0 0 0 12 7.2zm0 1.8A3 3 0 1 1 9 12a3 3 0 0 1 3-3zm5.2-2.9a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1z"></path></svg>
+</a>
+<a aria-label="Facebook" href="#">
+<svg viewbox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.6-1.6h1.7V4.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2V11H8v3h2.4v8z"></path></svg>
+</a>
+</div></footer>
+<script defer="True" src="js/app.js?v=77"></script><script id="floor-plan-production-script">
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.__floorPlanInitialized) return;
+  window.__floorPlanInitialized = true;
+// V31 interactive suite floor plan
+const suiteData={
+  1:{name:'Front Left Suite',location:'Front-left location near the main entrance',size:'120 SQ FT',status:'Available',description:'A bright, front-facing private studio designed for a polished and comfortable client experience.',features:['Front-facing location','Natural light','Private, lockable workspace','Upscale finishes shown conceptually']},
+  2:{name:'Front Right Suite',location:'Front-right location near the main entrance',size:'120 SQ FT',status:'Leased',description:'A bright, front-facing private studio with convenient access from the main entrance.',features:['Front-facing location','Natural light','Private, lockable workspace','Upscale finishes shown conceptually']},
+  3:{name:'Right-Side Suite',location:'Right-side private suite',size:'125 SQ FT',status:'Available',description:'A spacious private studio along the right side of the floor plan with room for a customized salon experience.',features:['Spacious private layout','Flexible workstation arrangement','Natural light','Upscale finishes shown conceptually']},
+  4:{name:'Back Left Suite',location:'Back-left private suite',size:'180 SQ FT',status:'Available',description:'A distinctive rear suite with its own private entrance for added privacy and convenience, plus easy access to the private restroom and coffee bar. A flexible studio designed to accommodate one or two beauty professionals.',features:['Dedicated private entrance','Near private restroom','Spacious rear position with the largest studio','Flexible build-out for one or two professionals','Shampoo bowl and styling chair provided']},
+  breakroom:{name:'Breakroom + Laundry',location:'Shared amenity for suite professionals',size:'80 SQ FT',status:'Shared Amenity',description:'A private, thoughtfully designed breakroom and on-site laundry with the everyday conveniences needed between appointments. The space seats four comfortably.',features:['Private breakroom','On-site washer & dryer','Microwave','Coffee bar','Fridge and storage','Seats 4 comfortably']}
+}
+
+const suitePhotos={
+  1:[
+    {src:'images/suite-1-new-1.jpg',alt:'Suite 1 interior'},
+    {src:'images/suite-1-new-2.jpg',alt:'Suite 1 interior, second view'}
+  ],
+  2:[
+    {src:'images/suite-2-new-1.jpg',alt:'Suite 2 interior'},
+    {src:'images/suite-2-new-2.jpg',alt:'Suite 2 interior, second view'}
+  ],
+  3:[
+    {src:'images/suite-3-new-1.jpg',alt:'Suite 3 interior'},
+    {src:'images/suite-3-new-2.jpg',alt:'Suite 3 interior, second view'}
+  ],
+  4:[
+    {src:'images/suite-4-new-1.jpg',alt:'Suite 4 view one'},
+    {src:'images/suite-4-new-2.jpg',alt:'Suite 4 view two'}
+  ],
+  breakroom:[
+    {src:'images/breakroom-new.jpg',alt:'Breakroom and on-site laundry with washer, coffee bar, microwave, refrigerator, storage and seating'}
+  ]
+}
+let activeSuiteNumber=1;
+let activeSuitePhotoIndex=0;
+function renderSuitePhoto(){
+  const photos=suitePhotos[activeSuiteNumber]||[];
+  const photo=photos[activeSuitePhotoIndex]||photos[0];
+  const image=document.getElementById('suiteDetailPhoto');
+  const count=document.getElementById('suitePhotoCount');
+  const thumbs=document.getElementById('suitePhotoThumbs');
+
+  if(image&&photo){
+    image.src=photo.src;
+    image.alt=photo.alt;
+  }
+  if(count){
+    count.textContent=photos.length?`${activeSuitePhotoIndex+1} / ${photos.length}`:'';
+  }
+
+  document.querySelectorAll('.suite-photo-nav').forEach(button=>{
+    button.hidden=photos.length<2;
+  });
+
+  if(thumbs){
+    thumbs.innerHTML=photos.map((item,index)=>`
+      <button type="button"
+              class="suite-photo-thumb ${index===activeSuitePhotoIndex?'active':''}"
+              data-photo-index="${index}"
+              aria-label="View photo ${index+1}">
+        <img src="${item.src}" alt="">
+      </button>
+    `).join('');
+
+    thumbs.querySelectorAll('.suite-photo-thumb').forEach(button=>{
+      button.addEventListener('click',()=>{
+        activeSuitePhotoIndex=Number(button.dataset.photoIndex);
+        renderSuitePhoto();
+      });
+    });
+  }
+}
+
+function selectSuite(number){
+  const data=suiteData[number]; if(!data)return;
+  activeSuiteNumber=String(number)==='breakroom'?'breakroom':Number(number);
+  activeSuitePhotoIndex=0;
+  document.querySelectorAll('[data-suite]').forEach(el=>el.classList.toggle('active',el.dataset.suite==number));
+  const isBreakroom=String(number)==='breakroom';
+  document.querySelector('.suite-detail-number').textContent=isBreakroom?'BR':number;
+  document.querySelector('.suite-detail-eyebrow').textContent=isBreakroom?'Shared Amenity':'Suite '+number;
+  document.getElementById('suiteDetailName').textContent=data.name;
+  document.getElementById('suiteDetailLocation').textContent=data.location;
+  const statusEl=document.querySelector('.suite-status');
+  statusEl.textContent=data.status;
+  statusEl.classList.toggle('leased-status',data.status==='Leased');
+  document.getElementById('suiteDetailSize').textContent=data.size;
+  document.getElementById('suiteDetailDescription').textContent=data.description;
+  document.getElementById('suiteDetailFeatures').innerHTML=data.features.map(x=>`<li>${x}</li>`).join('');
+  const requestButton=document.getElementById('requestSuite');
+  const isLeased=data.status==='Leased';
+  requestButton.textContent=isBreakroom?'Request Information':(isLeased?'Suite 2 — Leased':'Request Suite '+number);
+  requestButton.disabled=isLeased;
+  requestButton.dataset.suite=number;
+  renderSuitePhoto();
+}
+document.querySelectorAll('.suite-choice,.suite-marker').forEach(btn=>btn.addEventListener('click',()=>selectSuite(btn.dataset.suite)));
+document.getElementById('requestSuite')?.addEventListener('click',e=>{
+  const number=e.currentTarget.dataset.suite||'1';
+  const hidden=document.getElementById('preferred-suite');
+  const message=document.getElementById('message');
+  const isBreakroom=String(number)==='breakroom';
+  hidden.value=isBreakroom?'Breakroom + Laundry / General Information':'Suite '+number;
+  if(!message.value.trim()) message.value=isBreakroom?'I am interested in learning more about the suites and the Breakroom + Laundry.':`I am interested in learning more about Suite ${number}.`;
+  document.getElementById('apply').scrollIntoView({behavior:'smooth'});
+  setTimeout(()=>document.getElementById('full-name')?.focus(),650);
+});
+const planModal=document.getElementById('planModal');
+document.getElementById('planExpand')?.addEventListener('click',()=>{planModal.hidden=false;document.body.style.overflow='hidden'});
+planModal?.querySelector('.plan-modal-close')?.addEventListener('click',()=>{planModal.hidden=true;document.body.style.overflow=''});
+planModal?.addEventListener('click',e=>{if(e.target===planModal){planModal.hidden=true;document.body.style.overflow=''}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&planModal&&!planModal.hidden){planModal.hidden=true;document.body.style.overflow=''}});
+
+document.querySelector('.suite-photo-prev')?.addEventListener('click',()=>{
+  const photos=suitePhotos[activeSuiteNumber]||[];
+  if(!photos.length)return;
+  activeSuitePhotoIndex=(activeSuitePhotoIndex-1+photos.length)%photos.length;
+  renderSuitePhoto();
+});
+document.querySelector('.suite-photo-next')?.addEventListener('click',()=>{
+  const photos=suitePhotos[activeSuiteNumber]||[];
+  if(!photos.length)return;
+  activeSuitePhotoIndex=(activeSuitePhotoIndex+1)%photos.length;
+  renderSuitePhoto();
+});
+
+
+let suitePhotoTouchStart=0;
+const suitePhotoViewer=document.querySelector('.suite-photo-viewer');
+
+suitePhotoViewer?.addEventListener('touchstart',event=>{
+  suitePhotoTouchStart=event.changedTouches[0].clientX;
+},{passive:true});
+
+suitePhotoViewer?.addEventListener('touchend',event=>{
+  const photos=suitePhotos[activeSuiteNumber]||[];
+  const delta=event.changedTouches[0].clientX-suitePhotoTouchStart;
+  if(photos.length<2||Math.abs(delta)<45)return;
+
+  activeSuitePhotoIndex=delta<0
+    ?(activeSuitePhotoIndex+1)%photos.length
+    :(activeSuitePhotoIndex-1+photos.length)%photos.length;
+
+  renderSuitePhoto();
+},{passive:true});
+
+selectSuite(1);
+
+
+// V34 gallery full-screen lightbox
+const galleryModal=document.getElementById('galleryModal');
+const galleryModalImage=galleryModal?.querySelector('img');
+function openGalleryImage(card){
+  const img=card?.querySelector('img');
+  if(!img||!galleryModal||!galleryModalImage)return;
+  galleryModalImage.src=img.currentSrc||img.src;
+  galleryModalImage.alt=img.alt||'Enlarged gallery image';
+  galleryModal.hidden=false;
+  document.body.style.overflow='hidden';
+}
+document.querySelectorAll('#gallery .gallery-card').forEach(card=>{
+  card.addEventListener('click',()=>openGalleryImage(card));
+  card.addEventListener('keydown',event=>{
+    if(event.key==='Enter'||event.key===' '){
+      event.preventDefault();
+      openGalleryImage(card);
+    }
+  });
+});
+galleryModal?.querySelector('.gallery-modal-close')?.addEventListener('click',()=>{
+  galleryModal.hidden=true;
+  document.body.style.overflow='';
+});
+galleryModal?.addEventListener('click',event=>{
+  if(event.target===galleryModal){
+    galleryModal.hidden=true;
+    document.body.style.overflow='';
+  }
+});
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'&&galleryModal&&!galleryModal.hidden){
+    galleryModal.hidden=true;
+    document.body.style.overflow='';
+  }
+});
+
+});</script></body></html>
