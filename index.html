@@ -728,9 +728,21 @@ img { max-width: 100%; }
 #floor-plan .suite-choice[data-suite="breakroom"] span{font-size:.68rem;letter-spacing:-.03em}
 @media(max-width:760px){#floor-plan .suite-choice[data-suite="breakroom"] span{font-size:.58rem}}
 #floor-plan .suite-highlight[data-suite="breakroom"]{clip-path:polygon(7% 40%,43% 40%,43% 57%,7% 57%)}
+</style><style id="v79-suite2-leased-update">
+/* Oct 30, 2026: Suite 1 hero + Suite 2 leased */
+.hero.hero-v17{background-image:url('images/suite-1-new-1.jpg') !important;background-size:cover !important;background-position:center center !important}
+.hero-leasing-status{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;padding:9px 15px;border:1px solid rgba(255,255,255,.55);border-radius:999px;background:rgba(20,18,15,.62);backdrop-filter:blur(8px);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.hero-leasing-status .leased-dot{width:8px;height:8px;border-radius:50%;background:#d6ae66;box-shadow:0 0 0 3px rgba(214,174,102,.18)}
+#floor-plan .suite-choice[data-suite="2"]{position:relative;border-color:rgba(140,40,40,.28);background:#fff8f6}
+#floor-plan .suite-choice[data-suite="2"] small{color:#a23b31;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+#floor-plan .suite-choice[data-suite="2"] span{border-color:#a23b31;color:#a23b31}
+#floor-plan .suite-choice[data-suite="2"].active span{background:#a23b31;color:#fff}
+#floor-plan .suite-status.leased-status{background:#f7dfdc;color:#9b3028}
+#requestSuite:disabled{opacity:.6;cursor:not-allowed;filter:grayscale(.15)}
+@media(max-width:760px){.hero-leasing-status{font-size:.62rem;padding:8px 12px;letter-spacing:.08em}}
 </style></head>
 <body>
-<div class="announcement-bar">NOW LEASING   |   ANTICIPATED OPENING LATE 2026   |   ONLY FOUR PRIVATE SUITES AVAILABLE</div>
+<div class="announcement-bar">NOW LEASING   |   SUITE 2 LEASED   |   ONLY THREE PRIVATE SUITES REMAINING</div>
 <header id="hdr"><div class="wrap"><nav>
 <a class="brand" href="#top"><img alt="SA" decoding="async" src="images/monogram-light-transparent.png"/><span>The Suites at Adair</span></a>
 <div class="links"><a href="#story">Vision</a><a href="#suites">Four Suites</a><a href="#floor-plan">Floor Plan</a><a href="#gallery">Gallery</a><a class="btn gold" href="#apply">Request Information</a></div>
@@ -749,6 +761,7 @@ img { max-width: 100%; }
 <div class="wrap hero-v17-inner">
 <div class="hero-v17-content reveal">
 <div class="hero-v17-coming">COMING SOON</div>
+<div class="hero-leasing-status"><span class="leased-dot"></span>Suite 2 Leased &nbsp;·&nbsp; Only 3 Suites Remaining</div>
 <img alt="The Suites at Adair" class="hero-v17-logo" decoding="async" src="images/logo-dark-transparent.png"/>
 <div class="hero-v17-subtitle">Luxury Salon Suites</div>
 <div class="hero-v17-location">Downtown Woodstock</div>
@@ -761,14 +774,14 @@ img { max-width: 100%; }
 <div aria-label="Highlights" class="hero-v17-features">
 <span>Downtown Woodstock</span>
 <span>Luxury Private Suites</span>
-<span>Limited Availability</span>
+<span>Only 3 Suites Remaining</span>
 </div>
 </div>
 </div>
 </section>
 <div class="marquee"><div class="marquee-track">
-FOUR PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN   •   PRIVATE CLIENT EXPERIENCE   •  
-FOUR PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN   •   PRIVATE CLIENT EXPERIENCE   •  
+THREE SUITES REMAINING   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN   •   PRIVATE CLIENT EXPERIENCE   •  
+THREE SUITES REMAINING   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN   •   PRIVATE CLIENT EXPERIENCE   •  
 </div></div>
 <section class="manifesto" id="story"><div class="wrap manifesto-grid">
 <div class="reveal">
@@ -815,13 +828,13 @@ FOUR PRIVATE SUITES   •   DOWNTOWN WOODSTOCK   •   BOUTIQUE BY DESIGN  
 <section class="floor-plan-section" id="floor-plan">
 <div class="wrap">
 <div class="floor-plan-head reveal">
-<div><div class="eyebrow">Explore the layout</div><h2>Explore Our Suites.</h2><div class="floor-plan-urgency">Only four private suites available</div></div>
+<div><div class="eyebrow">Explore the layout</div><h2>Explore Our Suites.</h2><div class="floor-plan-urgency">Suite 2 leased · Only three suites remaining</div></div>
 <p>Select any suite on the plan or from the list to view its location, features, and current availability. Select any suite on the plan or from the list to view its location, features, square footage, and current availability.</p>
 </div>
 <div class="floor-plan-layout reveal">
 <aside aria-label="Choose a suite" class="suite-picker">
 <div class="suite-picker-title">Four Private Suites</div>
-<button class="suite-choice active" data-suite="1" type="button"><span>1</span><strong>Suite 1</strong><small>Front left</small></button><button class="suite-choice" data-suite="2" type="button"><span>2</span><strong>Suite 2</strong><small>Front right</small></button><button class="suite-choice" data-suite="3" type="button"><span>3</span><strong>Suite 3</strong><small>Right side</small></button><button class="suite-choice" data-suite="4" type="button"><span>4</span><strong>Suite 4</strong><small>Back left</small></button><button class="suite-choice" data-suite="breakroom" type="button"><span>BR</span><strong>Breakroom + Laundry</strong><small>Shared amenity</small></button><div class="suite-legend">
+<button class="suite-choice active" data-suite="1" type="button"><span>1</span><strong>Suite 1</strong><small>Front left</small></button><button class="suite-choice" data-suite="2" type="button"><span>2</span><strong>Suite 2</strong><small>Leased</small></button><button class="suite-choice" data-suite="3" type="button"><span>3</span><strong>Suite 3</strong><small>Right side</small></button><button class="suite-choice" data-suite="4" type="button"><span>4</span><strong>Suite 4</strong><small>Back left</small></button><button class="suite-choice" data-suite="breakroom" type="button"><span>BR</span><strong>Breakroom + Laundry</strong><small>Shared amenity</small></button><div class="suite-legend">
 <span><i class="status-dot available"></i> Available</span>
 <span><i class="status-dot pending"></i> Application Pending</span>
 <span><i class="status-dot leased"></i> Leased</span>
@@ -988,7 +1001,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // V31 interactive suite floor plan
 const suiteData={
   1:{name:'Front Left Suite',location:'Front-left location near the main entrance',size:'120 SQ FT',status:'Available',description:'A bright, front-facing private studio designed for a polished and comfortable client experience.',features:['Front-facing location','Natural light','Private, lockable workspace','Upscale finishes shown conceptually']},
-  2:{name:'Front Right Suite',location:'Front-right location near the main entrance',size:'120 SQ FT',status:'Available',description:'A bright, front-facing private studio with convenient access from the main entrance.',features:['Front-facing location','Natural light','Private, lockable workspace','Upscale finishes shown conceptually']},
+  2:{name:'Front Right Suite',location:'Front-right location near the main entrance',size:'120 SQ FT',status:'Leased',description:'A bright, front-facing private studio with convenient access from the main entrance.',features:['Front-facing location','Natural light','Private, lockable workspace','Upscale finishes shown conceptually']},
   3:{name:'Right-Side Suite',location:'Right-side private suite',size:'125 SQ FT',status:'Available',description:'A spacious private studio along the right side of the floor plan with room for a customized salon experience.',features:['Spacious private layout','Flexible workstation arrangement','Natural light','Upscale finishes shown conceptually']},
   4:{name:'Back Left Suite',location:'Back-left private suite',size:'180 SQ FT',status:'Available',description:'A distinctive rear suite with its own private entrance for added privacy and convenience, plus easy access to the private restroom and coffee bar. A flexible studio designed to accommodate one or two beauty professionals.',features:['Dedicated private entrance','Near private restroom','Spacious rear position with the largest studio','Flexible build-out for one or two professionals','Shampoo bowl and styling chair provided']},
   breakroom:{name:'Breakroom + Laundry',location:'Shared amenity for suite professionals',size:'80 SQ FT',status:'Shared Amenity',description:'A private, thoughtfully designed breakroom and on-site laundry with the everyday conveniences needed between appointments. The space seats four comfortably.',features:['Private breakroom','On-site washer & dryer','Microwave','Coffee bar','Fridge and storage','Seats 4 comfortably']}
@@ -1065,12 +1078,17 @@ function selectSuite(number){
   document.querySelector('.suite-detail-eyebrow').textContent=isBreakroom?'Shared Amenity':'Suite '+number;
   document.getElementById('suiteDetailName').textContent=data.name;
   document.getElementById('suiteDetailLocation').textContent=data.location;
-  document.querySelector('.suite-status').textContent=data.status;
+  const statusEl=document.querySelector('.suite-status');
+  statusEl.textContent=data.status;
+  statusEl.classList.toggle('leased-status',data.status==='Leased');
   document.getElementById('suiteDetailSize').textContent=data.size;
   document.getElementById('suiteDetailDescription').textContent=data.description;
   document.getElementById('suiteDetailFeatures').innerHTML=data.features.map(x=>`<li>${x}</li>`).join('');
-  document.getElementById('requestSuite').textContent=isBreakroom?'Request Information':'Request Suite '+number;
-  document.getElementById('requestSuite').dataset.suite=number;
+  const requestButton=document.getElementById('requestSuite');
+  const isLeased=data.status==='Leased';
+  requestButton.textContent=isBreakroom?'Request Information':(isLeased?'Suite 2 — Leased':'Request Suite '+number);
+  requestButton.disabled=isLeased;
+  requestButton.dataset.suite=number;
   renderSuitePhoto();
 }
 document.querySelectorAll('.suite-choice,.suite-marker').forEach(btn=>btn.addEventListener('click',()=>selectSuite(btn.dataset.suite)));
